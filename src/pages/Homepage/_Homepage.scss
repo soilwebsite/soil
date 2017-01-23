@@ -1,0 +1,64 @@
+.App {
+  .nav-bar {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    transition: background-color 1s;
+    &:hover {
+      background-color: white;
+    }
+  }
+  .hero {
+    height: 100vh;
+    font-size: large;
+    background-image: url("https://assets2.thereformation.com/app/public/assets/products/92666/original/2017.jpg?1483491128&i10c=img.resize(width:2560)");
+    background-size: contain;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+h2 {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  color: black;
+}
+
+.content {
+  height: 100vw;
+  padding: 25px;
+  .posts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    border-bottom: 2px solid black;
+    .post {
+      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .picture {
+        background: lightblue;
+        width: 350px;
+        height: 350px;
+      }
+      .title {
+        font-weight: bold;
+        margin: 25px;
+      }
+      .description {
+
+      }
+    }
+  }
+}
