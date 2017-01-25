@@ -1,27 +1,26 @@
 import React, { Component } from 'react';
-import './Homepage.scss';
 
-class Homepage extends Component {
+
+class Woman extends Component {
   render() {
     return (
       <div className="Homepage">
         <div className="nav-bar">
           <nav id="nav">
             <div id="nav_background"></div>
-          <a className="nav_item nav_item_projects" data-name="projects-container" data-index="1" href="/woman">woman</a>
+          <a className="nav_item nav_item_projects" data-name="projects-container" data-index="1" href="#">woman</a>
           <a className="nav_item" data-name="a-propos" data-index="2" href="#">dusty</a>
           <a className="nav_item" data-name="presse" data-index="3" href="#" style={{fontSize: "16px"}}><b>Forest Tribe</b></a>
           <a className="nav_item" data-name="partenaires" data-index="4" href="#">skin</a>
           <a className="nav_item" data-name="contact" data-index="5" href="#">buy</a>
         </nav>
         </div>
-        <div className="hero" />
       </div>
     );
   }
 }
 
-export default Homepage;
+export default Woman;
 
 // <div className="content">
         //   <h1>We make killer clothes that don’t kill the environment.</h1>
