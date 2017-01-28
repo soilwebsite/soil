@@ -7,7 +7,6 @@ class Homepage extends Component {
     return (
       <div className="Homepage">
         <Navbar />
-        <Sidebar />
         <div className="hero" />
       </div>
     );

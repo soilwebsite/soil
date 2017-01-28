@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
+
+const sidebarItems = [
+  { name: 'Coat', event:null },
+  { name: 'Dress' },
+  
+]
 class Woman extends Component {
+
   render() {
     return (
       <div className="Woman">
         <Navbar />
-          <Sidebar />
-
+        <Sidebar items={sidebarItems}/>
       </div>
     );
   }
