@@ -4,20 +4,37 @@
   // columns: 100px;
   column-count: 5;
   column-gap: 0;
-  .image {
+
+  .grid-item {
     border: 1px solid #ccc;
     margin: 2px;
-    // flex: 0 0 200px;
     break-inside: avoid;
-    // padding: 5px;
-    &:nth-child(4n) {
-      // flex: 0 0 400px;
-      img {
-        height: 200px;
-      }
-    }
+    border-radius: 2px;
     img {
       height: 100px;
+      perspective: 1000;
+      transition: 0.25s;
+    }
+    // &:nth-child(4n) img {
+    //   height: 200px;
+    // }
+    &:hover img {
+      overflow: visible;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateY(180deg);
+      // backface-visibility: hidden;
+      // z-index: 2;
+    }
+  }
+  .big.grid-item img {
+    height: 200px;
+  }
+  .two {
+    display: flex;
+    flex-direction: row;
+    .grid-item {
+      flex-basis: 50%;
     }
   }
 }
