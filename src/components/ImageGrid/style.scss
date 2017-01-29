@@ -1,0 +1,23 @@
+.image-grid {
+  // display: flex;
+  // flex-wrap: wrap;
+  // columns: 100px;
+  column-count: 5;
+  column-gap: 0;
+  .image {
+    border: 1px solid #ccc;
+    margin: 2px;
+    // flex: 0 0 200px;
+    break-inside: avoid;
+    // padding: 5px;
+    &:nth-child(4n) {
+      // flex: 0 0 400px;
+      img {
+        height: 200px;
+      }
+    }
+    img {
+      height: 100px;
+    }
+  }
+}

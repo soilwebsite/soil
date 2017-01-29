@@ -1,5 +1,6 @@
 import React from 'react';
-import { Router, Route } from 'react-router';
+import { Router, Route, IndexRoute } from 'react-router';
+import App from './App';
 
 import Homepage from './pages/Homepage';
 import Woman from './pages/Woman';
@@ -10,12 +11,16 @@ import NotFound from './pages/NotFound';
 
 const Routes = (props) => (
   <Router {...props}>
-    <Route path="/" component={Homepage} />
-    <Route path="/woman" component={Woman} />
-    <Route path="/dusty" component={Dusty} />
-    <Route path="/skin" component={Skin} />
-    <Route path="/buy" component={Buy} />
-    <Route path="*" component={NotFound} />
+    <Route path="/" component={App}>
+      <IndexRoute component={Homepage} />
+
+      <Route path="/woman" component={Woman} />
+      <Route path="/dusty" component={Dusty} />
+      <Route path="/skin" component={Skin} />
+      <Route path="/buy" component={Buy} />
+
+      <Route path="*" component={NotFound} />
+    </Route>
   </Router>
 );
 
