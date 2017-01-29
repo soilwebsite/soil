@@ -1,8 +1,11 @@
+$big-image: 600px;
+$small-image: 450px;
+
 .image-grid {
   // display: flex;
   // flex-wrap: wrap;
   // columns: 100px;
-  column-count: 5;
+  column-count: 2;
   column-gap: 0;
 
   .grid-item {
@@ -10,8 +13,13 @@
     margin: 2px;
     break-inside: avoid;
     border-radius: 2px;
+    height: $small-image;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
-      height: 100px;
+      max-height: $small-image;
       perspective: 1000;
       transition: 0.25s;
     }
@@ -27,14 +35,22 @@
       // z-index: 2;
     }
   }
-  .big.grid-item img {
-    height: 200px;
+  .big.grid-item {
+    height: auto;
+    img {
+      max-height: none;
+      height: $big-image;
+    }
   }
   .two {
     display: flex;
     flex-direction: row;
     .grid-item {
-      flex-basis: 50%;
+      // flex-basis: 50%;
+      flex: 0 1 50%;
+      img {
+        max-width: 250px;
+      }
     }
   }
 }

@@ -1,26 +1,34 @@
 import React, { Component } from 'react';
+import {shuffle} from 'lodash';
 
 class Navbar extends Component {
 
   images () {
     const {images} = this.props;
+    // const manyImages = shuffle(images).concat(shuffle(images));
     const manyImages = images.concat(images);
+    const nthBig = 5;
+    let alreadyShowingNextItem = false;
+
     return manyImages.map((image, i) => {
-      if (i % 4 === 0) {
+      if (i % nthBig === 0) {
+        alreadyShowingNextItem = false;
         return (
           <div className='big grid-item'>
             <img src={image.url} alt={image.name} />
           </div>
         )
       }
-      else if (!manyImages[i+1]) {
+      else if (!manyImages[i+1] || Math.random() > .7) {
+        alreadyShowingNextItem = false;
         return (
           <div className='grid-item'>
             <img src={image.url} alt={image.name} />
           </div>
         )
       }
-      else if (i % 5 === 1 || i % 5 === 3) {
+      else if (!alreadyShowingNextItem) {
+        alreadyShowingNextItem = true;
         return (
           <div className='two'>
             <div className='grid-item'>
@@ -32,6 +40,7 @@ class Navbar extends Component {
           </div>
         )
       }
+      alreadyShowingNextItem = false;
       return null;
     })
   }
