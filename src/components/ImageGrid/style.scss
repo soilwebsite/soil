@@ -5,12 +5,14 @@ $small-image: 450px;
   // display: flex;
   // flex-wrap: wrap;
   // columns: 100px;
+  max-width: 90vw;
+  padding: 15px;
   column-count: 2;
   column-gap: 0;
 
   .grid-item {
     border: 1px solid #ccc;
-    margin: 2px;
+    margin: 0px 4px 8px;
     break-inside: avoid;
     border-radius: 2px;
     height: $small-image;

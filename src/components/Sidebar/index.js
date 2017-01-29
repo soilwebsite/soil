@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Sidebar extends Component {
 
-  sidebarItems () {    
+  sidebarItems () {
     return this.props.items.map(item => {
       return (
         <div className='side-item' onClick={item.event}>
@@ -15,6 +15,7 @@ class Sidebar extends Component {
   render() {
     return (
       <div className="side-bar">
+        <p className="nav_item filter">filter</p>
         <nav>
           {this.sidebarItems()}
         </nav>

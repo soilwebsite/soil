@@ -1,5 +1,6 @@
 .side-bar {
-  position: absolute;
+  padding-left: 15px;
+  position: fixed;
   top: 0;
   left: 0;
   width: $nav_height;
@@ -7,18 +8,42 @@
   background: white;
   transition: width 1s;
   &:hover {
-    width: 14vw;
+    // width: 14vw;
     .side-item {
       opacity: 1;
+    }
+    .filter {
+      opacity: 0;
     }
   }
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+
+  .filter {
+    position: fixed;
+    transition: opacity 1s;
+    /* Safari */
+  -webkit-transform: rotate(-90deg);
+
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+
+  /* IE */
+  -ms-transform: rotate(-90deg);
+
+  /* Opera */
+  -o-transform: rotate(-90deg);
+
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  }
+
+
   .side-item {
     text-align: left;
-    width: 11vw;
+    // width: 11vw;
     display: block;
     font-size: 12px;
     padding: 15px;
