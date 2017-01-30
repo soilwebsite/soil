@@ -5,7 +5,7 @@ import App from './App';
 import Homepage from './pages/Homepage';
 import Woman from './pages/Woman';
 import Dusty from './pages/Dusty';
-import Skin from './pages/Skin';
+import About from './pages/About';
 import Buy from './pages/Buy';
 import NotFound from './pages/NotFound';
 
@@ -16,7 +16,7 @@ const Routes = (props) => (
 
       <Route path="/woman" component={Woman} />
       <Route path="/dusty" component={Dusty} />
-      <Route path="/skin" component={Skin} />
+      <Route path="/about" component={About} />
       <Route path="/buy" component={Buy} />
 
       <Route path="*" component={NotFound} />

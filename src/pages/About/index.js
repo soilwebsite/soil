@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 
-class Skin extends Component {
+class About extends Component {
   render() {
     return (
-      <div className="About">
-        Skin
+      <div className="Skin">
       </div>
     );
   }
 }
 
-export default Skin;
+export default About;
