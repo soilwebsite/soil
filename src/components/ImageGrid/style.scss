@@ -1,57 +1,48 @@
-$big-image: 600px;
-$small-image: 450px;
+$big-height: 600px;
+$small-height: 450px;
 
 .image-grid {
-  // display: flex;
-  // flex-wrap: wrap;
-  // columns: 100px;
-  max-width: 90vw;
-  padding: 15px;
+  width: 90vw;
   column-count: 2;
   column-gap: 0;
-
+  padding: 15px;
   .grid-item {
-    border: 1px solid #ccc;
+    height: $big-height;
+    max-height: $big-height;
+
+    border: 1px solid #ddd;
     margin: 0px 4px 8px;
     break-inside: avoid;
     border-radius: 2px;
-    height: $small-image;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     img {
-      max-height: $small-image;
+      max-height: $big-height;
+      max-width: 100%;
       perspective: 1000;
       transition: 0.25s;
     }
-    // &:nth-child(4n) img {
-    //   height: 200px;
-    // }
     &:hover img {
       overflow: visible;
       position: relative;
       transform-style: preserve-3d;
-      transform: rotateY(180deg);
+      transform: rotateY(90deg);
       // backface-visibility: hidden;
       // z-index: 2;
     }
   }
-  .big.grid-item {
-    height: auto;
-    img {
-      max-height: none;
-      height: $big-image;
-    }
-  }
   .two {
+    width: 100%;
     display: flex;
     flex-direction: row;
+    break-inside: avoid;
     .grid-item {
-      // flex-basis: 50%;
-      flex: 0 1 50%;
+      width: 100%;
+      height: $small-height;
       img {
-        max-width: 250px;
+        max-height: $small-height;
       }
     }
   }
