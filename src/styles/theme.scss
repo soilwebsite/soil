@@ -1,4 +1,4 @@
-$nav_height: 5vw;
+$nav_height: 124px;
 
 body {
   text-align: center;
@@ -7,15 +7,4 @@ body {
   text-transform: uppercase;
   color: #7f7f7f;
   font-size: 24px;
-}
-
-.hero {
-  height: 85vh;
-  width: 90vw;
-  font-size: large;
-  // background-image: url("https://assets2.thereformation.com/app/public/assets/products/92666/original/2017.jpg?1483491128&i10c=img.resize(width:2560)");
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 0 auto;
-  padding: 65;
 }
