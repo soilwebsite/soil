@@ -2,6 +2,10 @@ $big-height: 600px;
 $small-height: 450px;
 
 .image-grid {
+  position: relative;
+  top: -23px;
+  margin-top: $nav_height;
+  margin-left: $sidebar_width;
   width: 90vw;
   column-count: 2;
   column-gap: 0;
@@ -11,7 +15,7 @@ $small-height: 450px;
     max-height: $big-height;
 
     border: 1px solid #ddd;
-    margin: 0px 4px 8px;
+    margin: 8px 4px 0px 4px;
     break-inside: avoid;
     border-radius: 2px;
     overflow: hidden;
@@ -22,7 +26,7 @@ $small-height: 450px;
       max-height: $big-height;
       max-width: 100%;
       perspective: 1000;
-      transition: 0.25s;
+      transition: 0.5s;
     }
     &:hover img {
       overflow: visible;

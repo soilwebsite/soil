@@ -3,7 +3,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 5vw;
+  width: $sidebar_width;
   height: 100vh;
   background: white;
   transition: width 1s;
@@ -24,20 +24,12 @@
   .filter {
     position: fixed;
     transition: opacity 1s;
-    /* Safari */
-  -webkit-transform: rotate(-90deg);
-
-  /* Firefox */
-  -moz-transform: rotate(-90deg);
-
-  /* IE */
-  -ms-transform: rotate(-90deg);
-
-  /* Opera */
-  -o-transform: rotate(-90deg);
-
-  /* Internet Explorer */
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   }
 
 
