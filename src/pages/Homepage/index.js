@@ -15,14 +15,14 @@ class Homepage extends Component {
     return (
       <div className="Homepage">
         <h2 class="textTitle">The Campaign</h2>
-        <p>Discover the Summer 2017 campaign.</p>
+        <p>Discover</p>
         <div className="buttons">
           <a href="#">
-            PRE-ORDER THE COLLECTION
+            THE COLLECTION
           </a>
           &nbsp;
           <a href="#">
-            EXPLORE THE CAMPAIGN
+            THE CAMPAIGN
           </a>
         </div>
         <div className='video-container'>
