@@ -1,6 +1,12 @@
 $nav_height: 124px;
 $sidebar_width: 100px;
 
+
+html, #root, body, .App {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   text-align: center;
   font-family: 'Kanit', sans-serif;

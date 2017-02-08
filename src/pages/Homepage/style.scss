@@ -1,11 +1,58 @@
 .Homepage {
-  .hero {
-    margin-top: $nav_height;
-    height: 100%;
-    width: 100%;
-    font-size: large;
-    background-image: url("https://assets2.thereformation.com/app/public/assets/products/92666/original/2017.jpg?1483491128&i10c=img.resize(width:2560)");
-    background-size: contain;
-    background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  // .hero {
+  //   margin-top: $nav_height;
+  //   height: 100%;
+  //   width: 100%;
+  //   font-size: large;
+  //   background-image: url("https://assets2.thereformation.com/app/public/assets/products/92666/original/2017.jpg?1483491128&i10c=img.resize(width:2560)");
+  //   background-size: contain;
+  //   background-repeat: no-repeat;
+  // }
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    overflow: hidden;
+  }
+  h2 {
+    font-size: 32px;
+    padding: 20px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .buttons {
+    width: 600px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    a {
+      color: inherit;
+      letter-spacing: 1.2px;
+      font-size: 12px;
+      padding: 15px;
+      border: 1px solid white;
+      text-decoration: none;
+      transition: color .4s;
+      transition: background-color .4s;
+      &:hover {
+        color: black;
+        background-color: white;
+      }
+    }
   }
 }
