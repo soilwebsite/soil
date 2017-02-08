@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Navbar extends Component {
   render() {
     const {pathname} = this.props.location;
-    console.log(this.props.location.pathname);
+
     return (
       <div className="nav-bar">
         <nav id="nav">
