@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 
 class Navbar extends Component {
   render() {
-    const {location} = this.props;
-    console.log(this.props);
+    const {pathname} = this.props.location;
+    console.log(this.props.location.pathname);
     return (
       <div className="nav-bar">
         <nav id="nav">
           <div id="nav_background"></div>
-          <a className="nav_item title" data-name="presse" data-index="3" href="/">
+          <a className="nav_item title" href="/">
             <b><h1>Forest Tribe</h1></b>
           </a>
-          <a className="nav_item nav_item_projects" data-name="projects-container" data-index="1" href="/woman">woman</a>
-          <a className="nav_item" data-name="a-propos" data-index="2" href="/dusty">dusty</a>
-          <a className="nav_item" data-name="partenaires" data-index="4" href="/about">About</a>
-          <a className="nav_item" data-name="contact" data-index="5" href="/">buy</a>
+          <a className={`nav_item${pathname === '/woman' ? ' current' : ''}`} href="/woman">woman</a>
+          <a className={`nav_item${pathname === '/dusty' ? ' current' : ''}`} href="/dusty">dusty</a>
+          <a className={`nav_item${pathname === '/about' ? ' current' : ''}`} href="/about">About</a>
+          <a className={`nav_item${pathname === '/buy'   ? ' current' : ''}`} href="/buy">buy</a>
       </nav>
       </div>
     );

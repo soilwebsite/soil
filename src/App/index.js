@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar />
+        <Navbar location={this.props.location} />
         {React.cloneElement(this.props.children, this.props)}
       </div>
     );
