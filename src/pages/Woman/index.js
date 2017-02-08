@@ -5,7 +5,7 @@ import ImageGrid from '../../components/ImageGrid';
 const sidebarItems = [
   { name: 'Coat', event:null },
   { name: 'Dress' },
-  { name: 'top' },
+  { name: 'Top' },
   { name: 'bottom' },
   { name: 'shoe' }
 ]

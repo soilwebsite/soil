@@ -7,8 +7,8 @@
   height: 100vh;
   background: white;
   transition: width 1s;
+  // cursor: default;
   &:hover {
-    // width: 14vw;
     .side-item {
       opacity: 1;
     }
@@ -22,6 +22,7 @@
   align-items: center;
 
   .filter {
+    z-index: -1;
     position: fixed;
     transition: opacity 1s;
     -webkit-transform: rotate(-90deg);
@@ -34,6 +35,7 @@
 
 
   .side-item {
+    cursor: pointer;
     text-align: left;
     // width: 11vw;
     display: block;
