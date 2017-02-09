@@ -12,9 +12,12 @@ class Homepage extends Component {
   }
 
   render() {
+    console.log(process.env);
+    const {NODE_ENV} = process.env;
+    let videoURL = NODE_ENV === 'development' ? 'http://localhost:3000/forest.mp4' : 'http://www.foresttribe.nyc/forest.mp4';
     return (
       <div className="Homepage">
-        <h2 class="textTitle">The Campaign</h2>
+        <h2 className="textTitle">The Campaign</h2>
         <p>Discover</p>
         <div className="buttons">
           <a href="#">
@@ -31,7 +34,7 @@ class Homepage extends Component {
             autoPlay
             muted
             style={{objectFit:'cover', width:'100%', height:'100%'}}
-            src={'http://localhost:3000/forest.mp4'}
+            src={videoURL}
             />
         </div>
       </div>
