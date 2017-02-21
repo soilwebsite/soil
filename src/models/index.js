@@ -14,7 +14,10 @@ if (!global.hasOwnProperty('db')) {
   } else {
     // the application is executed on the local machine ... use mysql
     // sequelize = new Sequelize('forest-tribe', 'root', null)
-    sequelize = new Sequelize(process.env.REACT_APP_DB_URL, 'josx', 'qpow', {
+    sequelize = new Sequelize(
+      process.env.REACT_APP_LOCAL_DB_URL,
+      process.env.REACT_APP_LOCAL_DB_USER,
+      process.env.REACT_APP_LOCAL_DB_PASS, {
       host: 'localhost',
       dialect: 'postgres',
       pool: {
