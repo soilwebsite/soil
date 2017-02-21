@@ -4,7 +4,6 @@ if (!global.hasOwnProperty('db')) {
 
   if (process.env.NODE_ENV === 'production') {
     // the application is executed on Heroku ... use the postgres database
-    console.log('using production:' + process.env.REACT_APP_DB_URL);
     sequelize = new Sequelize(process.env.REACT_APP_DB_URL, {
       dialect:  'postgres',
       protocol: 'postgres',
@@ -15,8 +14,7 @@ if (!global.hasOwnProperty('db')) {
   } else {
     // the application is executed on the local machine ... use mysql
     // sequelize = new Sequelize('forest-tribe', 'root', null)
-
-    var sequelize = new Sequelize(process.env.REACT_APP_DB_URL, 'josx', 'qpow', {
+    sequelize = new Sequelize(process.env.REACT_APP_DB_URL, 'josx', 'qpow', {
       host: 'localhost',
       dialect: 'postgres',
       pool: {
