@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import forestVideo from '../../assets/forest.mp4';
 
 class Homepage extends Component {
 
@@ -12,9 +13,6 @@ class Homepage extends Component {
   }
 
   render() {
-    console.log(process.env);
-    const {NODE_ENV} = process.env;
-    let videoURL = NODE_ENV === 'development' ? 'http://localhost:3000/forest.mp4' : 'http://www.foresttribe.nyc/forest.mp4';
     return (
       <div className="Homepage">
         <h2 className="textTitle">The Campaign</h2>
@@ -34,7 +32,7 @@ class Homepage extends Component {
             autoPlay
             muted
             style={{objectFit:'cover', width:'100%', height:'100%'}}
-            src={videoURL}
+            src={forestVideo}
             />
         </div>
       </div>

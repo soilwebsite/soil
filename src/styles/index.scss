@@ -1,0 +1,12 @@
+// styles
+@import './reset';
+@import './theme';
+
+// pages
+@import '../pages/Homepage/style';
+
+// components
+@import '../components/App/style';
+@import '../components/Navbar/style';
+@import '../components/Sidebar/style';
+@import '../components/ImageGrid/style';
