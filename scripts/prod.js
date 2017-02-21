@@ -1,6 +1,5 @@
 /// added
-require('../db');
-process.env.NODE_ENV = 'production';
+var db = require('../src/db');
 ///
 
 const express = require('express');

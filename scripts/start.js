@@ -1,4 +1,6 @@
-require('../db');
+/// added
+var db = require('../src/models');
+///
 
 process.env.NODE_ENV = 'development';
 
@@ -72,6 +74,18 @@ function setupCompiler(host, port, protocol) {
 
     if (isSuccessful) {
       console.log(chalk.green('Compiled successfully!'));
+
+      // SQL
+      // SQL
+      // SQL
+      // SQL
+      db.User.findAll().then(function(users) {
+        console.log(users[0].dataValues)
+      })
+      // SQL
+      // SQL
+      // SQL
+      // SQL
     }
 
     if (showInstructions) {
