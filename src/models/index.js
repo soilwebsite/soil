@@ -29,9 +29,10 @@ if (!global.hasOwnProperty('db')) {
   }
 
   global.db = {
-    Sequelize: Sequelize,
+    // Sequelize: Sequelize,
     sequelize: sequelize,
-    User:      sequelize.import(__dirname + '/user')
+    User:      sequelize.import(__dirname + '/user'),
+    Product:   sequelize.import(__dirname + '/product')
     // add your other models here
   }
 
@@ -50,19 +51,25 @@ if (!global.hasOwnProperty('db')) {
       console.log('Unable to connect to the database:', err);
     });
 
-    var User = global.db.User;
-    User.sync({force: true}).then(function () {
+    var Product = global.db.Product;
+    Product.sync({force: true}).then(function () {
       // Table created
-      return User.create({
-        firstName: 'John',
-        lastName: 'Hancock'
-      });
+      return Product.bulkCreate([{
+        name: 'Handbag',
+        imageUrl: 'https://ak1.ostkcdn.com/images/products/11528497/P18476363.jpg'
+      }, {
+        name: 'Coat',
+        imageUrl: 'https://mb-brandstores-2-863894.c.cdn77.org/images/articles/dd8feadaa75d7337a7358e4228d877fd_12.png'
+      }, {
+        name: 'Dress',
+        imageUrl: 'https://s-media-cache-ak0.pinimg.com/236x/19/cd/66/19cd665dc090729fce969342d3311310.jpg'
+      }]);
     })
-    .then(() => {
-      User.findAll().then(function(users) {
-        console.log(users)
-      })
-    });
+    // .then(() => {
+    //   Product.findAll().then(function(products) {
+    //     console.log(products[0].dataValues)
+    //   })
+    // });
 }
 
 module.exports = global.db
