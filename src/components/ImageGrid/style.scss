@@ -3,14 +3,14 @@ $small-height: 450px;
 
 .image-grid {
   position: relative;
-  margin-top: $nav_height;
-  margin-left: $sidebar_width;
+  // margin-top: $nav_height;
+  margin-left: $sidebar_width + 70px;
   margin-right: $sidebar_width/2;
-  column-count: 2;
+  column-count: 3;
   column-gap: 0;
   .grid-item {
-    height: $big-height;
-    max-height: $big-height;
+    // height: $big-height;
+    // max-height: $big-height;
 
     border: 1px solid #ddd;
     margin: 0px 4px 8px 4px;

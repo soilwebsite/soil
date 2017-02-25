@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 class Sidebar extends Component {
 
   sidebarItems () {
-    return this.props.items.map(item => {
+    return this.props.items.map((item, i) => {
       return (
-        <div className='side-item' onClick={item.event}>
+        <div key={i} className='side-item' onClick={item.event}>
           {item.name}
         </div>
       );

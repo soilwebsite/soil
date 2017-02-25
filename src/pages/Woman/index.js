@@ -10,31 +10,15 @@ const sidebarItems = [
   { name: 'shoe' }
 ]
 
+let imageA = 'http://wpexplorer-demos.com/photopro/wp-content/uploads/sites/12/2012/10/Sasha.jpg';
+let imageB = 'http://wpexplorer-demos.com/photopro/wp-content/uploads/sites/12/2012/10/Kaitlyn.jpg';
+let imageC = 'http://wpexplorer-demos.com/photopro/wp-content/uploads/sites/12/2012/10/Gloria.jpg';
+let imageD = 'https://s-media-cache-ak0.pinimg.com/736x/47/fc/c2/47fcc2871992396a5a085e155b92a537.jpg';
 const images = [
-  { name: 'Coat', url: 'https://mb-brandstores-2-863894.c.cdn77.org/images/articles/dd8feadaa75d7337a7358e4228d877fd_12.png' },
-  { name: 'Dress', url: 'https://s-media-cache-ak0.pinimg.com/236x/19/cd/66/19cd665dc090729fce969342d3311310.jpg' },
-  { name: 'Handbag', url: 'https://ak1.ostkcdn.com/images/products/11528497/P18476363.jpg' },
-  { name: 'Coat', url: 'https://mb-brandstores-2-863894.c.cdn77.org/images/articles/dd8feadaa75d7337a7358e4228d877fd_12.png' },
-  { name: 'Dress', url: 'https://s-media-cache-ak0.pinimg.com/236x/19/cd/66/19cd665dc090729fce969342d3311310.jpg' },
-  { name: 'Handbag', url: 'https://ak1.ostkcdn.com/images/products/11528497/P18476363.jpg' },
-  { name: 'Coat', url: 'https://mb-brandstores-2-863894.c.cdn77.org/images/articles/dd8feadaa75d7337a7358e4228d877fd_12.png' },
-  { name: 'Dress', url: 'https://s-media-cache-ak0.pinimg.com/236x/19/cd/66/19cd665dc090729fce969342d3311310.jpg' },
-  { name: 'Handbag', url: 'https://ak1.ostkcdn.com/images/products/11528497/P18476363.jpg' },
-  { name: 'Coat', url: 'https://mb-brandstores-2-863894.c.cdn77.org/images/articles/dd8feadaa75d7337a7358e4228d877fd_12.png' },
-  { name: 'Dress', url: 'https://s-media-cache-ak0.pinimg.com/236x/19/cd/66/19cd665dc090729fce969342d3311310.jpg' },
-  { name: 'Handbag', url: 'https://ak1.ostkcdn.com/images/products/11528497/P18476363.jpg' },
-  { name: 'Coat', url: 'https://mb-brandstores-2-863894.c.cdn77.org/images/articles/dd8feadaa75d7337a7358e4228d877fd_12.png' },
-  { name: 'Dress', url: 'https://s-media-cache-ak0.pinimg.com/236x/19/cd/66/19cd665dc090729fce969342d3311310.jpg' },
-  { name: 'Handbag', url: 'https://ak1.ostkcdn.com/images/products/11528497/P18476363.jpg' },
-  { name: 'Coat', url: 'https://mb-brandstores-2-863894.c.cdn77.org/images/articles/dd8feadaa75d7337a7358e4228d877fd_12.png' },
-  { name: 'Dress', url: 'https://s-media-cache-ak0.pinimg.com/236x/19/cd/66/19cd665dc090729fce969342d3311310.jpg' },
-  { name: 'Handbag', url: 'https://ak1.ostkcdn.com/images/products/11528497/P18476363.jpg' },
-  { name: 'Coat', url: 'https://mb-brandstores-2-863894.c.cdn77.org/images/articles/dd8feadaa75d7337a7358e4228d877fd_12.png' },
-  { name: 'Dress', url: 'https://s-media-cache-ak0.pinimg.com/236x/19/cd/66/19cd665dc090729fce969342d3311310.jpg' },
-  { name: 'Handbag', url: 'https://ak1.ostkcdn.com/images/products/11528497/P18476363.jpg' },
-  { name: 'Coat', url: 'https://mb-brandstores-2-863894.c.cdn77.org/images/articles/dd8feadaa75d7337a7358e4228d877fd_12.png' },
-  { name: 'Dress', url: 'https://s-media-cache-ak0.pinimg.com/236x/19/cd/66/19cd665dc090729fce969342d3311310.jpg' },
-  { name: 'Handbag', url: 'https://ak1.ostkcdn.com/images/products/11528497/P18476363.jpg' },
+  { name: 'Coat', url: imageA },
+  { name: 'Dress', url: imageB },
+  { name: 'Handbag', url: imageC },
+  { name: 'Handbag', url: imageD }
 ]
 
 class Woman extends Component {
