@@ -75,17 +75,17 @@ function setupCompiler(host, port, protocol) {
     if (isSuccessful) {
       console.log(chalk.green('Compiled successfully!'));
 
-      // SQL
-      // SQL
-      // SQL
-      // SQL
-      db.User.findAll().then(function(users) {
-        console.log(users[0].dataValues)
-      })
-      // SQL
-      // SQL
-      // SQL
-      // SQL
+      // SQL TEST
+      // SQL TEST
+      // SQL TEST
+      // SQL TEST
+      // db.Product.findAll().then(function(products) {
+      //   console.log(products[0].dataValues)
+      // })
+      // SQL TEST
+      // SQL TEST
+      // SQL TEST
+      // SQL TEST
     }
 
     if (showInstructions) {
