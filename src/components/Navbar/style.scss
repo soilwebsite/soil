@@ -1,37 +1,32 @@
-#nav {
-  // position: stat;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: $nav_height;
+$nav-item-padding: 15px;
+.nav-bar {
+  position: relative;
+  height: $nav-height;
   background: #fff;
   text-align: center;
-  z-index: 12;
-  #nav_background {
-    position: absolute;
-    width: 820px;
-    height: 0;
-    bottom: 0;
-    background: #fafafa;
-    border-bottom: 1px solid #dbdbdb;
-    z-index: 13;
-    display: none;
+  z-index: 10;
+  margin-bottom: $page-margin/2;
+  &.on-homepage {
+    margin-bottom: 0;
+  }
+  .items {
+    display: flex;
+    justify-content: center;
+    .left, .right {
+      display: inline-block;
+      // margin-left: auto;
+      // margin: 0 120px;
+    }
+    .right {
+      padding-right: $page-margin - $nav-item-padding;
+      position: absolute;
+      margin-left: auto;
+      right: 0;
+    }
   }
   .nav_item {
-    height: 24px;
-    font-size: 12px;
-    position: relative;
-    display: inline-block;
-    padding: 0 15px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #7f7f7f;
-    text-decoration: none;
-    overflow: hidden;
-    transition: 0.4s color cubic-bezier(.19, 1, .22, 1);
-    z-index: 14;
     &.title {
-      margin-top: 30px;
+      padding-top: $page-margin/2;
       height: 70px;
       font-size: 42px;
       display: block;
@@ -39,32 +34,40 @@
         content: none;
       }
     }
-  }
-
-  .nav_item:after {
-    position: absolute;
-    content: '';
-    left: 10px;
-    right: 10px;
-    bottom: -4px;
-    height: 4px;
-    background: #2d2d2d;
-    transition: 0.6s bottom cubic-bezier(.19, 1, .22, 1);
-  }
-
-  .nav_item.current,
-  .nav_item.current:hover,
-  .nav_item:hover {
-    color: #2d2d2d;
-  }
-
-  .nav_item.current:after,
-  .nav_item.current:hover:after,
-  .nav_item:hover:after {
-    bottom: 0;
-  }
-
-  .nav_item.current {
-    cursor: default;
+    height: 24px;
+    font-size: 12px;
+    position: relative;
+    display: inline-block;
+    padding: 0 $nav-item-padding;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7f7f7f;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.4s color cubic-bezier(.19, 1, .22, 1);
+    z-index: 14;
+    &:after {
+      position: absolute;
+      content: '';
+      left: 10px;
+      right: 10px;
+      bottom: -4px;
+      height: 4px;
+      background: #2d2d2d;
+      transition: 0.6s bottom cubic-bezier(.19, 1, .22, 1);
+    }
+    &.current:after,
+    &.current:hover:after,
+    &:hover:after {
+      bottom: 0;
+    }
+    &.current,
+    &.current:hover,
+    &:hover {
+      color: #2d2d2d;
+    }
+    &.current {
+      cursor: default;
+    }
   }
 }
