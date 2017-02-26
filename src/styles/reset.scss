@@ -46,3 +46,32 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+//////////////////////////
+
+
+// inputs
+/* Smooth outline with box-shadow: */
+
+input, select, textarea {
+	padding: 2pt;
+	&:focus {
+		// box-shadow: 0 0 2pt 1pt lightgrey;
+		outline: 0;
+		outline: 1px solid grey;
+	}
+}
+// input:not(:focus):invalid {
+//   outline: 1px solid red;
+// }
+// input:focus:invalid {
+//   outline: 2px solid lightblue;
+// }
+
+#button {
+	border: 1px solid lightgrey;
+	padding: 10px;
+	background: lightgrey;
+	color: black;
+	cursor: pointer;
+}
