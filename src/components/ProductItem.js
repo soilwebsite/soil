@@ -1,30 +1,16 @@
 import React, { Component } from 'react';
-import {shuffle} from 'lodash';
 
-class ImageGrid extends Component {
 
-  images () {
-    const {images} = this.props;
-    const manyImages = shuffle(images.concat(images).concat(images).concat(images));
+class ProductItem extends Component {
+
+  // images () {
     // const nthBig = 5;
     // let alreadyShowingNextItem = false;
-
-    return manyImages.map((image, i) => {
-
-      return (
-        <div key={i} className='grid-item'>
-          <img src={image.url} alt={image.name} />
-          <div className='info'>
-            <h3>{image.name}</h3>
-            <strong>${Math.floor(Math.random()*200)}</strong>
-          </div>
-        </div>
-      )
-      //
+    // return manyImages.map((image, i) => {
       // if (i % nthBig === 0 || !manyImages[i+1] || Math.random() > .7) {
       //   alreadyShowingNextItem = false;
       //   return (
-      //     <div className='grid-item'>
+      //     <div className='ProductItem'>
       //       <img src={image.url} alt={image.name} />
       //     </div>
       //   )
@@ -33,10 +19,10 @@ class ImageGrid extends Component {
       //   alreadyShowingNextItem = true;
       //   return (
       //     <div className='two'>
-      //       <div className='grid-item'>
+      //       <div className='ProductItem'>
       //         <img src={image.url} alt={image.name} />
       //       </div>
-      //       <div className='grid-item'>
+      //       <div className='ProductItem'>
       //         <img src={manyImages[i+1].url} alt={manyImages[i+1].name} />
       //       </div>
       //     </div>
@@ -44,17 +30,22 @@ class ImageGrid extends Component {
       // }
       // alreadyShowingNextItem = false;
       // return null;
-    })
-  }
-  
+    // })
+  // }
+
   render() {
-    // {this.props.images}
+    const {item} = this.props;
+    const productId = encodeURIComponent(item.name);
     return (
-      <div className="image-grid">
-        {this.images()}
-      </div>
+      <a className='ProductItem' href={`/clothing/${productId}`}>
+        <img src={item.url} alt={item.name} />
+        <div className='info'>
+          <h3>{item.name}</h3>
+          <strong>${Math.floor(Math.random()*200)}</strong>
+        </div>
+      </a>
     );
   }
 }
 
-export default ImageGrid
+export default ProductItem
