@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Sidebar from '../../components/Sidebar';
-import ProductGrid from '../../components/ProductGrid';
+import Sidebar from '../components/Sidebar';
+import ProductGrid from '../components/ProductGrid';
 
 const sidebarItems = [
   { name: 'Tops' },
