@@ -4,7 +4,7 @@ import ImageGrid from '../../components/ImageGrid';
 
 
 const sidebarItems = [
-  { name: 'pink', event:null },
+  { name: 'pink', onClick:null },
   { name: 'blue' },
   { name: 'gray' },
   { name: 'white' },

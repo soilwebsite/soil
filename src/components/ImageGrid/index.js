@@ -14,6 +14,10 @@ class ImageGrid extends Component {
       return (
         <div key={i} className='grid-item'>
           <img src={image.url} alt={image.name} />
+          <div className='info'>
+            <h3>{image.name}</h3>
+            <strong>${Math.floor(Math.random()*200)}</strong>
+          </div>
         </div>
       )
       //
@@ -42,6 +46,7 @@ class ImageGrid extends Component {
       // return null;
     })
   }
+  
   render() {
     // {this.props.images}
     return (

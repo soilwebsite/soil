@@ -5,7 +5,7 @@ class Sidebar extends Component {
   sidebarItems () {
     return this.props.items.map((item, i) => {
       return (
-        <div key={i} className='side-item' onClick={item.event}>
+        <div key={i} className='side-item' onClick={item.onClick}>
           {item.name}
         </div>
       );
@@ -13,14 +13,9 @@ class Sidebar extends Component {
   }
 
   render() {
-    return (
-      <div className="side-bar">
-        <p className="nav_item filter">filter</p>
-        <nav>
-          {this.sidebarItems()}
-        </nav>
-      </div>
-    );
+    return <nav className="side-bar">
+      {this.sidebarItems()}
+    </nav>
   }
 }
 
