@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {shuffle} from 'lodash';
-import Product from '../ProductItem';
+import Product from './ProductItem';
 
 class ProductGrid extends Component {
   render() {
