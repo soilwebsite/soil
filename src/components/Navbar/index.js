@@ -4,9 +4,8 @@ class Navbar extends Component {
   render() {
     const pn = this.props.location.pathname;
     const onHomepage = pn === '/' ? 'on-homepage' : '';
-    console.log(pn, pn === '/');
 
-    return <nav className={`nav-bar ${onHomepage}`}>
+    return <nav className={`Navbar ${onHomepage}`}>
       <a className="nav_item title" href="/">
         <strong><h1>Forest Tribe</h1></strong>
       </a>

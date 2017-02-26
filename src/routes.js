@@ -4,11 +4,12 @@ import App from './components/App'
 
 import Homepage from './pages/Homepage'
 import Clothing from './pages/Clothing'
-// import Dusty from './pages/Dusty'
-import SignIn from './pages/SignIn'
+import Product from './pages/Product'
 import About from './pages/About'
 import Mission from './pages/Mission'
 import Cart from './pages/Cart'
+import SignIn from './pages/SignIn'
+
 import NotFound from './pages/NotFound'
 
 
@@ -18,9 +19,10 @@ const Routes = (props) => (
 
       <IndexRoute component={Homepage} />
       <Route path="/clothing" component={Clothing} />
+      <Route path="/clothing/:id" component={Product} />
       <Route path="/about" component={About} />
       <Route path="/mission" component={Mission} />
-      
+
       <Route path="/cart" component={Cart} />
       <Route path="/signin" component={SignIn} />
 

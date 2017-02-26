@@ -13,7 +13,7 @@ class Sidebar extends Component {
   }
 
   render() {
-    return <nav className="side-bar">
+    return <nav className="Sidebar">
       {this.sidebarItems()}
     </nav>
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Sidebar from '../../components/Sidebar';
-import ImageGrid from '../../components/ImageGrid';
+import ProductGrid from '../../components/ProductGrid';
 
 const sidebarItems = [
   { name: 'Tops' },
@@ -28,7 +28,7 @@ class Clothing extends Component {
     return (
       <div className="Clothing">
         <Sidebar items={sidebarItems}/>
-        <ImageGrid images={images} />
+        <ProductGrid images={images} />
       </div>
     );
   }
