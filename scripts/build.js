@@ -7,8 +7,6 @@ process.env.NODE_ENV = 'production';
 // https://github.com/motdotla/dotenv
 require('dotenv').config({silent: true});
 
-// user-added
-var db = require('../src/models');
 
 var chalk = require('chalk');
 var fs = require('fs-extra');

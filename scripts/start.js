@@ -7,7 +7,8 @@ process.env.NODE_ENV = 'development';
 require('dotenv').config({silent: true});
 
 /// user-added
-var db = require('../src/models');
+// var db = require('../src/models');
+console.log('running start.js!');
 ///
 
 var chalk = require('chalk');
