@@ -15,15 +15,14 @@ class Homepage extends Component {
   render() {
     return (
       <div className="Homepage">
-        <h2 className="textTitle">The Campaign</h2>
-        <p>Discover</p>
+        <h2 className="textTitle">Discover</h2>
         <div className="buttons">
-          <a href="#">
+          <a href="/woman">
             THE COLLECTION
           </a>
           &nbsp;
-          <a href="#">
-            THE CAMPAIGN
+          <a href="/mission">
+            THE INITIATIVE
           </a>
         </div>
         <div className='video-container'>

@@ -12,7 +12,7 @@ class Navbar extends Component {
 
       <div className='items'>
         <div className='left'>
-          <a className={`nav_item${pn === '/clothing' ? ' current' : ''}`} href="/clothing">Clothing</a>
+          <a className={`nav_item${pn === '/clothing' ? ' current' : ''}`} href="/clothing">Shop</a>
           <a className={`nav_item${pn === '/about'    ? ' current' : ''}`} href="/about">Who We Are</a>
           <a className={`nav_item${pn === '/mission'  ? ' current' : ''}`} href="/mission">Tribe Vibe</a>
         </div>
