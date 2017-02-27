@@ -17,7 +17,7 @@ class Homepage extends Component {
       <div className="Homepage">
         <h2 className="textTitle">Discover</h2>
         <div className="buttons">
-          <a href="/woman">
+          <a href="/clothing">
             THE COLLECTION
           </a>
           &nbsp;

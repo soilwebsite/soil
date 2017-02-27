@@ -1,3 +1,4 @@
+// Do this as the first thing so that any code reading it knows the right env.
 process.env.NODE_ENV = 'development';
 
 // Load environment variables from .env file. Suppress warnings using silent
@@ -6,10 +7,6 @@ process.env.NODE_ENV = 'development';
 // https://github.com/motdotla/dotenv
 require('dotenv').config({silent: true});
 
-/// user-added
-// var db = require('../src/models');
-console.log('running start.js!');
-///
 
 var chalk = require('chalk');
 var webpack = require('webpack');
