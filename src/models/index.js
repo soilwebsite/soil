@@ -3,6 +3,8 @@ if (!global.hasOwnProperty('db')) {
     , sequelize = null
 
   if (process.env.NODE_ENV === 'production') {
+
+    console.log('app in Production...');
     // the application is executed on Heroku ... use the postgres database
     sequelize = new Sequelize(process.env.REACT_APP_DB_URL, {
       dialect:  'postgres',
@@ -12,6 +14,7 @@ if (!global.hasOwnProperty('db')) {
       logging:  true //false
     })
   } else {
+    console.log('app in Development...');
     // the application is executed on the local machine ... use mysql
     // sequelize = new Sequelize('forest-tribe', 'root', null)
     sequelize = new Sequelize(
@@ -51,20 +54,21 @@ if (!global.hasOwnProperty('db')) {
       console.log('Unable to connect to the database:', err);
     });
 
-    var Product = global.db.Product;
-    Product.sync({force: true}).then(function () {
-      // Table created
-      return Product.bulkCreate([{
-        name: 'Handbag',
-        imageUrl: 'https://ak1.ostkcdn.com/images/products/11528497/P18476363.jpg'
-      }, {
-        name: 'Coat',
-        imageUrl: 'https://mb-brandstores-2-863894.c.cdn77.org/images/articles/dd8feadaa75d7337a7358e4228d877fd_12.png'
-      }, {
-        name: 'Dress',
-        imageUrl: 'https://s-media-cache-ak0.pinimg.com/236x/19/cd/66/19cd665dc090729fce969342d3311310.jpg'
-      }]);
-    })
+    // var Product = global.db.Product;
+    // Product.sync({force: true}).then(function () {
+    //   // Table created
+    //   return Product.bulkCreate([{
+    //     name: 'Handbag',
+    //     imageUrl: 'https://ak1.ostkcdn.com/images/products/11528497/P18476363.jpg'
+    //   }, {
+    //     name: 'Coat',
+    //     imageUrl: 'https://mb-brandstores-2-863894.c.cdn77.org/images/articles/dd8feadaa75d7337a7358e4228d877fd_12.png'
+    //   }, {
+    //     name: 'Dress',
+    //     imageUrl: 'https://s-media-cache-ak0.pinimg.com/236x/19/cd/66/19cd665dc090729fce969342d3311310.jpg'
+    //   }]);
+    // })
+
     // .then(() => {
     //   Product.findAll().then(function(products) {
     //     console.log(products[0].dataValues)
