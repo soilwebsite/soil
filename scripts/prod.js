@@ -16,7 +16,7 @@ app.get('/*', (req, res) => {
 
 
 app.listen(app.get('port'), () => {
-  let env = process.env.DEV ? 'dev' : 'prod';
+  let env = process.env.NODE_ENV;
   console.info('*******************************************************');
   console.info('Forest Tribe server listening on port ' + app.get('port') + ' env --> ' + env);
   console.info("*******************************************************\n");
