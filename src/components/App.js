@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './Navbar';
 import store from '../store'
 import { fetchProducts } from '../actions/product'
+import { fetchTags } from '../actions/tag'
 
 
 class App extends Component {
@@ -13,7 +14,8 @@ class App extends Component {
 
   componentDidMount () {
     store.dispatch(fetchProducts())
-    .then(() => this.setState(store.getState()))
+    .then(() => store.dispatch(fetchTags()))
+    .then(() => { console.log(store.getState()); this.setState(store.getState())})
   }
 
   render() {

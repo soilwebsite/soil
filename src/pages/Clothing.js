@@ -12,9 +12,11 @@ const sidebarItems = [
 
 class Clothing extends Component {
   render() {
+    console.log('itmes', this.props.tags);
+    if (!this.props.tags) { return null }
     return (
       <div className="Clothing">
-        <Sidebar items={sidebarItems} />
+        <Sidebar items={this.props.tags.tags} />
         <ProductGrid products={this.props.products.products} />
       </div>
     );

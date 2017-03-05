@@ -7,6 +7,7 @@ class ProductDetail extends Component {
       <div className="ProductDetail">
         <img src={item.imageUrl} alt={item.name} />
         {item.name}
+        {item.tags ? item.tags.map(tag => <p>#{tag.name}</p>) : null}
       </div>
     );
   }
