@@ -38,7 +38,7 @@ class ProductItem extends Component {
     const productId = encodeURIComponent(item.name);
     return (
       <a className='ProductItem' href={`/clothing/${productId}`}>
-        <img src={item.url} alt={item.name} />
+        <img src={item.imageUrl} alt={item.name} />
         <div className='info'>
           <h3>{item.name}</h3>
           <strong>${Math.floor(Math.random()*200)}</strong>
