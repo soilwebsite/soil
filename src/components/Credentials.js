@@ -22,11 +22,11 @@ class Credentials extends Component {
         <div className='signin'>
           <h1>Sign In</h1>
   				<p>
-  					<label for="login-email">Email</label>
+  					<label htmlFor="login-email">Email</label>
   					<input id="login-email" name="email" required="required" type="email"/>
   				</p>
   				<p>
-  					<label for="login-password" className="youpasswd" data-icon="p">Password </label>
+  					<label htmlFor="login-password" className="youpasswd" data-icon="p">Password </label>
   					<input id="login-password" name="password" required="required" type="password" />
   				</p>
           <p>
@@ -37,15 +37,15 @@ class Credentials extends Component {
         <div className='signup'>
           <h1>Join The Tribe</h1>
   				<p>
-  					<label for="email" data-icon="u" >Email </label>
+  					<label htmlFor="email" data-icon="u" >Email </label>
   					<input id="email" name="email" required="required" type="email" placeholder="eg. me@email.com"/>
   				</p>
   				<p>
-  					<label for="password" data-icon="p">Password </label>
+  					<label htmlFor="password" data-icon="p">Password </label>
   					<input id="password" name="password" required="required" type="password" placeholder="eg. CantGu3ssTh1s" />
   				</p>
   				<p>
-  					<label for="retype-password" data-icon="p">Re-type password </label>
+  					<label htmlFor="retype-password" data-icon="p">Re-type password </label>
   					<input id="retype-password" name="retype password" required="required" type="password" />
   				</p>
           <p>

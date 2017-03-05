@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { Link } from 'react-router'
 
 class Navbar extends Component {
   render() {
@@ -6,19 +7,19 @@ class Navbar extends Component {
     const onHomepage = pn === '/' ? 'on-homepage' : '';
 
     return <nav className={`Navbar ${onHomepage}`}>
-      <a className="nav_item title" href="/">
+      <Link className="nav_item title" to="/">
         <strong><h1>Forest Tribe</h1></strong>
-      </a>
+      </Link>
 
       <div className='items'>
         <div className='left'>
-          <a className={`nav_item${pn === '/clothing' ? ' current' : ''}`} href="/clothing">Shop</a>
-          <a className={`nav_item${pn === '/about'    ? ' current' : ''}`} href="/about">Who We Are</a>
-          <a className={`nav_item${pn === '/mission'  ? ' current' : ''}`} href="/mission">Tribe Vibe</a>
+          <Link className={`nav_item${pn === '/clothing' ? ' current' : ''}`} to="/clothing">Shop</Link>
+          <Link className={`nav_item${pn === '/about'    ? ' current' : ''}`} to="/about">Who We Are</Link>
+          <Link className={`nav_item${pn === '/mission'  ? ' current' : ''}`} to="/mission">Tribe Vibe</Link>
         </div>
         <div className='right'>
-          <a className={`nav_item${pn === '/signin'  ? ' current' : ''}`} href="/signin">Sign In</a>
-          <a className={`nav_item${pn === '/cart'     ? ' current' : ''}`} href="/cart">Cart</a>
+          <Link className={`nav_item${pn === '/signin'  ? ' current' : ''}`} to="/signin">Sign In</Link>
+          <Link className={`nav_item${pn === '/cart'     ? ' current' : ''}`} to="/cart">Cart</Link>
         </div>
       </div>
     </nav>
