@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-
+import React, { Component } from 'react'
+import { Link } from 'react-router'
 
 class ProductItem extends Component {
 
@@ -35,15 +35,14 @@ class ProductItem extends Component {
 
   render() {
     const {item} = this.props;
-    const productId = encodeURIComponent(item.name);
     return (
-      <a className='ProductItem' href={`/clothing/${productId}`}>
+      <Link to={`/clothing/${item.id}`} className='ProductItem'>
         <img src={item.imageUrl} alt={item.name} />
         <div className='info'>
           <h3>{item.name}</h3>
           <strong>${Math.floor(Math.random()*200)}</strong>
         </div>
-      </a>
+      </Link>
     );
   }
 }

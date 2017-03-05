@@ -1,4 +1,6 @@
-const products = (state = { isFetching: false, products: [] }, action) => {
+const defaults = { isFetching: true, products: [] }
+
+const products = (state = defaults, action) => {
   switch (action.type) {
     case "REQUEST_PRODUCTS":
       return Object.assign({}, state, {
