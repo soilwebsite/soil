@@ -4,8 +4,8 @@ import Product from './ProductItem';
 
 class ProductGrid extends Component {
   render() {
-    const {images} = this.props;
-    const manyImages = shuffle(images.concat(images).concat(images).concat(images));
+    const {products} = this.props;
+    const manyImages = shuffle(products.concat(products).concat(products).concat(products));
 
     return <div className="ProductGrid">
       {manyImages.map((item, i) => <Product key={i} item={item} />)}

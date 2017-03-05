@@ -13,8 +13,8 @@ import SignIn from './pages/SignIn'
 import NotFound from './pages/NotFound'
 
 
-const Routes = (props) => (
-  <Router {...props}>
+const Routes = (props) => {
+  return <Router {...props}>
     <Route path="/" component={App}>
 
       <IndexRoute component={Homepage} />
@@ -29,6 +29,6 @@ const Routes = (props) => (
       <Route path="*" component={NotFound} />
     </Route>
   </Router>
-);
+}
 
 export default Routes;
