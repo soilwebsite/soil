@@ -2,14 +2,6 @@ import React, { Component } from 'react';
 import Sidebar from '../components/Sidebar';
 import ProductGrid from '../components/ProductGrid';
 
-const sidebarItems = [
-  { name: 'Tops' },
-  { name: 'Bottoms' },
-  { name: 'Dresses' },
-  { name: 'Outerwear', onClick: null },
-  { name: 'Accessories' }
-]
-
 class Clothing extends Component {
   render() {
     console.log('itmes', this.props.tags);

@@ -79,7 +79,10 @@ if (!global.hasOwnProperty('db')) { // check to see if sequelize is defined yet
     })
   } else {
     console.log('app in Development...')
-    sequelize = new Sequelize(dbUrl, dbUser, dbPass, {
+    sequelize = new Sequelize(
+      process.env.REACT_APP_DB_URL,
+      process.env.REACT_APP_DB_USER,
+      process.env.REACT_APP_DB_PASS, {
       host: 'localhost',
       dialect: 'postgres',
       pool: {

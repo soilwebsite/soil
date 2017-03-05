@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
-const { appDomain } = require('../app-config')
+require('dotenv').config()
 
 app.all('/*', function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", appDomain);
+  res.header("Access-Control-Allow-Origin", process.env.APP_DOMAIN);
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
   next();
 });
