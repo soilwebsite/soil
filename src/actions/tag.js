@@ -8,7 +8,7 @@ const receiveTags = (tags) => ({
 
 export const fetchTags = () => (dispatch) => {
   dispatch(requestTags())
-  return fetch(`${process.env.API_DOMAIN}/tags`)
+  return fetch(`${process.env.REACT_APP_API_DOMAIN}/tags`)
     .then(res => res.json())
     .then(tags => dispatch(receiveTags(tags)))
     .catch(err => console.log('err', err));

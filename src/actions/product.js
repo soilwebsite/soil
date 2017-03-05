@@ -10,7 +10,7 @@ const receiveProducts = (products) => ({
 
 export const fetchProducts = () => (dispatch) => {
   dispatch(requestProducts())
-  return fetch(`${process.env.API_DOMAIN}/products`)
+  return fetch(`${process.env.REACT_APP_API_DOMAIN}/products`)
     .then(res => res.json())
     .then(products => dispatch(receiveProducts(products)))
     .catch(err => console.log('err', err));
