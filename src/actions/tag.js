@@ -1,4 +1,3 @@
-import config from '../../app-config'
 import fetch from 'isomorphic-fetch'
 const requestTags = () => ({ type: 'REQUEST_TAGS' })
 const receiveTags = (tags) => ({
@@ -9,7 +8,7 @@ const receiveTags = (tags) => ({
 
 export const fetchTags = () => (dispatch) => {
   dispatch(requestTags())
-  return fetch(`${config.apiDomain}/tags`)
+  return fetch(`${process.env.API_DOMAIN}/tags`)
     .then(res => res.json())
     .then(tags => dispatch(receiveTags(tags)))
     .catch(err => console.log('err', err));

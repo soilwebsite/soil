@@ -1,6 +1,5 @@
 
 if (!global.hasOwnProperty('db')) { // check to see if sequelize is defined yet
-  const { dbUrl, dbUser, dbPass } = require('../../app-config')
   const Sequelize = require('sequelize')
   let sequelize;
 

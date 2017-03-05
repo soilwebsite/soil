@@ -1,6 +1,5 @@
 // http://redux.js.org/docs/advanced/AsyncActions.html
 
-import config from '../../app-config'
 import fetch from 'isomorphic-fetch'
 const requestProducts = () => ({ type: 'REQUEST_PRODUCTS' })
 const receiveProducts = (products) => ({
@@ -11,7 +10,7 @@ const receiveProducts = (products) => ({
 
 export const fetchProducts = () => (dispatch) => {
   dispatch(requestProducts())
-  return fetch(`${config.apiDomain}/products`)
+  return fetch(`${process.env.API_DOMAIN}/products`)
     .then(res => res.json())
     .then(products => dispatch(receiveProducts(products)))
     .catch(err => console.log('err', err));
