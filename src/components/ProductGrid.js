@@ -3,12 +3,15 @@ import {shuffle} from 'lodash';
 import Product from './ProductItem';
 
 class ProductGrid extends Component {
+  items () {
+    const {products, filter} = this.props
+    let manyImages = shuffle(products.concat(products).concat(products).concat(products))
+    if (filter) manyImages = manyImages.filter(i => i.tags.find(t => t.name === filter))
+    return manyImages.map((item, i) => <Product key={i} item={item} />)
+  }
   render() {
-    const {products} = this.props;
-    const manyImages = shuffle(products.concat(products).concat(products).concat(products));
-
     return <div className="ProductGrid">
-      {manyImages.map((item, i) => <Product key={i} item={item} />)}
+      {this.items()}
     </div>
   }
 }

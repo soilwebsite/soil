@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
 
 class Sidebar extends Component {
-
+  state = { active: '' }
+  handleClick (item) {
+    this.setState({ active: item.name })
+    this.props.setFilter(item.name)
+  }
   sidebarItems () {
     return this.props.items.map((item, i) => {
-      return (
-        <div key={i} className='side-item' onClick={item.onClick}>
-          {item.name}
-        </div>
-      );
+      let cn = 'side-item'
+      if(this.state.active === item.name) cn += ' active'
+      return <div key={i} className={cn} onClick={this.handleClick.bind(this, item)}>
+        {item.name}
+      </div>
     });
   }
 

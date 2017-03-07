@@ -2,11 +2,9 @@ const express = require('express')
 const path = require('path')
 const app = express()
 require('dotenv').config()
-process.env.REACT_APP_API_DOMAIN = process.env.REACT_APP_DOMAIN
-console.log('process.env.REACT_APP_DOMAIN')
-console.log(process.env.REACT_APP_DOMAIN)
-console.log('process.env.REACT_APP_API_DOMAIN')
-console.log(process.env.REACT_APP_API_DOMAIN)
+// if (process.env.NODE_ENV === 'production') {
+//   process.env.REACT_APP_API_DOMAIN = process.env.REACT_APP_DOMAIN + 'api/v1'
+// }
 
 app.use(express.static(path.join(__dirname, '../build')));
 app.set('port', process.env.PORT || 3000);
