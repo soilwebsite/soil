@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import Navbar from './Navbar';
+import React, { Component } from 'react'
+import Navbar from './Navbar'
+import Spinner from './Spinner'
 import store from '../store'
 import { fetchProducts } from '../actions/product'
 import { fetchTags } from '../actions/tag'
@@ -15,11 +16,14 @@ class App extends Component {
   componentDidMount () {
     store.dispatch(fetchProducts())
     .then(() => store.dispatch(fetchTags()))
-    .then(() => { console.log(store.getState()); this.setState(store.getState())})
+    .then(() => {
+      console.log(store.getState())
+      this.setState(store.getState())
+    })
   }
 
   render() {
-    if (this.state.products.isFetching) { return <div>Loading</div> }
+    if (this.state.products.isFetching) return <Spinner />
 
     return (
         <div className="App">

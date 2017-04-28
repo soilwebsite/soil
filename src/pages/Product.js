@@ -5,8 +5,8 @@ class Product extends Component {
 
   constructor (props) {
     super(props)
-    let id = Number(this.props.location.pathname.split('/clothing/')[1])
-    this.state = { item: this.props.products.products.find(p => p.id === id) }
+    let id = Number(props.location.pathname.split('/clothing/')[1])
+    this.state = { item: props.products.products.find(p => p.id === id) }
   }
 
   render() {

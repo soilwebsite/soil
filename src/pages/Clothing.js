@@ -5,7 +5,7 @@ import ProductGrid from '../components/ProductGrid';
 class Clothing extends Component {
   state = { filter: '' }
   setFilter (tag) {
-    this.setState({ filter: tag })
+    this.setState({ filter: (tag === 'All' ? null : tag) })
   }
   render() {
     if (!this.props.tags) { return null }

@@ -1,40 +1,12 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import Spinner from '../components/Spinner'
 
 class ProductItem extends Component {
 
-  // images () {
-    // const nthBig = 5;
-    // let alreadyShowingNextItem = false;
-    // return manyImages.map((image, i) => {
-      // if (i % nthBig === 0 || !manyImages[i+1] || Math.random() > .7) {
-      //   alreadyShowingNextItem = false;
-      //   return (
-      //     <div className='ProductItem'>
-      //       <img src={image.url} alt={image.name} />
-      //     </div>
-      //   )
-      // }
-      // else if (!alreadyShowingNextItem) {
-      //   alreadyShowingNextItem = true;
-      //   return (
-      //     <div className='two'>
-      //       <div className='ProductItem'>
-      //         <img src={image.url} alt={image.name} />
-      //       </div>
-      //       <div className='ProductItem'>
-      //         <img src={manyImages[i+1].url} alt={manyImages[i+1].name} />
-      //       </div>
-      //     </div>
-      //   )
-      // }
-      // alreadyShowingNextItem = false;
-      // return null;
-    // })
-  // }
-
   render() {
-    const {item} = this.props;
+    const { item } = this.props
+    if (!item) return <Spinner />
     return (
       <Link to={`/clothing/${item.id}`} className='ProductItem'>
         <img src={item.imageUrl} alt={item.name} />
