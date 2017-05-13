@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   render() {
-    if (this.state.products.isFetching) return <Spinner />
+    // if (this.state.products.isFetching) return <Spinner />
 
     return (
         <div className="App">

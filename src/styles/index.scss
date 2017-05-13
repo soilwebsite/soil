@@ -4,9 +4,11 @@
 
 // pages
 @import '../pages/Homepage/style';
+@import '../pages/Clothing/style';
 
 // components
 @import './components/App';
+@import './components/Spinner';
 @import './components/Navbar';
 @import './components/Sidebar';
 @import './components/ProductGrid';

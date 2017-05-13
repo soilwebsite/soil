@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {shuffle} from 'lodash';
 import Product from './ProductItem';
+import Spinner from './Spinner'
+
 
 class ProductGrid extends Component {
   items () {
@@ -10,6 +12,8 @@ class ProductGrid extends Component {
     return manyImages.map((item, i) => <Product key={i} item={item} />)
   }
   render() {
+    let items = this.items()
+    if(items.length === 0) return <Spinner />
     return <div className="ProductGrid">
       {this.items()}
     </div>

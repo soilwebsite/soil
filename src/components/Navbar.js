@@ -13,12 +13,11 @@ class Navbar extends Component {
 
       <div className='items'>
         <div className='middle'>
-          <Link className={`nav_item${path === '/clothing' ? ' current' : ''}`} to="/clothing">Shop</Link>
-          <Link className={`nav_item${path === '/about'    ? ' current' : ''}`} to="/about">Who We Are</Link>
-          <Link className={`nav_item${path === '/mission'  ? ' current' : ''}`} to="/mission">Tribe Vibe</Link>
+          <Link className={`nav_item${path === '/clothing' ? ' current' : ''}`} to="/clothing">The Collection</Link>
+          <Link className={`nav_item${path === '/mission'  ? ' current' : ''}`} to="/mission">The Initiative</Link>
         </div>
         <div className='right'>
-          <Link className={`nav_item${path === '/signin'  ? ' current' : ''}`} to="/signin">Sign In</Link>
+          {/* <Link className={`nav_item${path === '/signin'  ? ' current' : ''}`} to="/signin">Sign In</Link> */}
           <Link className={`nav_item${path === '/cart'     ? ' current' : ''}`} to="/cart">Cart</Link>
         </div>
       </div>
