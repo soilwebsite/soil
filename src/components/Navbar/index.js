@@ -10,7 +10,7 @@ class Navbar extends Component {
 
     return <nav className={`Navbar ${onHomepage}`}>
       <Link className="nav_item title" to="/">
-        <strong><h1>Forest Tribe</h1></strong>
+        <strong><h1>F<span>o</span>restTr<span>i</span>be</h1></strong>
       </Link>
 
       <div className='items'>

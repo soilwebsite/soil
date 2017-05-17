@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
-import Sidebar from '../../components/Sidebar';
-import ProductGrid from '../../components/ProductGrid';
+import BigProduct from '../../components/BigProduct';
+import {shuffle} from 'lodash';
 
 class Clothing extends Component {
-  state = { filter: '' }
-  setFilter (tag) {
-    this.setState({ filter: (tag === 'All' ? null : tag) })
+
+  items () {
+    let products = this.props.products.data
+    return products.map((item, i) => <BigProduct key={i} item={item} />)
   }
+
   render() {
     if (!this.props.tags || !this.props.tags.data) { return null }
-    return <div className="Clothing">
-      <Sidebar items={this.props.tags.data} setFilter={this.setFilter.bind(this)} />
-      <ProductGrid products={this.props.products.data} filter={this.state.filter} />
-    </div>
+    return (
+      <div className="Clothing">
+        {this.items()}
+      </div>
+    )
   }
 }
 
