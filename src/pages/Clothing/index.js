@@ -8,10 +8,10 @@ class Clothing extends Component {
     this.setState({ filter: (tag === 'All' ? null : tag) })
   }
   render() {
-    if (!this.props.tags) { return null }
+    if (!this.props.tags || !this.props.tags.data) { return null }
     return <div className="Clothing">
-      <Sidebar items={this.props.tags.tags} setFilter={this.setFilter.bind(this)} />
-      <ProductGrid products={this.props.products.products} filter={this.state.filter} />
+      <Sidebar items={this.props.tags.data} setFilter={this.setFilter.bind(this)} />
+      <ProductGrid products={this.props.products.data} filter={this.state.filter} />
     </div>
   }
 }

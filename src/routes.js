@@ -6,7 +6,7 @@ import Homepage from './pages/Homepage'
 import Clothing from './pages/Clothing'
 import Product from './pages/Product'
 import About from './pages/About'
-import Mission from './pages/Mission'
+import Blog from './pages/Blog'
 import Cart from './pages/Cart'
 import SignIn from './pages/SignIn'
 
@@ -21,10 +21,10 @@ const Routes = (props) => {
       <Route path="/clothing" component={Clothing} />
       <Route path="/clothing/:id" component={Product} />
       <Route path="/about" component={About} />
-      <Route path="/mission" component={Mission} />
+      <Route path="/theinitiative" component={Blog} />
 
-      <Route path="/cart" component={Cart} />
-      <Route path="/signin" component={SignIn} />
+      <Route path="/bag" component={Cart} />
+      <Route path="/account" component={SignIn} />
 
       <Route path="*" component={NotFound} />
     </Route>

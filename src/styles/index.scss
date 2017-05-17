@@ -7,9 +7,9 @@
 @import '../pages/Clothing/style';
 
 // components
+@import '../components/Navbar/style';
 @import './components/App';
 @import './components/Spinner';
-@import './components/Navbar';
 @import './components/Sidebar';
 @import './components/ProductGrid';
 @import './components/ProductDetail';

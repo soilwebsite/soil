@@ -9,7 +9,7 @@ const tags = (state = defaults, action) => {
     case "RECEIVE_TAGS":
       return Object.assign({}, state, {
         isFetching: false,
-        tags: action.tags,
+        data: action.tags,
         lastUpdated: action.receivedAt
       })
     default:

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar'
-import Spinner from './Spinner'
 import store from '../store'
 import { fetchProducts } from '../actions/product'
 import { fetchTags } from '../actions/tag'
@@ -23,8 +22,6 @@ class App extends Component {
   }
 
   render() {
-    // if (this.state.products.isFetching) return <Spinner />
-
     return (
         <div className="App">
           <Navbar location={this.props.location} />

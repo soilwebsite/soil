@@ -9,7 +9,7 @@ const products = (state = defaults, action) => {
     case "RECEIVE_PRODUCTS":
       return Object.assign({}, state, {
         isFetching: false,
-        products: action.products,
+        data: action.products,
         lastUpdated: action.receivedAt
       })
     default:

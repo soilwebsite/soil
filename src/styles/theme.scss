@@ -1,3 +1,21 @@
+@font-face {
+    font-family: 'franklingothic-demi';
+    src: url('../../public/fonts/franklingothic-demi-webfont.woff2') format('woff2'),
+         url('../../public/fonts/franklingothic-demi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'franklingothic-book';
+    src: url('../../public/fonts/franklingothic-book-webfont.woff2') format('woff2'),
+         url('../../public/fonts/franklingothic-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 $nav-height: 122px;
 $sidebar-width: 220px;
 $page-margin: $sidebar-width/4;
@@ -10,8 +28,21 @@ html, #root, body, .App {
 
 body {
   text-align: center;
-  font-family: 'Kanit', sans-serif;
-  letter-spacing: 0.1em;
+  font-family: 'franklingothic-book', 'Open Sans', 'Kanit', sans-serif;
+  letter-spacing: 0.2em;
   color: #7f7f7f;
   font-size: 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'franklingothic-demi', sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+  border: 3px dashed black;
+  display: inline-block;
+  padding: .2em;
+  letter-spacing: .8em;
+  // line-height: 2em;
 }

@@ -21,7 +21,7 @@ class Homepage extends Component {
             THE COLLECTION
           </a>
           &nbsp;
-          <a href="/mission">
+          <a href="/theinitiative">
             THE INITIATIVE
           </a>
         </div>
