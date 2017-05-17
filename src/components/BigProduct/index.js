@@ -12,7 +12,7 @@ class BigProduct extends React.Component {
         <img src={imageUrl} alt={item.name} />
         <div className='info'>
           <h3>{item.name}</h3>
-          <strong>${Math.floor(Math.random()*200)}</strong>
+          <p><strong>${Math.floor(Math.random()*200)}</strong></p>
         </div>
       </Link>
     );

@@ -1,13 +1,10 @@
 .BigProduct {
-  position: relative;
   border: 1px solid #ddd;
   margin: 0px 4px 8px 4px;
-  break-inside: avoid;
-  border-radius: 2px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
   img {
     // max-height: $big-height;
     height: 600px;
@@ -16,24 +13,21 @@
     transition: 0.5s;
   }
   .info {
-    width: 100%;
+    padding: 20px 0 50px;
     height: 7%;
-    position: absolute;
-    bottom: 40%;
+    // position: absolute;
+    // bottom: 40%;
     left: 0;
     background: #fff;
-    opacity: 0;
+    // opacity: 0;
     transition: opacity .5s;
-    text-transform: none;
-    display: flex;
+    // text-transform: none;
     font-size: 12px;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     h3 {
-      margin-right: 5px;
+      margin: 5px;
     }
-  }
-  &:hover .info {
-    opacity: .9;
   }
 }
