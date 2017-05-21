@@ -16,7 +16,7 @@
 
 }
 
-$nav-height: 122px;
+$nav-height: 90px;
 $sidebar-width: 220px;
 $page-margin: $sidebar-width/4;
 
@@ -38,14 +38,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'franklingothic-demi', sans-serif;
 }
 
+$logo-spacing: 1.1em;
 h1 {
   color: #333;
   font-size: 36px;
-  // border: 3px dashed black;
   display: inline-block;
   padding: .2em;
-  letter-spacing: 1.1em;
-  // line-height: 2em;
+  letter-spacing: $logo-spacing;
+  padding-left: $logo-spacing;
   span {
     color: #bbb;
   }

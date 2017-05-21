@@ -5,22 +5,18 @@ $nav-item-padding: 15px;
   background: #fff;
   text-align: center;
   z-index: 10;
-  margin-bottom: $page-margin/2;
   &.on-homepage {
     margin-bottom: 0;
   }
-  .items {
-    display: flex;
-    justify-content: center;
-    .middle, .right {
-      display: inline-block;
-    }
-    .right {
-      margin-right: $page-margin - $nav-item-padding;
-      position: absolute;
-      margin-left: auto;
-      right: 0;
-    }
+  img {
+    height: $nav-height/2;
+  }
+  .top-right {
+    margin-right: $page-margin - $nav-item-padding;
+    position: absolute;
+    margin-left: auto;
+    right: 0;
+    top: 10px;
   }
   .nav_item {
     &.title {

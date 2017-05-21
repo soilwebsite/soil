@@ -1,31 +1,18 @@
 .BigProduct {
   border: 1px solid #ddd;
   margin: 0px 4px 8px 4px;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
   img {
-    // max-height: $big-height;
-    height: 600px;
-    max-width: 100%;
+    width: 800px;
     perspective: 1000;
     transition: 0.5s;
   }
   .info {
     padding: 20px 0 50px;
     height: 7%;
-    // position: absolute;
-    // bottom: 40%;
     left: 0;
     background: #fff;
-    // opacity: 0;
     transition: opacity .5s;
-    // text-transform: none;
     font-size: 12px;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     h3 {
       margin: 5px;
     }
