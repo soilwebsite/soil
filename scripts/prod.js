@@ -9,6 +9,12 @@ require('dotenv').config()
 app.use(express.static(path.join(__dirname, '../build')));
 app.set('port', process.env.PORT || 3000);
 
+app.all('/*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", process.env.REACT_APP_DOMAIN);
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+});
+
 app.use('/api/v1', require('../server/api/v1'));
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '../build', 'index.html'));
