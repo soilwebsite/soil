@@ -2,18 +2,10 @@ const express = require('express')
 const path = require('path')
 const app = express()
 require('dotenv').config()
-// if (process.env.NODE_ENV === 'production') {
-//   process.env.REACT_APP_API_DOMAIN = process.env.REACT_APP_DOMAIN + 'api/v1'
-// }
 
 app.use(express.static(path.join(__dirname, '../build')));
 app.set('port', process.env.PORT || 3000);
 
-app.all('/*', function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", process.env.REACT_APP_DOMAIN);
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  next();
-});
 
 app.use('/api/v1', require('../server/api/v1'));
 app.get('/*', (req, res) => {
