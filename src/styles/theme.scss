@@ -38,14 +38,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'franklingothic-demi', sans-serif;
 }
 
-$logo-spacing: 1.1em;
+$logo-spacing: .7em;
 h1 {
   color: #333;
-  font-size: 36px;
+  font-size: 40px;
   display: inline-block;
   padding: .2em;
   letter-spacing: $logo-spacing;
   padding-left: $logo-spacing;
+  transform: scaleY(0.7);
   span {
     color: #bbb;
   }

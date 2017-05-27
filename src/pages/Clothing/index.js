@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import BigProduct from '../../components/BigProduct';
-import {shuffle} from 'lodash';
 
 class Clothing extends Component {
 

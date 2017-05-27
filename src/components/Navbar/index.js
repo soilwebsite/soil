@@ -9,7 +9,10 @@ class Navbar extends Component {
 
     return <nav className="Navbar">
       <Link className="nav_item title" to="/">
-        <h1><img src={'baikhal.png'} alt="Baikhal" /></h1>
+        <h1>
+          {/* <img src={'baikhal.png'} alt="Baikhal" /> */}
+          BAIKHAL
+        </h1>
       </Link>
       <div className='top-right'>
         <Link className={`nav_item ${path === '/account'  ? 'current' : ''}`} to="/account"><AccountIcon /></Link>
