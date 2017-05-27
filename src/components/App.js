@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar'
+import Footer from './Footer'
 import store from '../store'
 import { fetchProducts } from '../actions/product'
 import { fetchTags } from '../actions/tag'
@@ -29,6 +30,7 @@ class App extends Component {
             this.props.children,
             { ...this.props, ...this.state }
           )}
+          <Footer />
         </div>
     );
   }

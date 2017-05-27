@@ -15,15 +15,17 @@ class Homepage extends Component {
   render() {
     return (
       <div className="Homepage">
-        <h2 className="textTitle">Discover</h2>
-        <div className="buttons">
-          <a href="/clothing">
-            THE COLLECTION
-          </a>
-          &nbsp;
-          <a href="/theinitiative">
-            THE INITIATIVE
-          </a>
+        <div className="action-box">
+          <h2 className="textTitle">Discover</h2>
+          <div className="buttons">
+            <a href="/clothing">
+              THE COLLECTION
+            </a>
+            &nbsp;
+            <a href="/theinitiative">
+              THE INITIATIVE
+            </a>
+          </div>
         </div>
         <div className='video-container'>
           <video
@@ -34,6 +36,7 @@ class Homepage extends Component {
             src={forestVideo}
             />
         </div>
+        <div className='video-container-spacer' />
       </div>
     );
     // <div className="hero" />

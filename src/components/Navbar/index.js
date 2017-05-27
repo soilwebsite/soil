@@ -6,9 +6,8 @@ import BagIcon from 'react-icons/lib/fa/shopping-bag'
 class Navbar extends Component {
   render() {
     const path = this.props.location.pathname;
-    const onHomepage = path === '/' ? 'on-homepage' : '';
 
-    return <nav className={`Navbar ${onHomepage}`}>
+    return <nav className="Navbar">
       <Link className="nav_item title" to="/">
         <h1><img src={'baikhal.png'} alt="Baikhal" /></h1>
       </Link>
