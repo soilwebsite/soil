@@ -16,7 +16,7 @@ class Homepage extends Component {
     return (
       <div className="Homepage">
         <div className="action-box">
-          <h2 className="textTitle">Discover</h2>
+          {/* <h2 className="textTitle">Discover</h2> */}
           <div className="buttons">
             <a href="/clothing">
               THE COLLECTION
