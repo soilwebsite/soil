@@ -1,6 +1,6 @@
 {
-  "name": "forest-tribe",
-  "version": "0.1.0",
+  "name": "Baikhal",
+  "version": "0.2.0",
   "private": true,
   "homepage": "http://www.baikhal.com",
   "devDependencies": {
@@ -67,12 +67,13 @@
     "webpack": "^1.15.0"
   },
   "scripts": {
-    "dev-api": "node scripts/dev-api.js",
+    "addons": "node scripts/addons.js",
+    "dev-api": "node scripts/dev-api.js && node scripts/addons.js",
     "test": "node scripts/test.js --env=jsdom",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "prod": "node scripts/prod.js",
-    "app": "NODE_ENV=production node scripts/build.js && node scripts/prod.js"
+    "app": "NODE_ENV=production node scripts/build.js && node scripts/prod.js && node scripts/addons.js"
   },
   "jest": {
     "collectCoverageFrom": [
