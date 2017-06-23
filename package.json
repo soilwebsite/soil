@@ -73,7 +73,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "prod": "node scripts/prod.js",
-    "app": "NODE_ENV=production node scripts/build.js && node scripts/prod.js && node scripts/addons.js"
+    "app": "node scripts/build.js && node scripts/prod.js && node scripts/addons.js"
   },
   "jest": {
     "collectCoverageFrom": [
