@@ -1,6 +1,8 @@
 const express = require('express')
 const path = require('path')
 const app = express()
+process.env.NODE_ENV = 'production';
+
 require('dotenv').config()
 
 app.use(express.static(path.join(__dirname, '../build')));

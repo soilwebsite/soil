@@ -20,6 +20,13 @@ class App extends Component {
       console.log(store.getState())
       this.setState(store.getState())
     })
+    fetch(`${process.env.REACT_APP_API_DOMAIN}/subscription`, {
+      method: 'POST',
+      body: { email: 'jacobnelken@gmail.com' },
+      headers: { "content-type": "application/json" }
+    })
+    .then(res => console.log(res.json()))
+    .catch(err => console.log(err))
   }
 
   render() {
