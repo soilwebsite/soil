@@ -1,9 +1,7 @@
 let fetch = require('node-fetch')
 
 module.exports = (req, res) => {
-  // TODO
-  console.log(Object.keys('hello!', req.method));
-  return res.send('excellent')
+  return res.send(req.method)
 
   let email = req.body.email
   let mailChimpID = process.env.REACT_APP_MAILCHIMP_ID
