@@ -1,15 +1,15 @@
-const defaults = { isFetching: true, tags: {} }
+const defaults = { isFetching: true, posts: {} }
 
-const tags = (state = defaults, action) => {
+const posts = (state = defaults, action) => {
   switch (action.type) {
-    case "REQUEST_TAGS":
+    case "REQUEST_POSTS":
       return Object.assign({}, state, {
         isFetching: true,
       })
-    case "RECEIVE_TAGS":
+    case "RECEIVE_POSTS":
       return Object.assign({}, state, {
         isFetching: false,
-        data: action.tags,
+        data: action.posts,
         lastUpdated: action.receivedAt
       })
     default:
@@ -17,4 +17,4 @@ const tags = (state = defaults, action) => {
   }
 }
 
-export default tags
+export default posts

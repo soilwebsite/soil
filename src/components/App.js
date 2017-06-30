@@ -4,28 +4,18 @@ import Footer from './Footer'
 import store from '../store'
 import { fetchProducts } from '../actions/product'
 import { fetchTags } from '../actions/tag'
+import { fetchPosts } from '../actions/wordpress'
+// import { subscribeUser } from '../actions/subscription'
 
 
 class App extends Component {
 
-  constructor () {
-    super()
-    this.state = store.getState()
-  }
-
   componentDidMount () {
     store.dispatch(fetchProducts())
     .then(() => store.dispatch(fetchTags()))
-    .then(() => {
-      console.log(store.getState())
-      this.setState(store.getState())
-    })
-    fetch(`${process.env.REACT_APP_API_DOMAIN}/subscription`, {
-      method: 'POST',
-      body: { email: 'jacobnelken@gmail.com' },
-      headers: { "content-type": "application/json" }
-    })
-    .then(res => console.log(res.json()))
+    .then(() => store.dispatch(fetchPosts()))
+    // .then(() => store.dispatch(subscribeUser()))
+    .then(() => { console.log(store.getState()); this.setState(store.getState()) })
     .catch(err => console.log(err))
   }
 

@@ -1,4 +1,4 @@
-const defaults = { isFetching: true, products: [] }
+const defaults = { isFetching: true, products: {} }
 
 const products = (state = defaults, action) => {
   switch (action.type) {
