@@ -22,7 +22,7 @@ class Homepage extends Component {
               THE COLLECTION
             </a>
             &nbsp;
-            <a href="https://impressions.baikhal.com">
+            <a href="/impressions">
               IMPRESSIONS
             </a>
           </div>

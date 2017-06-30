@@ -12,17 +12,16 @@ import SignIn from './pages/SignIn'
 
 import NotFound from './pages/NotFound'
 
-
 const Routes = (props) => {
   return <Router {...props}>
     <Route path="/" component={App}>
 
       <IndexRoute component={Homepage} />
+      <Route path="/impressions" component={Blog} />
       <Route path="/*" component={Clothing} />
       <Route path="/clothing" component={Clothing} />
       <Route path="/clothing/:id" component={Product} />
       <Route path="/about" component={About} />
-      <Route path="/theinitiative" component={Blog} />
 
       <Route path="/bag" component={Cart} />
       <Route path="/account" component={SignIn} />
