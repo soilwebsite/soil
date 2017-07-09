@@ -1,11 +1,12 @@
 import React from 'react'
+import { SubmitUI } from './ui'
 
 export default function Submit({ handleSubmit }) {
   return (
-    <div className="Submit">
+    <SubmitUI>
       <div className="ok" onClick={handleSubmit}>
         OK
       </div>
-    </div>
+    </SubmitUI>
   )
 }

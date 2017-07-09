@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Submit from '../Submit'
 
+import { EmailCapture } from './ui'
+
 class Footer extends Component {
 
   constructor() {
@@ -10,6 +12,10 @@ class Footer extends Component {
 
   handleChange(v) {
     this.setState({ email: v })
+  }
+
+  handleSubmit() {
+    // subscribe email
   }
 
   render() {
@@ -29,7 +35,7 @@ class Footer extends Component {
           <p><a href="/">FAQ</a></p>
         </div>
         <div>
-          <h3>Find Us On</h3>
+          <h3>Befriend</h3>
           <p><a
             href="https://www.instagram.com/baikhalofficial"
             target="blank"
@@ -38,11 +44,13 @@ class Footer extends Component {
           </a></p>
           <p><a href="/">Facebook</a></p>
         </div>
-        <div className="email-capture">
-          <h3>Updates</h3>
-          <input type="email" value={this.state.value} onChange={this.handleChange} />
-          <Submit handleSubmit={this.handleSubmit} />
-        </div>
+          <div>
+          <h3>Stay In Touch</h3>
+          <EmailCapture>
+            <input type="email" value={this.state.value} onChange={this.handleChange} />
+            <Submit handleSubmit={this.handleSubmit} />
+          </EmailCapture>
+          </div>
       </div>
     );
   }
