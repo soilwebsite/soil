@@ -1,3 +1,4 @@
+const initializeServer = require('./initializeServer');
 const express = require('express')
 const path = require('path')
 const app = express()
@@ -8,12 +9,11 @@ require('dotenv').config()
 app.use(express.static(path.join(__dirname, '../build')));
 app.set('port', process.env.PORT || 3000);
 
+initializeServer(app)
 
-app.use('/api/v1', require('../server/api/v1'));
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '../build', 'index.html'));
 })
-
 
 app.listen(app.get('port'), () => {
   console.info('*******************************************************');

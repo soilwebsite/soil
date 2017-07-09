@@ -5,8 +5,6 @@ import store from '../store'
 import { fetchProducts } from '../actions/product'
 import { fetchTags } from '../actions/tag'
 import { fetchPosts } from '../actions/wordpress'
-// import { subscribeUser } from '../actions/subscription'
-
 
 class App extends Component {
 
@@ -14,7 +12,6 @@ class App extends Component {
     store.dispatch(fetchProducts())
     .then(() => store.dispatch(fetchTags()))
     .then(() => store.dispatch(fetchPosts()))
-    // .then(() => store.dispatch(subscribeUser()))
     .then(() => { console.log(store.getState()); this.setState(store.getState()) })
     .catch(err => console.log(err))
   }

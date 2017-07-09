@@ -5,8 +5,6 @@ export const EmailCapture = styled.div`
   display: flex;
   input[type=email] {
     border-width: 0;
-    ${'' /* box-shadow: 0 0 0 #ddd; */}
-    ${'' /* border-color: #ddd; */}
     width: 18vw;
     padding: 5px;
     display: inline-block;
@@ -14,8 +12,5 @@ export const EmailCapture = styled.div`
   }
   input:focus {
     outline: none;
-  }
-  .Submit {
-    margin-left: 10px;
   }
 `

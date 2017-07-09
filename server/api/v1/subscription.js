@@ -1,31 +1,38 @@
 let fetch = require('node-fetch')
 
 module.exports = (req, res) => {
-  return res.send(req.method)
-
   let email = req.body.email
-  let mailChimpID = process.env.REACT_APP_MAILCHIMP_ID
-  let apiKey = process.env.REACT_APP_MAILCHIMP_API
-  let instance = apiKey.slice(-4)
-  let url = `https://${instance}.api.mailchimp.com/3.0/lists/${mailChimpID}/members/`
-  let headers = {
-    'Authorization': 'Basic ' + new Buffer('any:' + apiKey).toString('base64'),
+    , mailChimpID = process.env.REACT_APP_MAILCHIMP_ID
+    , apiKey = process.env.REACT_APP_MAILCHIMP_API
+    , instance = apiKey.slice(-4)
+    , url = `https://${instance}.api.mailchimp.com/3.0/lists/${mailChimpID}/members`
+    , method = 'POST'
+    , encryptedAPIKey = new Buffer('any:' + apiKey).toString('base64')
+    , headers = {
+    'Authorization': 'Basic ' + encryptedAPIKey,
     'Content-Type': 'application/json'
   }
-  let body = {
-    "email_address": email,
-    "status": "subscribed"
-  }
+    , body = JSON.stringify({
+    email_address: email,
+    status: "subscribed",
+    email_type: 'html',
+    timestamp_signup: Date.now()
+  })
 
-  console.log('subscribe: ' + url);
-  fetch(url, { method: 'POST', body, headers })
-    .then(res => res.json())
+  if(!email) throw new Error('No email given')
+  console.log('subscribing...: ' + url)
+
+  return fetch(url, { method, body, headers })
+    .then(res => {
+      console.log(res.status);
+      console.log(res.statusText);
+      return res.text()
+    })
     .then(body => {
-      console.log(body);
-      // models.User.save({ include: models.Tag }).then(function(data) {
-      //   return res.json(data);
-      // })
-
+      let b = JSON.parse(body)
+      if(!b.status != 200) { throw new Error(body) }
+      console.log('Subscribed ' + JSON.parse(body).email_address)
       return body
-    });
+    })
+    .catch(err => console.error('MailChimp - ', err))
 }

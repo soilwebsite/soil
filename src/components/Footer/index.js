@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import store from '../../store'
+import { subscribeUser } from '../../actions/subscription'
 import Submit from '../Submit'
-
 import { EmailCapture } from './ui'
 
 class Footer extends Component {
@@ -8,14 +9,18 @@ class Footer extends Component {
   constructor() {
     super()
     this.state = { email: '' }
+    this.subscribeEmail = this.subscribeEmail.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
-  handleChange(v) {
-    this.setState({ email: v })
+  handleChange(event) {
+    this.setState({ email: event.target.value })
   }
 
-  handleSubmit() {
-    // subscribe email
+  subscribeEmail() {
+    if(!this.state.email) alert('Please enter a valid email address')
+    store.dispatch(subscribeUser(this.state.email))
+    .catch(err => console.log(err))
   }
 
   render() {
@@ -48,7 +53,7 @@ class Footer extends Component {
           <h3>Stay In Touch</h3>
           <EmailCapture>
             <input type="email" value={this.state.value} onChange={this.handleChange} />
-            <Submit handleSubmit={this.handleSubmit} />
+            <Submit handleSubmit={this.subscribeEmail} />
           </EmailCapture>
           </div>
       </div>

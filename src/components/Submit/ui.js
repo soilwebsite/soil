@@ -2,12 +2,11 @@ import styled from 'styled-components'
 
 export const SubmitUI = styled.div`
   display: inline-block;
-  .ok {
-    // border-radius: 100%;
-    width: 60px;
+  margin-left: 10px;
+  user-select: none;
+  div {
+    padding: 0 20px;
     color: black;
-    // background: white;
-    // width: 30px;
     border: 1px solid #ddd;
     height: 30px;
     display: flex;
