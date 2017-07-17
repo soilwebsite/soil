@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import forestVideo from '../../assets/forest.mp4';
+// import forestVideo from '../../assets/forest.mp4';
+import { Background } from './ui'
 
 class Homepage extends Component {
 
@@ -27,7 +28,8 @@ class Homepage extends Component {
             </a>
           </div>
         </div>
-        <div className='video-container'>
+        <Background />
+        {/* <div className='video-container'>
           <video
             ref='video'
             autoPlay
@@ -36,7 +38,7 @@ class Homepage extends Component {
             src={forestVideo}
             />
         </div>
-        <div className='video-container-spacer' />
+        <div className='video-container-spacer' /> */}
       </div>
     );
     // <div className="hero" />

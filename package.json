@@ -1,8 +1,8 @@
 {
-  "name": "Baikhal",
+  "name": "virgin-sol",
   "version": "0.2.0",
   "private": true,
-  "homepage": "http://www.baikhal.com",
+  "homepage": "http://www.virgin-sol.com",
   "devDependencies": {
     "autoprefixer": "6.5.1",
     "babel-core": "6.17.0",

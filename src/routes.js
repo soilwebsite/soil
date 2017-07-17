@@ -3,6 +3,7 @@ import { Router, Route, IndexRoute } from 'react-router'
 import App from './components/App'
 
 import Homepage from './pages/Homepage'
+import ComingSoon from './pages/ComingSoon'
 import Clothing from './pages/Clothing'
 import Product from './pages/Product'
 import About from './pages/About'
@@ -18,7 +19,7 @@ const Routes = (props) => {
 
       <IndexRoute component={Homepage} />
       <Route path="/impressions" component={Blog} />
-      <Route path="/*" component={Clothing} />
+      <Route path="/*" component={ComingSoon} />
       <Route path="/clothing" component={Clothing} />
       <Route path="/clothing/:id" component={Product} />
       <Route path="/about" component={About} />

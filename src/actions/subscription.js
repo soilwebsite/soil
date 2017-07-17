@@ -3,11 +3,11 @@
 import fetch from 'isomorphic-fetch'
 
 const requestSubscription = () => ({ type: 'REQUEST_SUBSCRIPTION' })
-const receiveSubscription = subscription => ({
-  type: 'RECEIVE_SUBSCRIPTION',
-  receivedAt: Date.now(),
-  subscription
-})
+// const receiveSubscription = subscription => ({
+//   type: 'RECEIVE_SUBSCRIPTION',
+//   receivedAt: Date.now(),
+//   subscription
+// })
 
 export const subscribeUser = email => dispatch => {
   dispatch(requestSubscription())

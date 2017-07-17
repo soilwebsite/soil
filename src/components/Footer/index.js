@@ -42,7 +42,7 @@ class Footer extends Component {
         <div>
           <h3>Befriend</h3>
           <p><a
-            href="https://www.instagram.com/baikhalofficial"
+            href="https://www.instagram.com/virgin_sol"
             target="blank"
           >
             Instagram

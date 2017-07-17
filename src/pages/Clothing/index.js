@@ -12,10 +12,7 @@ class Clothing extends Component {
     if (!this.props.tags || !this.props.tags.data) { return null }
     return (
       <div className="Clothing">
-        {/* {this.items()} */}
-        <div className='coming-soon'>
-          <span>Coming Soon</span>
-        </div>
+        {this.items()}
       </div>
     )
   }
