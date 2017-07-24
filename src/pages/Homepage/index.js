@@ -22,10 +22,7 @@ class Homepage extends Component {
             <a href="/clothing">
               THE COLLECTION
             </a>
-            &nbsp;
-            <a href="/impressions">
-              IMPRESSIONS
-            </a>
+            {/* &nbsp; */}
           </div>
         </div>
         <Background />
