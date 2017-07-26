@@ -27,8 +27,8 @@ class Navbar extends Component {
           </LinkRight>
         </NavLinks>
         <Link className="nav_item title" to="/">
-          <img src={'virgin-sol-text-logo.png'} alt="Virgin Sol Logo" />
-          {/* <h1>Virgin Sol</h1> */}
+          <img src={'virginsoil-text-logo.png'} alt="Virgin Soil" />
+          {/* <h1>Virgin Soil</h1> */}
         </Link>
       </nav>
     )

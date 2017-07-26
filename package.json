@@ -1,8 +1,8 @@
 {
-  "name": "virgin-sol",
-  "version": "0.2.0",
+  "name": "virginsoil",
+  "version": "0.3.0",
   "private": true,
-  "homepage": "http://www.virgin-sol.com",
+  "homepage": "http://www.virginsoil.us",
   "devDependencies": {
     "autoprefixer": "6.5.1",
     "babel-core": "6.17.0",
