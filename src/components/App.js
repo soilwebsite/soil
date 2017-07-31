@@ -10,10 +10,13 @@ class App extends Component {
 
   componentDidMount () {
     store.dispatch(fetchProducts())
+    .catch(err => console.log(err))
     .then(() => store.dispatch(fetchTags()))
     .then(() => store.dispatch(fetchPosts()))
-    .then(() => { console.log(store.getState()); this.setState(store.getState()) })
-    .catch(err => console.log(err))
+    .then(() => {
+      console.log(store.getState())
+      this.setState(store.getState())
+    })
   }
 
   render() {
