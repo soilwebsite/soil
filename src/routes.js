@@ -19,8 +19,8 @@ const Routes = (props) => {
     <Route path="/" component={App}>
 
       <IndexRoute component={Homepage} />
-      <Route path="/impressions/:post" component={Blog} />
-      <Route path="/impressions" component={Blogs} />
+      {/* <Route path="/impressions/:post" component={Blog} />
+      <Route path="/impressions" component={Blogs} /> */}
       <Route path="/*" component={ComingSoon} />
       <Route path="/clothing" component={Clothing} />
       <Route path="/clothing/:id" component={Product} />

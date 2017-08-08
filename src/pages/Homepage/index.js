@@ -5,7 +5,7 @@ import { Background } from './ui'
 class Homepage extends Component {
 
   componentDidMount () {
-    this.refs.video.addEventListener('ended', this.replay.bind(this));
+    // this.refs.video.addEventListener('ended', this.replay.bind(this));
   }
 
   replay () {

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  margin-top: -90px; ${'' /* -$nav-height; */}
+  margin-top: -${({ theme }) => theme.spacing.navHeight}px;
   height: 100vh;
   width: 100vw;
   display: flex;

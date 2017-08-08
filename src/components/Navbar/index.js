@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
-import { NavLinks, LinkRight, TextLink } from './ui'
+import { Nav, VirginSoil, NavLinks, NavLink, Group, TitleImg } from './ui'
 import AccountIcon from 'react-icons/lib/fa/user'
 import BagIcon from 'react-icons/lib/fa/shopping-bag'
 
@@ -9,28 +8,39 @@ class Navbar extends Component {
     const path = this.props.location.pathname;
 
     return (
-      <nav className="Navbar">
+      <Nav>
         <NavLinks>
-          <TextLink href="/impressions">
-            IMPRESSIONS
-          </TextLink>
-          <TextLink href="/about">
-            ABOUT US
-          </TextLink>
-          <LinkRight>
-            <Link className={`nav_item ${path === '/account' ? 'current' : ''}`} to="/account">
+          <Group>
+            {/* <NavLink href="/impressions">
+              IMPRESSIONS
+            </NavLink> */}
+            <NavLink href="/about">
+              ABOUT
+            </NavLink>
+          </Group>
+          <TitleImg href="/">
+            <VirginSoil
+              src={'virginsoil-text-logo.png'}
+              alt="Virgin Soil"
+            />
+            {/* <h1>Virgin Soil</h1> */}
+          </TitleImg>
+          <Group>
+            <NavLink
+              className={path === '/account' && 'current'}
+              href="/account"
+              >
               <AccountIcon />
-            </Link>
-              <Link className={`nav_item ${path === '/bag' ? 'current' : ''}`} to="/bag">
+            </NavLink>
+              <NavLink
+                className={path === '/bag' && 'current'}
+                href="/bag"
+                >
                 <BagIcon />
-            </Link>
-          </LinkRight>
+            </NavLink>
+          </Group>
         </NavLinks>
-        <Link className="nav_item title" to="/">
-          <img src={'virginsoil-text-logo.png'} alt="Virgin Soil" />
-          {/* <h1>Virgin Soil</h1> */}
-        </Link>
-      </nav>
+      </Nav>
     )
   }
 }
