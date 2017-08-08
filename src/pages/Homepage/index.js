@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 // import forestVideo from '../../assets/forest.mp4';
 import { Background } from './ui'
 
 class Homepage extends Component {
 
-  componentDidMount () {
+  componentDidMount() {
     // this.refs.video.addEventListener('ended', this.replay.bind(this));
   }
 
-  replay () {
-    this.refs.video.currentTime = 0;
-    this.refs.video.play();
+  replay() {
+    this.refs.video.currentTime = 0
+    this.refs.video.play()
   }
 
   render() {
@@ -24,8 +24,8 @@ class Homepage extends Component {
             </a>
             &nbsp;
             <a href="/shop">
-            SHOP
-          </a>
+              SHOP
+            </a>
           </div>
         </div>
         <Background />
@@ -40,9 +40,9 @@ class Homepage extends Component {
         </div>
         <div className='video-container-spacer' /> */}
       </div>
-    );
+    )
     // <div className="hero" />
   }
 }
 
-export default Homepage;
+export default Homepage
