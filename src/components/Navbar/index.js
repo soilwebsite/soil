@@ -2,10 +2,12 @@ import React, { Component } from 'react'
 import { Nav, VirginSoil, NavLinks, NavLink, Group, TitleImg } from './ui'
 import AccountIcon from 'react-icons/lib/fa/user'
 import BagIcon from 'react-icons/lib/fa/shopping-bag'
+import VirginSoilTextLogo from 'virgin-soil-transparent.svg'
 
 class Navbar extends Component {
   render() {
-    const path = this.props.location.pathname;
+    console.log(VirginSoilTextLogo)
+    const path = this.props.location.pathname
 
     return (
       <Nav>
@@ -20,7 +22,7 @@ class Navbar extends Component {
           </Group>
           <TitleImg href="/">
             <VirginSoil
-              src={'virginsoil-text-logo.png'}
+              src={'virgin-soil-transparent.svg'}
               alt="Virgin Soil"
             />
             {/* <h1>Virgin Soil</h1> */}
@@ -29,14 +31,14 @@ class Navbar extends Component {
             <NavLink
               className={path === '/account' && 'current'}
               href="/account"
-              >
+            >
               <AccountIcon />
             </NavLink>
-              <NavLink
-                className={path === '/bag' && 'current'}
-                href="/bag"
-                >
-                <BagIcon />
+            <NavLink
+              className={path === '/bag' && 'current'}
+              href="/bag"
+            >
+              <BagIcon />
             </NavLink>
           </Group>
         </NavLinks>

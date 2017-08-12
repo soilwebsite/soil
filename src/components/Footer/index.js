@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import store from '../../store'
 import { subscribeUser } from '../../actions/subscription'
 import Submit from '../Submit'
@@ -49,15 +49,15 @@ class Footer extends Component {
           </a></p>
           <p><a href="/">Facebook</a></p>
         </div>
-          <div>
+        <div>
           <h3>Stay In Touch</h3>
           <EmailCapture>
             <input type="email" value={this.state.value} onChange={this.handleChange} />
             <Submit handleSubmit={this.subscribeEmail} />
           </EmailCapture>
-          </div>
+        </div>
       </div>
-    );
+    )
   }
 }
 

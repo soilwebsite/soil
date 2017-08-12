@@ -1,26 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class Sidebar extends Component {
   state = { active: '' }
-  handleClick (selection) {
+  handleClick(selection) {
     this.setState({ active: selection.name })
-    console.log(selection);
+    console.log(selection)
     this.props.setFilter(selection.name)
   }
-  sidebarItems () {
+  sidebarItems() {
     return [{ name: 'All' }].concat(this.props.items).map((item, i) => {
       let cn = 'side-item'
       if(this.state.active === item.name) cn += ' active'
-      return <div key={i} className={cn} onClick={this.handleClick.bind(this, item)}>
+      return (<div key={i} className={cn} onClick={this.handleClick.bind(this, item)}>
         {item.name}
-      </div>
-    });
+      </div>)
+    })
   }
 
   render() {
-    return <nav className="Sidebar">
+    return (<nav className="Sidebar">
       {this.sidebarItems()}
-    </nav>
+    </nav>)
   }
 }
 

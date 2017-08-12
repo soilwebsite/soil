@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import BigProduct from '../../components/BigProduct';
+import React, { Component } from 'react'
+import BigProduct from '../../components/BigProduct'
 
 class Clothing extends Component {
 
-  items () {
+  items() {
     let products = this.props.products.data
     return products.map((item, i) => <BigProduct key={i} item={item} />)
   }
 
   render() {
-    if (!this.props.tags || !this.props.tags.data) { return null }
+    if(!this.props.tags || !this.props.tags.data) { return null }
     return (
       <div className="Clothing">
         {this.items()}
@@ -18,4 +18,4 @@ class Clothing extends Component {
   }
 }
 
-export default Clothing;
+export default Clothing

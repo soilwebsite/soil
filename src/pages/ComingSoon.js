@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -20,7 +20,7 @@ export const ComingSoon = () => {
 
   return (
     <Container>
-        <span>Coming Soon</span>
+      <span>Coming Soon</span>
     </Container>
   )
 }

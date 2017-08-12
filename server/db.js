@@ -8,7 +8,7 @@ function initDB() {
   let sequelize
 
   const connect = () => {
-    if (process.env.NODE_ENV === 'production') {
+    if(process.env.NODE_ENV === 'production') {
       console.log('App in Production...')
       sequelize = new Sequelize(
         process.env.REACT_APP_DB_URL,
@@ -33,7 +33,7 @@ function initDB() {
             idle: 10000
           }
         }
-      );
+      )
     }
   }
 
@@ -42,8 +42,8 @@ function initDB() {
     let Product = sequelize.import(__dirname + '/models/product')
     let Tag = sequelize.import(__dirname + '/models/tag')
 
-    Product.belongsToMany(Tag, {through: 'products_tags'});
-    Tag.belongsToMany(Product, {through: 'products_tags'})
+    Product.belongsToMany(Tag, { through: 'products_tags' })
+    Tag.belongsToMany(Product, { through: 'products_tags' })
 
     db.models = {
       User,
@@ -56,7 +56,7 @@ function initDB() {
     sequelize
     .authenticate()
     .then(REACT_APP_DB_PASS => console.log('√ Postgres connected'))
-    .catch(err => console.log('Unable to connect to the database:', err));
+    .catch(err => console.log('Unable to connect to the database:', err))
   }
 
   const seedDB = (models) => {
@@ -74,5 +74,5 @@ function initDB() {
   db.sequelize = sequelize
 }
 
-if (!global.hasOwnProperty('dbInitiated')) initDB()
+if(!global.hasOwnProperty('dbInitiated')) initDB()
 module.exports = db

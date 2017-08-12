@@ -1,20 +1,20 @@
-const nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer')
 
 let transporter = nodemailer.createTransport({
-    service: 'zoho',
-    auth: {
-      user: 'maneesha@baikhal.com',
-      pass: process.env.REACT_APP_EMAIL_PW
-    }
-});
+  service: 'zoho',
+  auth: {
+    user: 'maneesha@baikhal.com',
+    pass: process.env.REACT_APP_EMAIL_PW
+  }
+})
 
 let mailOptions = {
-    from: '"Maneesha W" <maneesha@baikhal.com>', // sender address
-    to: 'maneesha.wijesinghe1@gmail.com', // list of receivers
-    subject: 'Hello ✔', // Subject line
-    text: 'I love you', // plain text body
-    html: '<b>I love you</b>' // html body
-};
+  from: '"Maneesha W" <maneesha@baikhal.com>', // sender address
+  to: 'maneesha.wijesinghe1@gmail.com', // list of receivers
+  subject: 'Hello ✔', // Subject line
+  text: 'I love you', // plain text body
+  html: '<b>I love you</b>' // html body
+}
 
 // un-comment this to send an email:
 

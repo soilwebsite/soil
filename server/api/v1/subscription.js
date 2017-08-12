@@ -9,23 +9,23 @@ module.exports = (req, res) => {
     , method = 'POST'
     , encryptedAPIKey = new Buffer('any:' + apiKey).toString('base64')
     , headers = {
-    'Authorization': 'Basic ' + encryptedAPIKey,
-    'Content-Type': 'application/json'
-  }
+      'Authorization': 'Basic ' + encryptedAPIKey,
+      'Content-Type': 'application/json'
+    }
     , body = JSON.stringify({
-    email_address: email,
-    status: "subscribed",
-    email_type: 'html',
-    timestamp_signup: Date.now()
-  })
+      email_address: email,
+      status: 'subscribed',
+      email_type: 'html',
+      timestamp_signup: Date.now()
+    })
 
   if(!email) throw new Error('No email given')
   console.log('subscribing...: ' + url)
 
   return fetch(url, { method, body, headers })
     .then(res => {
-      console.log(res.status);
-      console.log(res.statusText);
+      console.log(res.status)
+      console.log(res.statusText)
       return res.text()
     })
     .then(body => {

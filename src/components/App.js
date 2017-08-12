@@ -16,7 +16,7 @@ let Container = styled.div`
 
 class App extends Component {
 
-  componentDidMount () {
+  componentDidMount() {
     store.dispatch(fetchProducts())
     .catch(err => console.log(err))
     .then(() => store.dispatch(fetchTags()))
@@ -29,18 +29,18 @@ class App extends Component {
 
   render() {
     return (
-        <ThemeProvider theme={theme}>
-          <Container>
-            <Navbar location={this.props.location} />
-            {React.cloneElement(
+      <ThemeProvider theme={theme}>
+        <Container>
+          <Navbar location={this.props.location} />
+          {React.cloneElement(
               this.props.children,
               { ...this.props, ...this.state }
             )}
-            <Footer />
-          </Container>
-        </ThemeProvider>
-    );
+          <Footer />
+        </Container>
+      </ThemeProvider>
+    )
   }
 }
 
-export default App;
+export default App

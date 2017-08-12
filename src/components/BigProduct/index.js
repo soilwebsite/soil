@@ -5,16 +5,16 @@ import Spinner from '../Spinner'
 class BigProduct extends React.Component {
   render() {
     const { item } = this.props
-    if (!item) return <Spinner />
+    if(!item) return <Spinner />
     return (
-      <Link to={`/clothing/${item.id}`} className='BigProduct'>
+      <Link to={`/clothing/${item.id}`} className="BigProduct">
         <img src={item.imageUrl} alt={item.name} />
-        <div className='info'>
+        <div className="info">
           <h3>{item.name}</h3>
-          <p><strong>${Math.floor(Math.random()*200 + 200)}</strong></p>
+          <p><strong>${Math.floor(Math.random() * 200 + 200)}</strong></p>
         </div>
       </Link>
-    );
+    )
   }
 }
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { Article } from './ui'
 import Spinner from '../../components/Spinner'
 import styled from 'styled-components'
@@ -30,19 +30,18 @@ const Preview = styled.article`
   }
 `
 
-
 class Blog extends Component {
   render() {
     let { wordpress } = this.props
-    if (!wordpress) return <Spinner />
+    if(!wordpress) return <Spinner />
     return (
       <Container>
         {wordpress.data.posts.map((post, i) => {
-          let html = { __html: `<h2>${post.title}</h2> `+ post.content }
+          let html = { __html: `<h2>${post.title}</h2> ` + post.content }
           return <Preview key={i} dangerouslySetInnerHTML={html} />
         })}
       </Container>
-    );
+    )
   }
 }
 

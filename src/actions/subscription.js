@@ -14,7 +14,7 @@ export const subscribeUser = email => dispatch => {
   return fetch(`${process.env.REACT_APP_API_DOMAIN}/subscription`, {
     method: 'POST',
     body: JSON.stringify({ email }),
-    headers: { 'Content-Type': "application/json" }
+    headers: { 'Content-Type': 'application/json' }
   })
     .then(res => console.log('successfully subscribed'))
     .catch(err => console.log('err', err))

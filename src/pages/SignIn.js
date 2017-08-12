@@ -7,8 +7,8 @@ class SignIn extends Component {
       <div className="SignIn">
         <Credentials />
       </div>
-    );
+    )
   }
 }
 
-export default SignIn;
+export default SignIn

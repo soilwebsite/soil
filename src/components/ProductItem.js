@@ -6,16 +6,16 @@ class ProductItem extends Component {
 
   render() {
     const { item } = this.props
-    if (!item) return <Spinner />
+    if(!item) return <Spinner />
     return (
-      <Link to={`/clothing/${item.id}`} className='ProductItem'>
+      <Link to={`/clothing/${item.id}`} className="ProductItem">
         <img src={item.imageUrl} alt={item.name} />
-        <div className='info'>
+        <div className="info">
           <h3>{item.name}</h3>
-          <strong>${Math.floor(Math.random()*200)}</strong>
+          <strong>${Math.floor(Math.random() * 200)}</strong>
         </div>
       </Link>
-    );
+    )
   }
 }
 

@@ -4,5 +4,5 @@ module.exports = function(sequelize, DataTypes) {
     password: DataTypes.STRING
   // }, {
   //   paranoid: true
-  });
-};
+  })
+}

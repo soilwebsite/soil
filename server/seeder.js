@@ -1,8 +1,8 @@
 module.exports = (models) => {
-    return models.Tag.bulkCreate([{
-      name: 'Summer'
-    }, {
-      name: 'Sweater'
+  return models.Tag.bulkCreate([{
+    name: 'Summer'
+  }, {
+    name: 'Sweater'
     //   name: 'tops'
     // }, {
     //   name: 'bottoms'
