@@ -16,24 +16,25 @@ export const Nav = styled.nav`
 `
 
 export const VirginSoil = styled.img`
-  height: 53px;
-  margin-top: 5px;
+  height: 33px;
+  ${'' /* opacity: .5;
+  filter: hue-rotate(180deg);
+  filter: sepia(100%); */}
 `
 
-export const NavLinks = styled.nav`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+export const NavLinks = styled.div`
+  height: ${({ theme }) => theme.spacing.navHeight}px;
   display: flex;
   justify-content: space-between;
-  padding-top: 10px;
   padding-left: ${linkPadding};
   padding-right: ${linkPadding};
 `
 
 export const TitleImg = styled.a`
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 export const Group = styled.div`
@@ -53,7 +54,7 @@ export const NavLink = styled.a`
   font-size: 12px;
   position: relative;
   display: inline-block;
-  padding: 10px ${({ theme }) => theme.spacing.navItem}px 0;
+  padding: 20px ${({ theme }) => theme.spacing.navItem}px 0;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   ${'' /* color: #7f7f7f; */}

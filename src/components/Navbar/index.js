@@ -2,11 +2,10 @@ import React, { Component } from 'react'
 import { Nav, VirginSoil, NavLinks, NavLink, Group, TitleImg } from './ui'
 import AccountIcon from 'react-icons/lib/fa/user'
 import BagIcon from 'react-icons/lib/fa/shopping-bag'
-import VirginSoilTextLogo from 'virgin-soil-transparent.svg'
+// import VirginSoilTextLogo from '../../../public/virgin-soil-transparent.svg'
 
 class Navbar extends Component {
   render() {
-    console.log(VirginSoilTextLogo)
     const path = this.props.location.pathname
 
     return (
