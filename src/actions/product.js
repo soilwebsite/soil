@@ -1,6 +1,7 @@
 // http://redux.js.org/docs/advanced/AsyncActions.html
 
 import fetch from 'isomorphic-fetch'
+
 const requestProducts = () => ({ type: 'REQUEST_PRODUCTS' })
 const receiveProducts = (products) => ({
   type: 'RECEIVE_PRODUCTS',

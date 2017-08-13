@@ -1,4 +1,5 @@
 import fetch from 'isomorphic-fetch'
+
 const requestTags = () => ({ type: 'REQUEST_TAGS' })
 const receiveTags = (tags) => ({
   type: 'RECEIVE_TAGS',

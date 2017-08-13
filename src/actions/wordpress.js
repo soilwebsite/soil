@@ -1,5 +1,5 @@
-//
 import fetch from 'isomorphic-fetch'
+
 const requestPosts = () => ({ type: 'REQUEST_POSTS' })
 const receivePosts = posts => ({
   type: 'RECEIVE_POSTS',
