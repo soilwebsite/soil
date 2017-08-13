@@ -1,7 +1,7 @@
 
 let db = {}
-function initDB() {
-  global.dbInitated = true
+const initDB = () => {
+  global.dbInitiated = true
 
   const Sequelize = require('sequelize')
   let seeder = require('./seeder')
@@ -12,6 +12,8 @@ function initDB() {
       console.log('App in Production...')
       sequelize = new Sequelize(
         process.env.REACT_APP_DB_URL,
+        process.env.REACT_APP_DB_USER,
+        process.env.REACT_APP_DB_PASS,
         {
           dialect:  'postgres',
           protocol: 'postgres',
@@ -55,14 +57,14 @@ function initDB() {
   const testConnection = () => {
     sequelize
     .authenticate()
-    .then(REACT_APP_DB_PASS => console.log('√ Postgres connected'))
+    .then(() => console.log('√ Postgres connected'))
     .catch(err => console.log('Unable to connect to the database:', err))
   }
 
   const seedDB = (models) => {
     sequelize
     .sync({ force: true })
-    .then(res => seeder(models))
+    .then(() => seeder(models))
     .catch(err => console.log('An error occurred while creating the table:', err))
   }
 
@@ -70,9 +72,8 @@ function initDB() {
   testConnection()
   createModels()
   seedDB(db.models)
-  db.Sequelize = Sequelize
   db.sequelize = sequelize
 }
 
-if(!global.hasOwnProperty('dbInitiated')) initDB()
+if(!global.dbInitiated) initDB()
 module.exports = db
