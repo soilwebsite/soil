@@ -11,7 +11,7 @@ const initDB = () => {
     if(process.env.NODE_ENV === 'production') {
       console.log('App in Production...')
       sequelize = new Sequelize(
-        process.env.REACT_APP_DB_URL,
+        process.env.DATABASE_URL,
         process.env.REACT_APP_DB_USER,
         process.env.REACT_APP_DB_PASS,
         {
@@ -23,7 +23,7 @@ const initDB = () => {
     } else {
       console.log('App in Development...')
       sequelize = new Sequelize(
-        process.env.REACT_APP_DB_URL,
+        process.env.DATABASE_URL,
         process.env.REACT_APP_DB_USER,
         process.env.REACT_APP_DB_PASS,
         {
