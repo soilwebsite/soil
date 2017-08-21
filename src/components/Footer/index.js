@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import store from '../../store'
 import { subscribeUser } from '../../actions/subscription'
 import Submit from '../Submit'
-import { EmailCapture } from './ui'
+import { Container, Texture, EmailCapture } from './ui'
 
 class Footer extends Component {
 
@@ -26,7 +26,8 @@ class Footer extends Component {
   render() {
 
     return (
-      <div className="Footer">
+      <Container className="Footer">
+        <Texture />
         <div>
           <h3>Care</h3>
           <p><a href="/">Shipping</a></p>
@@ -56,7 +57,7 @@ class Footer extends Component {
             <Submit handleSubmit={this.subscribeEmail} />
           </EmailCapture>
         </div>
-      </div>
+      </Container>
     )
   }
 }
