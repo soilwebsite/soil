@@ -20,6 +20,7 @@ export const VirginSoil = styled.img`
   ${'' /* opacity: .5;
   filter: hue-rotate(180deg);
   filter: sepia(100%); */}
+  filter: blur(.5px);
 `
 
 export const NavLinks = styled.div`

@@ -39,7 +39,7 @@
           || window.location.host !== 'www.virgin-sol.com'
           || window.location.host !== 'www.foresttribe.com'
         ){
-          console.log('analytics: off');
+          window.ga() { console.log('analytics: off'); }
           return;
         }
         i['GoogleAnalyticsObject'] = r;
