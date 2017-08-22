@@ -31,8 +31,9 @@ export const NavLinks = styled.div`
   padding-right: ${linkPadding};
 `
 
-export const TitleImg = styled.a`
+export const TitleLink = styled.a`
   height: 100%;
+  flex: 0 0 410px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -8,6 +8,7 @@ export const Background = styled.div`
   right: 0;
   z-index: -1;
   overflow: hidden;
-  background-image: url(https://scontent-lga3-1.cdninstagram.com/t51.2885-15/e35/19761740_384896158575105_5699318299238596608_n.jpg);
+  ${'' /* background-image: url(https://scontent-lga3-1.cdninstagram.com/t51.2885-15/e35/19761740_384896158575105_5699318299238596608_n.jpg); */}
+  background-image: url(https://scontent-iad3-1.cdninstagram.com/t51.2885-15/e35/19623470_1868955620025064_19260140888784896_n.jpg);
   background-size: cover;
 `

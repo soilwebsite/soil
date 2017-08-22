@@ -3,15 +3,14 @@ import { Router, Route, IndexRoute } from 'react-router'
 import App from './components/App'
 
 import Homepage from './pages/Homepage'
-import ComingSoon from './pages/ComingSoon'
-import Clothing from './pages/Clothing'
+import Shop from './pages/Shop'
 import Product from './pages/Product'
 import About from './pages/About'
+import SignIn from './pages/SignIn'
+import Cart from './pages/Cart'
 // import Blogs from './pages/Blogs'
 // import Blog from './pages/Blog'
-import Cart from './pages/Cart'
-import SignIn from './pages/SignIn'
-
+import ComingSoon from './pages/ComingSoon'
 import NotFound from './pages/NotFound'
 
 const Routes = (props) => {
@@ -21,13 +20,13 @@ const Routes = (props) => {
       <IndexRoute component={Homepage} />
       {/* <Route path="/impressions/:post" component={Blog} />
       <Route path="/impressions" component={Blogs} /> */}
+      <Route path="/shop" component={Shop} />
+      <Route path="/shop/:id" component={Product} />
+      <Route path="/the-collection" component={Shop} />
       <Route path="/*" component={ComingSoon} />
-      <Route path="/clothing" component={Clothing} />
-      <Route path="/clothing/:id" component={Product} />
       <Route path="/about" component={About} />
-
-      <Route path="/bag" component={Cart} />
       <Route path="/account" component={SignIn} />
+      <Route path="/bag" component={Cart} />
 
       <Route path="*" component={NotFound} />
     </Route>

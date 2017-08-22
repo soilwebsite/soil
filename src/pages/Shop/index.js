@@ -1,21 +1,21 @@
 import React, { Component } from 'react'
-import BigProduct from '../../components/BigProduct'
+import ProductGrid from '../../components/ProductGrid'
 
-class Clothing extends Component {
+class Shop extends Component {
 
   items() {
     let products = this.props.products.data
-    return products.map((item, i) => <BigProduct key={i} item={item} />)
+    return products.map((item, i) => <ProductGrid key={i} item={item} />)
   }
 
   render() {
     if(!this.props.tags || !this.props.tags.data) { return null }
     return (
-      <div className="Clothing">
+      <div className="Shop">
         {this.items()}
       </div>
     )
   }
 }
 
-export default Clothing
+export default Shop

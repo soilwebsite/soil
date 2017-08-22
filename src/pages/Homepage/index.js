@@ -4,14 +4,14 @@ import { Background } from './ui'
 
 class Homepage extends Component {
 
-  componentDidMount() {
-    // this.refs.video.addEventListener('ended', this.replay.bind(this));
-  }
-
-  replay() {
-    this.refs.video.currentTime = 0
-    this.refs.video.play()
-  }
+  // componentDidMount() {
+  //   this.refs.video.addEventListener('ended', this.replay.bind(this));
+  // }
+  //
+  // replay() {
+  //   this.refs.video.currentTime = 0
+  //   this.refs.video.play()
+  // }
 
   render() {
     return (
@@ -19,13 +19,9 @@ class Homepage extends Component {
         <div className="action-box">
           {/* <h2 className="textTitle">Discover</h2> */}
           <div className="buttons">
-            <a href="/clothing">
-              THE COLLECTION
-            </a>
+            <a href="/the-collection">THE COLLECTION</a>
             &nbsp;
-            <a href="/shop">
-              SHOP
-            </a>
+            <a href="/shop">SHOP</a>
           </div>
         </div>
         <Background />
