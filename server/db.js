@@ -12,8 +12,8 @@ const initDB = () => {
       console.log('App in Production...')
       sequelize = new Sequelize(
         process.env.DATABASE_URL,
-        process.env.REACT_APP_DB_USER,
-        process.env.REACT_APP_DB_PASS,
+        process.env.DB_USER,
+        process.env.DB_PASS,
         {
           dialect:  'postgres',
           protocol: 'postgres',
@@ -24,8 +24,8 @@ const initDB = () => {
       console.log('App in Development...')
       sequelize = new Sequelize(
         process.env.DATABASE_URL,
-        process.env.REACT_APP_DB_USER,
-        process.env.REACT_APP_DB_PASS,
+        process.env.DB_USER,
+        process.env.DB_PASS,
         {
           host: 'localhost',
           dialect: 'postgres',
