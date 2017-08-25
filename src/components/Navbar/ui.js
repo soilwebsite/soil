@@ -16,11 +16,11 @@ export const Nav = styled.nav`
 `
 
 export const VirginSoil = styled.img`
-  height: 33px;
+  height: 50px;
   ${'' /* opacity: .5;
   filter: hue-rotate(180deg);
   filter: sepia(100%); */}
-  filter: blur(.5px);
+  ${'' /* filter: blur(.5px); */}
 `
 
 export const NavLinks = styled.div`
