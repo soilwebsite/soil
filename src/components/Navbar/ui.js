@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 let linkPadding = ({ theme }) =>
-  `calc(${theme.spacing.page}px - ${theme.spacing.navItem}px)`
+  `calc(${theme.spacing.page} - ${theme.spacing.navItem}px)`
 
 export const Nav = styled.nav`
   position: relative;

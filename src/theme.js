@@ -1,6 +1,7 @@
 export default {
   spacing: {
-    page: 55,
+    page: '55px', // vw
+    sidebar: '240px',
     navItem: 15,
     navHeight: 110
   },

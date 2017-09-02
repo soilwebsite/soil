@@ -15,11 +15,18 @@ module.exports = (models) => {
   }])
   .then(() => {
     return models.Product.bulkCreate([{
-      name: 'Flower Style',
-      imageUrl: 'https://cdn3.yoox.biz/cloud/stellawp/uploads/2017/05/forth.jpg'
+      name: 'Satin Dress',
+      imageUrl: 'https://www.jasonwustudio.com/media/catalog/product/cache/1/small_image/800x/040ec09b1e35df139433887a97daa66f/j/w/jwu_p1713019a_bone_1.jpg'
     }, {
       name: 'Men\'s Fashion',
       imageUrl: 'https://cdn3.yoox.biz/cloud/stellawp/uploads/2017/05/SMC_Web_MW_S17_777X660.jpg'
+
+    //   name: 'Flower Style',
+    //   imageUrl: 'https://cdn3.yoox.biz/cloud/stellawp/uploads/2017/05/forth.jpg'
+    // }, {
+    //   name: 'Men\'s Fashion',
+    //   imageUrl: 'https://cdn3.yoox.biz/cloud/stellawp/uploads/2017/05/SMC_Web_MW_S17_777X660.jpg'
+
       // name: 'Solid Black Top',
       // imageUrl: 'http://wpexplorer-demos.com/photopro/wp-content/uploads/sites/12/2012/10/Sasha.jpg'
       // }, {

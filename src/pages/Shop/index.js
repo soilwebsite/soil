@@ -1,21 +1,39 @@
 import React, { Component } from 'react'
-import ProductGrid from '../../components/ProductGrid'
+import ItemGrid from '../../components/ItemGrid'
+import Sidebar from '../../components/Sidebar'
+import { Shop } from './ui'
 
-class Shop extends Component {
+class ShopClass extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      filteredItems: null
+    }
+  }
 
-  items() {
-    let products = this.props.products.data
-    return products.map((item, i) => <ProductGrid key={i} item={item} />)
+  componentWillReceiveProps(nextProps) {
+    this.setState({ filteredItems: nextProps.products.data })
+  }
+
+  setFilter(name) {
+    let filteredItems = this.props.tags.data.filter(i => {
+      return i.name === name
+    })
+    this.setState({ filteredItems })
   }
 
   render() {
-    if(!this.props.tags || !this.props.tags.data) { return null }
+    let { filteredItems } = this.state
+    if(!this.props.products || !filteredItems) { return null }
+    let { data: items } = this.props.products
+
     return (
-      <div className="Shop">
-        {this.items()}
-      </div>
+      <Shop className="Shop">
+        <Sidebar items={items} setFilter={this.setFilter} />
+        <ItemGrid items={filteredItems} />
+      </Shop>
     )
   }
 }
 
-export default Shop
+export default ShopClass

@@ -1,48 +1,23 @@
-.Sidebar {
-  padding-left: 15px;
+import styled from 'styled-components'
+
+export const Sidebar = styled.nav`
   position: fixed;
   bottom: 0;
-  left: 0;
+  ${'' /* left: 0; */}
   height: 100%;
-  width: $sidebar-width;
-  background-color: #eee;
+  width: ${({ theme }) => theme.spacing.sidebar};
   transition: width 1s;
-  // cursor: default;
   z-index: 1;
-  &:hover {
-    .side-item {
-      opacity: 1;
-    }
-    // .filter {
-    //   opacity: 0;
-    // }
-  }
   display: flex;
   justify-content: center;
   flex-direction: column;
-  // align-items: center;
-
-  // .filter {
-  //   z-index: -1;
-  //   position: fixed;
-  //   transition: opacity 1s;
-  //   -webkit-transform: rotate(-90deg);
-  //   -moz-transform: rotate(-90deg);
-  //   -ms-transform: rotate(-90deg);
-  //   -o-transform: rotate(-90deg);
-  //   transform: rotate(-90deg);
-  //   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-  // }
-
 
   .side-item {
     cursor: pointer;
     text-align: left;
-    // width: 11vw;
     display: block;
     font-size: 12px;
     padding: 15px 30px;
-    // opacity: 0;
     transition: opacity 1s;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -81,4 +56,4 @@
         cursor: default;
     }
   }
-}
+`
