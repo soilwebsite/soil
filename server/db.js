@@ -9,8 +9,7 @@ const initDB = () => {
 
   const connect = () => {
     if(process.env.NODE_ENV === 'production') {
-      console.log('App in Production...')
-      console.log(process.env.DATABASE_URL)
+      console.log('********** Connecting to Production DB **********')
       sequelize = new Sequelize(
         process.env.DB_URL,
         process.env.DB_USER,
@@ -18,11 +17,13 @@ const initDB = () => {
         {
           dialect:  'postgres',
           protocol: 'postgres',
+          port: process.env.DB_PORT,
+          host: process.env.DB_HOST,
           logging:  true
         }
       )
     } else {
-      console.log('App in Development...')
+      console.log('********** Connecting to Development DB **********')
       sequelize = new Sequelize(
         process.env.DB_URL,
         process.env.DB_USER,
