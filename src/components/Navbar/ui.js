@@ -13,6 +13,9 @@ export const Nav = styled.nav`
   ${'' /* border-image: linear-gradient(180deg, #303030, #dddddd); */}
   border-image: url(./border.png);
   border-image-slice: 1;
+  @media screen and (max-width: 890px) {
+    height: ${({ theme }) => theme.spacing.navHeight / 2}px;
+  }
 `
 
 export const VirginSoil = styled.img`
@@ -21,6 +24,9 @@ export const VirginSoil = styled.img`
   filter: hue-rotate(180deg);
   filter: sepia(100%); */}
   ${'' /* filter: blur(.5px); */}
+  @media screen and (max-width: 890px) {
+    height: 25px;
+  }
 `
 
 export const NavLinks = styled.div`
@@ -29,6 +35,11 @@ export const NavLinks = styled.div`
   justify-content: space-between;
   padding-left: ${linkPadding};
   padding-right: ${linkPadding};
+  @media screen and (max-width: 890px) {
+    height: ${({ theme }) => theme.spacing.navHeight / 2}px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 `
 
 export const TitleLink = styled.a`
@@ -37,6 +48,9 @@ export const TitleLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 890px) {
+    flex: 0 0 205px;
+  }
 `
 
 export const Group = styled.div`

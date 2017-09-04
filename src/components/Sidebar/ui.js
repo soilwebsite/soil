@@ -11,7 +11,6 @@ export const Sidebar = styled.nav`
   display: flex;
   justify-content: center;
   flex-direction: column;
-
   .side-item {
     cursor: pointer;
     text-align: left;
@@ -55,5 +54,8 @@ export const Sidebar = styled.nav`
     .current {
         cursor: default;
     }
+  }
+  @media screen and (max-width: 890px) {
+    visibility: hidden;
   }
 `
