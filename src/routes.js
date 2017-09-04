@@ -4,6 +4,7 @@ import App from './components/App'
 
 import Homepage from './pages/Homepage'
 import Shop from './pages/Shop'
+import Look from './pages/Look'
 import Product from './pages/Product'
 import About from './pages/About'
 import SignIn from './pages/SignIn'
@@ -22,7 +23,7 @@ const Routes = (props) => {
       <Route path="/impressions" component={Blogs} /> */}
       <Route path="/shop" component={Shop} />
       <Route path="/shop/:id" component={Product} />
-      <Route path="/the-collection" component={Shop} />
+      <Route path="/collection" component={Look} />
       <Route path="/*" component={ComingSoon} />
       <Route path="/about" component={About} />
       <Route path="/account" component={SignIn} />

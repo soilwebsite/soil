@@ -28,7 +28,7 @@ class ShopClass extends Component {
     let { data: items } = this.props.products
 
     return (
-      <Shop className="Shop">
+      <Shop>
         <Sidebar items={items} setFilter={this.setFilter} />
         <ItemGrid items={filteredItems} />
       </Shop>
