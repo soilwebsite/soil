@@ -11,7 +11,7 @@ const initDB = () => {
     if(process.env.NODE_ENV === 'production') {
       console.log('********** Connecting to Production DB **********')
       sequelize = new Sequelize(
-        process.env.DB_URL,
+        process.env.DB_NAME,
         process.env.DB_USER,
         process.env.DB_PASS,
         {
@@ -25,7 +25,7 @@ const initDB = () => {
     } else {
       console.log('********** Connecting to Development DB **********')
       sequelize = new Sequelize(
-        process.env.DB_URL,
+        process.env.DB_NAME,
         process.env.DB_USER,
         process.env.DB_PASS,
         {
