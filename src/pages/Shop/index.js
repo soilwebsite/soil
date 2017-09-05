@@ -9,6 +9,14 @@ class ShopClass extends Component {
     this.state = {
       filteredItems: null
     }
+    this.setFilter = this.setFilter.bind(this)
+  }
+
+  componentWillMount() {
+    if(!this.props.products) {
+      return
+    }
+    this.setState({ filteredItems: this.props.products.data })
   }
 
   componentWillReceiveProps(nextProps) {
@@ -16,20 +24,23 @@ class ShopClass extends Component {
   }
 
   setFilter(name) {
-    let filteredItems = this.props.tags.data.filter(i => {
-      return i.name === name
-    })
+    if(!name) {
+      this.setState({ filteredItems: this.props.products.data })
+      return
+    }
+    let filteredItems = this.props.products.data.filter(i =>
+      i.tags.find((t => t.name === name))
+    )
     this.setState({ filteredItems })
   }
 
   render() {
     let { filteredItems } = this.state
     if(!this.props.products || !filteredItems) { return null }
-    let { data: items } = this.props.products
 
     return (
       <Shop>
-        <Sidebar items={items} setFilter={this.setFilter} />
+        <Sidebar items={this.props.tags.data} setFilter={this.setFilter} />
         <ItemGrid items={filteredItems} />
       </Shop>
     )

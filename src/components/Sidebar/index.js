@@ -5,9 +5,10 @@ export default class SidebarClass extends Component {
   state = { active: '' }
 
   handleClick(selection) {
+    let filterName = selection.name
+    if(filterName === 'All') filterName = null
     this.setState({ active: selection.name })
-    console.log(selection)
-    this.props.setFilter(selection.name)
+    this.props.setFilter(filterName)
   }
 
   sidebarItems() {

@@ -6,7 +6,7 @@ export default ({ item }) => {
   if(!item) return <Spinner />
 
   return (
-    <Item to={`/clothing/${item.id}`}>
+    <Item to={`/shop/${item.id}`}>
       <img src={item.imageUrl} alt={item.name} />
       <Info>
         <h3>{item.name}</h3>

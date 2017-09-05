@@ -7,7 +7,7 @@ class BigProduct extends React.Component {
     const { item } = this.props
     if(!item) return <Spinner />
     return (
-      <Link to={`/clothing/${item.id}`} className="BigProduct">
+      <Link to={`/shop/${item.id}`} className="BigProduct">
         <img src={item.imageUrl} alt={item.name} />
         <div className="info">
           <h3>{item.name}</h3>
