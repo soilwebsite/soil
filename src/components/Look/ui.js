@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Link } from 'react-router'
 
 export const LookWrap = styled.div`
   display: inline-block;
@@ -15,7 +14,7 @@ export const LookWrap = styled.div`
     opacity: .9;
   }
 `
-export const Look = styled(Link)`
+export const Look = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;

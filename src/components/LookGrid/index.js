@@ -3,22 +3,46 @@ import { shuffle } from 'lodash'
 import Look from '../Look'
 import Spinner from '../Spinner'
 import { ItemGrid } from './ui'
+import Modal from '../Modal'
 
-export default (props) => {
+export default class LookGrid extends React.Component {
 
-  function getItems() {
-    const { items, filter } = props
-    let manyImages = shuffle(items.concat(items).concat(items).concat(items))
-    if(filter) manyImages = manyImages.filter(i => i.tags.find(t => t.name === filter))
-    return manyImages.map((item, i) => <Look key={i} item={item} />)
+  constructor(props) {
+    super(props)
+    this.state = { modalItem: null }
+    this.onClick = this.onClick.bind(this)
+    this.hideModal = this.hideModal.bind(this)
   }
 
-  let content = getItems()
-  if(content.length === 0) return <Spinner />
+  onClick(item) {
+    this.setState({ modalItem: item })
+  }
 
-  return (
-    <ItemGrid>
-      {content}
-    </ItemGrid>
-  )
+  hideModal() {
+    this.setState({ modalItem: null })
+  }
+
+  getItems() {
+    const { items, filter } = this.props
+    let manyImages = shuffle(items.concat(items).concat(items).concat(items))
+    if(filter) manyImages = manyImages.filter(i => i.tags.find(t => t.name === filter))
+    return manyImages.map((item, i) =>
+      <Look key={i} item={item} onClick={() => this.onClick(item)} />
+    )
+  }
+
+  render() {
+    const { modalItem } = this.state
+    let content = this.getItems()
+    if(content.length === 0) return <Spinner />
+
+    return (
+      <ItemGrid>
+        {content}
+        {modalItem &&
+          <Modal content={modalItem} hideModal={this.hideModal} />
+        }
+      </ItemGrid>
+    )
+  }
 }
