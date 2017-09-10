@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Border from '../../assets/images/border.png'
 
 let linkPadding = ({ theme }) =>
   `calc(${theme.spacing.page} - ${theme.spacing.navItem}px)`
@@ -11,7 +12,7 @@ export const Nav = styled.nav`
   z-index: 10;
   border-bottom: 4px solid transparent;
   ${'' /* border-image: linear-gradient(180deg, #303030, #dddddd); */}
-  border-image: url(./border.png);
+  border-image: url(${Border});
   border-image-slice: 1;
   @media screen and (max-width: 890px) {
     height: ${({ theme }) => theme.spacing.navHeight / 2}px;
