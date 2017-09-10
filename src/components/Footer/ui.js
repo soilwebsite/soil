@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import BlueTexture from '../../assets/images/virginsoil-texture.png'
 
 let height = 200
 export const Container = styled.div`
@@ -31,7 +32,7 @@ export const Texture = styled.span`
   left: 0;
   right: 0;
   height: 40px;
-  background: url(virginsoil-texture.png) 0 48px;
+  background: url(${BlueTexture}) 0 48px;
   ${'' /* background-size: cover; */}
   background-size: 700px;
   background-repeat: repeat;
