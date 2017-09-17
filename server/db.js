@@ -45,35 +45,47 @@ const initDB = () => {
     let User = sequelize.import(__dirname + '/models/user')
     let Product = sequelize.import(__dirname + '/models/product')
     let Tag = sequelize.import(__dirname + '/models/tag')
-
-    Product.belongsToMany(Tag, { through: 'products_tags' })
-    Tag.belongsToMany(Product, { through: 'products_tags' })
+    let Image = sequelize.import(__dirname + '/models/image')
 
     db.models = {
       User,
       Product,
-      Tag
+      Tag,
+      Image
     }
+  }
+
+  const createAssociations = () => {
+    let { Product, Tag, Image } = db.models
+    Product.belongsToMany(Tag, { through: 'products_tags' })
+    Tag.belongsToMany(Product, { through: 'products_tags' })
+
+    Product.belongsToMany(Image, { through: 'products_images' })
+    Image.belongsToMany(Product, { through: 'products_images' })
+
+    Tag.belongsToMany(Image, { through: 'images_tags' })
+    Image.belongsToMany(Tag, { through: 'images_tags' })
   }
 
   const testConnection = () => {
     sequelize
     .authenticate()
-    .then(() => console.log('√ Postgres connected'))
+    .then(() => console.log('√√√ √√√ √√√ Postgres connected √√√ √√√ √√√'))
     .catch(err => console.log('Unable to connect to the database:', err))
   }
 
-  const seedDB = (models) => {
+  const seedDB = () => {
     sequelize
     .sync({ force: true })
-    .then(() => seeder(models))
+    .then(() => seeder(db.models))
     .catch(err => console.log('An error occurred while creating the table:', err))
   }
 
   connect()
   testConnection()
   createModels()
-  seedDB(db.models)
+  createAssociations()
+  seedDB()
   db.sequelize = sequelize
 }
 

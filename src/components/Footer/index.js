@@ -42,13 +42,22 @@ class Footer extends Component {
         </div>
         <div>
           <h3>Befriend</h3>
-          <p><a
-            href="https://www.instagram.com/virgin_soil"
-            target="blank"
-          >
-            Instagram
-          </a></p>
-          <p><a href="/">Facebook</a></p>
+          <p>
+            <a
+              href="https://www.instagram.com/virgin_soil"
+              target="blank"
+            >
+              Instagram
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://www.facebook.com/virginsoilus"
+              target="blank"
+            >
+              Facebook
+            </a>
+          </p>
         </div>
         <div>
           <h3>Stay In Touch</h3>

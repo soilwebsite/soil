@@ -27,8 +27,6 @@ export const Container = styled.div`
     font-size: 12px;
   }
   .buttons {
-    width: 600px;
-    height: 100px;
     display: flex;
     flex-direction: row;
     justify-content: center;
