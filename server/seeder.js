@@ -42,9 +42,11 @@ module.exports = (models) => {
   })
   .then(() => {
     return models.Product.bulkCreate([{
-      name: 'Satin Dress'
+      name: 'Item 1',
+      price: 200
     }, {
-      name: 'Men\'s Fashion'
+      name: 'Item 2',
+      price: 300
       // name: 'Solid Black Top',
       // imageUrl: 'http://wpexplorer-demos.com/photopro/wp-content/uploads/sites/12/2012/10/Sasha.jpg'
       // }, {

@@ -15,6 +15,7 @@ export const Modal = styled.div`
 `
 
 export const Content = styled.div`
+  border: 1px solid lightgray;
   width: 800px;
   height: 600px;
   padding: 10px;
@@ -46,6 +47,13 @@ export const Image = styled.img`
 `
 
 export const Details = styled.div`
+  border: 1px solid lightgray;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
   max-height: 500px;
   width: 300px;
+  span {
+    padding: 10px;
+  }
 `

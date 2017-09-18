@@ -13,7 +13,7 @@ export default class ModalClass extends React.Component {
   }
   render() {
     if(!this.props.content) return <Spinner />
-    let { name, images } = this.props.content
+    let { name, images, price } = this.props.content
     let { active } = this.state
     return (
       <Modal onClick={this.props.hideModal}>
@@ -30,7 +30,8 @@ export default class ModalClass extends React.Component {
           </Icons>
           <Image src={images[active].url} />
           <Details>
-            Item:{name}
+            <span>Item: {name}</span>
+            <span>Price: {price}</span>
           </Details>
         </Content>
       </Modal>
