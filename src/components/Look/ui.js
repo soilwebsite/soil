@@ -7,9 +7,9 @@ export const LookWrap = styled.div`
   width: 350px;
   margin-top: 55px;
   margin-left: 55px;
-  &:nth-child(3n + 1) {
+  ${'' /* &:nth-child(3n + 1) {
     margin-left: 0;
-  }
+  } */}
   &:hover .info {
     opacity: .9;
   }
