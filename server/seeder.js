@@ -20,12 +20,12 @@ module.exports = (models) => {
       url: 'https://cdn3.yoox.biz/cloud/stellawp/uploads/2017/05/SMC_Web_MW_S17_777X660.jpg'
     }, {
       url: 'static/media/shop/belt.png'
+    }, {
+      url: 'http://wpexplorer-demos.com/photopro/wp-content/uploads/sites/12/2012/10/Sasha.jpg'
 
       //   name: 'Flower Style',
       //   imageUrl: 'https://cdn3.yoox.biz/cloud/stellawp/uploads/2017/05/forth.jpg'
       // }, {
-      //   name: 'Men\'s Fashion',
-      //   imageUrl: 'https://cdn3.yoox.biz/cloud/stellawp/uploads/2017/05/SMC_Web_MW_S17_777X660.jpg'
 
       // name: 'Solid Black Top',
       // imageUrl: 'http://wpexplorer-demos.com/photopro/wp-content/uploads/sites/12/2012/10/Sasha.jpg'
@@ -45,12 +45,6 @@ module.exports = (models) => {
       name: 'Satin Dress'
     }, {
       name: 'Men\'s Fashion'
-    //   name: 'Flower Style',
-    //   imageUrl: 'https://cdn3.yoox.biz/cloud/stellawp/uploads/2017/05/forth.jpg'
-    // }, {
-    //   name: 'Men\'s Fashion',
-    //   imageUrl: 'https://cdn3.yoox.biz/cloud/stellawp/uploads/2017/05/SMC_Web_MW_S17_777X660.jpg'
-
       // name: 'Solid Black Top',
       // imageUrl: 'http://wpexplorer-demos.com/photopro/wp-content/uploads/sites/12/2012/10/Sasha.jpg'
       // }, {
@@ -72,6 +66,7 @@ module.exports = (models) => {
     models.Product.findById(2).then(product => {
       models.Tag.findById(2).then(tag => product.addTag(tag))
       models.Image.findById(2).then(img => product.addImage(img))
+      models.Image.findById(4).then(img => product.addImage(img))
     })
     // models.Tag.findById(3).then(tag => {
     //   models.Product.findById(3).then(product => {

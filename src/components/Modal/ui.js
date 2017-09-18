@@ -16,11 +16,28 @@ export const Modal = styled.div`
 
 export const Content = styled.div`
   width: 800px;
-  height: 800px;
+  height: 600px;
+  padding: 10px;
   background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
+`
+
+export const Icons = styled.div`
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgray;
+`
+
+export const ImageIcon = styled.div`
+  cursor: pointer;
+  border: 1px solid ${({ active }) => active ? 'darkgray' : 'lightgray'};
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  background-image: url(${({ url }) => url});
+  background-size: contain;
 `
 
 export const Image = styled.img`
