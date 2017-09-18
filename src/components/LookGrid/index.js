@@ -24,6 +24,7 @@ export default class LookGrid extends React.Component {
 
   getItems() {
     const { items, filter } = this.props
+    if(!items) return []
     let manyImages = shuffle(items.concat(items).concat(items).concat(items))
     if(filter) manyImages = manyImages.filter(i => i.tags.find(t => t.name === filter))
     return manyImages.map((item, i) =>

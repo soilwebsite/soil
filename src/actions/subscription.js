@@ -16,6 +16,4 @@ export const subscribeUser = email => dispatch => {
     body: JSON.stringify({ email }),
     headers: { 'Content-Type': 'application/json' }
   })
-    .then(res => console.log('successfully subscribed'))
-    .catch(err => console.log('err', err))
 }

@@ -9,7 +9,7 @@ export default ({ item, onClick }) => {
   return (
     <LookWrap>
       <Look onClick={onClick}>
-        <img src={item.imageUrl} alt={item.name} />
+        <img src={item.images[0].url} alt={item.name} />
         <Info className="info">
           <h3>Shop This Look</h3>
         </Info>

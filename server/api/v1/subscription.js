@@ -16,23 +16,25 @@ module.exports = (req, res) => {
       email_address: email,
       status: 'subscribed',
       email_type: 'html',
-      timestamp_signup: Date.now()
+      timestamp_signup: `${Date.now()}`
     })
 
   if(!email) throw new Error('No email given')
-  console.log('subscribing...: ' + url)
+  console.log(`subscribing ${email}...`)
 
   return fetch(url, { method, body, headers })
-    .then(res => {
-      console.log(res.status)
-      console.log(res.statusText)
-      return res.text()
+    .then(response => {
+      console.log(response.status, response.statusText)
+      return response.text()
     })
-    .then(body => {
-      let b = JSON.parse(body)
-      if(!b.status != 200) { throw new Error(body) }
-      console.log('Subscribed ' + JSON.parse(body).email_address)
-      return body
+    .then(data => {
+      data = JSON.parse(data)
+      if(data.status === 200) {
+        console.log('Subscribed ' + JSON.parse(data).email_address)
+        return data
+      } else {
+        console.error('MailChimp:', data)
+        return res.status(data.status || 500).json(data)
+      }
     })
-    .catch(err => console.error('MailChimp - ', err))
 }

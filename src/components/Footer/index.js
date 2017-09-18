@@ -8,7 +8,7 @@ class Footer extends Component {
 
   constructor() {
     super()
-    this.state = { email: '' }
+    this.state = { email: '', message: '' }
     this.subscribeEmail = this.subscribeEmail.bind(this)
     this.handleChange = this.handleChange.bind(this)
   }
@@ -20,11 +20,12 @@ class Footer extends Component {
   subscribeEmail() {
     if(!this.state.email) alert('Please enter a valid email address')
     store.dispatch(subscribeUser(this.state.email))
-    .catch(err => console.log(err))
+    .then(res => {
+      this.setState({ message: 'Thanks!' })
+    })
   }
 
   render() {
-
     return (
       <Container className="Footer">
         <Texture />
@@ -61,6 +62,7 @@ class Footer extends Component {
         </div>
         <div>
           <h3>Stay In Touch</h3>
+          <div>{this.state.message}</div>
           <EmailCapture>
             <input type="email" value={this.state.value} onChange={this.handleChange} />
             <Submit handleSubmit={this.subscribeEmail} />
