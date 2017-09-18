@@ -71,7 +71,7 @@ module.exports = (models) => {
     })
     models.Product.findById(2).then(product => {
       models.Tag.findById(2).then(tag => product.addTag(tag))
-      models.Image.findById(3).then(img => product.addImage(img))
+      models.Image.findById(2).then(img => product.addImage(img))
     })
     // models.Tag.findById(3).then(tag => {
     //   models.Product.findById(3).then(product => {

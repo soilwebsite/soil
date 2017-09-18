@@ -2,7 +2,7 @@ import React from 'react'
 import { shuffle } from 'lodash'
 import Look from '../Look'
 import Spinner from '../Spinner'
-import { ItemGrid } from './ui'
+import { Container } from './ui'
 import Modal from '../Modal'
 
 export default class LookGrid extends React.Component {
@@ -38,12 +38,12 @@ export default class LookGrid extends React.Component {
     if(content.length === 0) return <Spinner />
 
     return (
-      <ItemGrid>
+      <Container>
         {content}
         {modalItem &&
           <Modal content={modalItem} hideModal={this.hideModal} />
         }
-      </ItemGrid>
+      </Container>
     )
   }
 }

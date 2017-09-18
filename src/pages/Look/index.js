@@ -6,7 +6,7 @@ import { Look } from './ui'
 class LookClass extends Component {
 
   render() {
-    if({} || !this.props.products) return <Spinner />
+    if(!this.props.products) return <Spinner />
     return (
       <Look>
         <LookGrid items={this.props.products.data} />
