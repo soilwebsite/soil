@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import store from '../../store'
 import { subscribeUser } from '../../actions/subscription'
 import Submit from '../Submit'
-import { Container, Texture, EmailCapture } from './ui'
+import { Container, Column, Texture, EmailCapture } from './ui'
 
 class Footer extends Component {
 
@@ -28,20 +28,20 @@ class Footer extends Component {
   render() {
     return (
       <Container className="Footer">
-        <Texture />
-        <div>
+        <Texture><div /><div /></Texture>
+        <Column>
           <h3>Care</h3>
           <p><a href="/">Shipping</a></p>
           <p><a href="/">Returns & Exchanges</a></p>
           <p><a href="/">Contact</a></p>
-        </div>
-        <div>
+        </Column>
+        <Column>
           <h3>Helpful Info</h3>
           <p><a href="/">Terms & Conditions</a></p>
           <p><a href="/">Privacy Policy</a></p>
           <p><a href="/">FAQ</a></p>
-        </div>
-        <div>
+        </Column>
+        <Column>
           <h3>Befriend</h3>
           <p>
             <a
@@ -59,15 +59,15 @@ class Footer extends Component {
               Facebook
             </a>
           </p>
-        </div>
-        <div>
+        </Column>
+        <Column>
           <h3>Stay In Touch</h3>
           <div>{this.state.message}</div>
           <EmailCapture>
             <input type="email" value={this.state.value} onChange={this.handleChange} />
             <Submit handleSubmit={this.subscribeEmail} />
           </EmailCapture>
-        </div>
+        </Column>
       </Container>
     )
   }

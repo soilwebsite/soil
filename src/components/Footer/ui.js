@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import BlueTexture from '../../assets/images/virginsoil-texture-spray.png'
+import BlueTexture from '../../assets/images/virginsoil-texture-spray-ii-crop.jpg'
 
 let height = 600
 export const Container = styled.div`
@@ -25,18 +25,29 @@ export const Container = styled.div`
     }
   }
 `
+export const Column = styled.div`
+  z-index: 1;
+`
 
 export const Texture = styled.span`
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: ${height - 200}px;
-  background: url(${BlueTexture}) 0 0px;
-  ${'' /* background-size: cover; */}
-  background-size: 700px;
-  background-repeat: repeat;
+  height: ${height}px;
   opacity: 1;
+  display: flex;
+  z-index: 0;
+  div {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 45%, rgba(255, 255, 255, 0) 100%), url(${BlueTexture}) no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    + div {
+      transform: scaleX(-1);
+    }
+  }
 `
 
 export const EmailCapture = styled.div`
