@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { Icon } from 'react-fa'
 
-export const Modal = styled.div`
+export const Container = styled.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -14,6 +15,14 @@ export const Modal = styled.div`
   z-index: 10;
 `
 
+export const Close = styled(Icon)`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+`
+
 export const Content = styled.div`
   border: 1px solid lightgray;
   width: 800px;
@@ -23,15 +32,16 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 `
 
-export const Icons = styled.div`
+export const Images = styled.div`
   display: flex;
   flex-direction: column;
   border: 1px solid lightgray;
 `
 
-export const ImageIcon = styled.div`
+export const MiniImage = styled.div`
   cursor: pointer;
   border: 1px solid ${({ active }) => active ? 'darkgray' : 'lightgray'};
   margin: 10px;
