@@ -6,16 +6,16 @@ class Product extends Component {
 
   constructor(props) {
     super(props)
-    this.id = Number(props.location.pathname.split('/shop/')[1])
+    this.handle = props.params.id
     let item
     if(props.products) {
-      item = props.products.data.find(p => p.id === this.id)
+      item = props.products.byHandle[this.handle]
     }
     this.state = { item }
   }
 
   componentWillReceiveProps(nextProps) {
-    let item = nextProps.products.data.find(p => p.id === this.id)
+    let item = nextProps.products.byHandle[this.handle]
     if(item !== this.state.item) {
       this.setState({ item })
     }

@@ -1,4 +1,4 @@
-const defaults = { isFetching: true, posts: {} }
+const defaults = { isFetching: true }
 
 const posts = (state = defaults, action) => {
   switch (action.type) {

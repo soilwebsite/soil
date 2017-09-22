@@ -1,4 +1,5 @@
-const defaults = { isFetching: true, products: {} }
+import { keyBy } from 'lodash'
+const defaults = { isFetching: true }
 
 const products = (state = defaults, action) => {
   switch (action.type) {
@@ -10,6 +11,7 @@ const products = (state = defaults, action) => {
     return Object.assign({}, state, {
       isFetching: false,
       data: action.products,
+      byHandle: keyBy(action.products, 'handle'),
       lastUpdated: action.receivedAt
     })
   default:

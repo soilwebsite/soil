@@ -1,4 +1,4 @@
-const defaults = { isFetching: true, tags: {} }
+const defaults = { isFetching: true }
 
 const tags = (state = defaults, action) => {
   switch (action.type) {

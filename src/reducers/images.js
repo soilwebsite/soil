@@ -1,4 +1,4 @@
-const defaults = { isFetching: true, images: {} }
+const defaults = { isFetching: true }
 
 const images = (state = defaults, action) => {
   switch (action.type) {

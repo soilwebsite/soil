@@ -1,5 +1,4 @@
 import React from 'react'
-import { shuffle } from 'lodash'
 import Item from '../Item'
 import Spinner from '../Spinner'
 import { ItemGrid } from './ui'
@@ -8,9 +7,9 @@ export default (props) => {
 
   function getItems() {
     const { items, filter } = props
-    let manyImages = shuffle(items.concat(items).concat(items).concat(items))
-    if(filter) manyImages = manyImages.filter(i => i.tags.find(t => t.name === filter))
-    return manyImages.map((item, i) => <Item key={i} item={item} />)
+    let filteredItems = items
+    if(filter) filteredItems = items.filter(i => i.tags.find(t => t.name === filter))
+    return filteredItems.map((item, i) => <Item key={i} item={item} />)
   }
 
   let content = getItems()

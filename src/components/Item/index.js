@@ -6,11 +6,11 @@ export default ({ item }) => {
   if(!item) return <Spinner />
 
   return (
-    <Item to={`/shop/${item.id}`}>
-      <img src={item.images[0].url} alt={item.name} />
-      <Info>
-        <h3>{item.name}</h3>
-        <strong>${Math.floor(Math.random() * 1000)}</strong>
+    <Item to={`/shop/${item.handle}`}>
+      <img src={item.images[0] && item.images[0].src} alt={item.name} />
+      <Info className="info">
+        <h3>{item.title}</h3>
+        <strong>{item.variants[0].formatted_price}</strong>
       </Info>
     </Item>
   )
