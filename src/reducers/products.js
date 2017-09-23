@@ -1,4 +1,4 @@
-import { keyBy } from 'lodash'
+import { keyBy, uniq } from 'lodash'
 const defaults = { isFetching: true }
 
 const products = (state = defaults, action) => {
@@ -12,6 +12,7 @@ const products = (state = defaults, action) => {
       isFetching: false,
       data: action.products,
       byHandle: keyBy(action.products, 'handle'),
+      productTypes: uniq(action.products.map(p => p.product_type)),
       lastUpdated: action.receivedAt
     })
   default:

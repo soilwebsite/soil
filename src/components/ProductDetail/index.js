@@ -1,4 +1,7 @@
+/* eslint-disable */
+
 import React, { Component } from 'react'
+import shopifyWidget from './shopifyWidget'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -14,10 +17,12 @@ const Container = styled.div`
 class ProductDetail extends Component {
   render() {
     const { item } = this.props
-    console.log(item)
-    // return (
-    //   <div dangerouslySetInnerHTML={{__html: item.body_html}} /> // eslint-disable-line
-    // )
+
+    return (
+      <div id='product-component-1506116392081'>
+        {shopifyWidget(item.product_id)}
+      </div>
+    )
     return (
       <Container>
         <img src={item.images[0].src} alt={item.title} />

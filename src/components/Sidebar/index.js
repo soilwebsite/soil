@@ -1,27 +1,27 @@
 import React, { Component } from 'react'
-import { Sidebar } from './ui'
+import { Sidebar, ProductType } from './ui'
 
 export default class SidebarClass extends Component {
-  state = { active: '' }
+  state = { active: 'All' }
 
-  handleClick(selection) {
-    let filterName = selection.name
+  handleClick(productType) {
+    let filterName = productType
     if(filterName === 'All') filterName = null
-    this.setState({ active: selection.name })
+    this.setState({ active: productType })
     this.props.setFilter(filterName)
   }
 
   sidebarItems() {
-    return [{ name: 'All' }].concat(this.props.items).map((item, i) => {
-      let cn = 'side-item'
-      if(this.state.active === item.name) {
-        cn += ' active'
-      }
-
+    let types = ['All'].concat(this.props.productTypes)
+    return types.map((productType, i) => {
       return (
-        <div key={i} className={cn} onClick={this.handleClick.bind(this, item)}>
-          {item.name}
-        </div>
+        <ProductType
+          key={i}
+          onClick={this.handleClick.bind(this, productType)}
+          active={this.state.active === productType}
+        >
+          {productType}
+        </ProductType>
       )
     })
   }

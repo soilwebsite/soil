@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { ThemeProvider } from 'styled-components'
 import { fetchProducts } from '../actions/product'
-import { fetchImages } from '../actions/image'
-import { fetchTags } from '../actions/tag'
-import { fetchPosts } from '../actions/wordpress'
+// import { fetchImages } from '../actions/image'
+// import { fetchTags } from '../actions/tag'
+// import { fetchPosts } from '../actions/wordpress'
 import theme from '../theme'
 import store from '../store'
 import Navbar from './Navbar'
@@ -19,9 +19,9 @@ class App extends Component {
 
   componentDidMount() {
     store.dispatch(fetchProducts())
-    .then(() => store.dispatch(fetchImages()))
-    .then(() => store.dispatch(fetchTags()))
-    .then(() => store.dispatch(fetchPosts()))
+    // .then(() => store.dispatch(fetchImages()))
+    // .then(() => store.dispatch(fetchTags()))
+    // .then(() => store.dispatch(fetchPosts()))
     .then(() => {
       let state = store.getState()
       console.log('state', state)

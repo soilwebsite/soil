@@ -7,6 +7,7 @@ let linkPadding = ({ theme }) =>
 export const Nav = styled.nav`
   position: relative;
   height: ${({ theme }) => theme.spacing.navHeight}px;
+  margin-bottom: ${({ theme }) => theme.spacing.page};
   background: #fff;
   text-align: center;
   z-index: 10;

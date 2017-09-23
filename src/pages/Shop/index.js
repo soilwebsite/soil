@@ -23,14 +23,13 @@ class ShopClass extends Component {
     this.setState({ filteredItems: nextProps.products.data })
   }
 
-  setFilter(name) {
-    if(!name) {
-      this.setState({ filteredItems: this.props.products.data })
-      return
-    }
-    let filteredItems = this.props.products.data.filter(i =>
-      i.tags.find((t => t.name === name))
-    )
+  setFilter(productType) {
+    let { data } = this.props.products
+    if(!productType) { return this.setState({ filteredItems: data }) }
+    var regex = new RegExp(productType)
+    let filteredItems = data.filter(i => {
+      if(!i.product_type) console.warn('Warning: No product type for ' + i.handle)
+      return regex.test(i.product_type)})
     this.setState({ filteredItems })
   }
 
@@ -40,7 +39,7 @@ class ShopClass extends Component {
 
     return (
       <Shop>
-        <Sidebar items={this.props.tags.data} setFilter={this.setFilter} />
+        <Sidebar productTypes={this.props.products.productTypes} setFilter={this.setFilter} />
         <ItemGrid items={filteredItems} />
       </Shop>
     )
