@@ -4,7 +4,7 @@ const path = require('path')
 const app = express()
 process.env.NODE_ENV = 'production';
 
-require('dotenv').config()
+require('dotenv').config({ silent: true })
 
 app.use(express.static(path.join(__dirname, '../build')));
 app.set('port', process.env.PORT || 3000);
