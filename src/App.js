@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import { ThemeProvider } from 'styled-components'
-import { fetchProducts } from '../actions/product'
+import { fetchProducts } from './actions/product'
 // import { fetchImages } from '../actions/image'
 // import { fetchTags } from '../actions/tag'
 // import { fetchPosts } from '../actions/wordpress'
-import theme from '../theme'
-import store from '../store'
-import Navbar from './Navbar'
-import Footer from './Footer'
+import theme from './theme'
+import store from './store'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 let Container = styled.div`
   width: 100%;
@@ -16,7 +16,6 @@ let Container = styled.div`
 `
 
 class App extends Component {
-
   componentDidMount() {
     store.dispatch(fetchProducts())
     // .then(() => store.dispatch(fetchImages()))
