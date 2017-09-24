@@ -1,15 +1,20 @@
 import styled from 'styled-components'
 import BlueTexture from '../../assets/images/virginsoil-texture-spray-ii-crop.jpg'
+import Border from '../../assets/images/border.png'
 
 let height = 600
 export const Container = styled.div`
   position: relative;
   background: #fff;
   height: ${height}px;
-  padding: 30px;
+  margin-top: ${({ theme }) => theme.spacing.page};
+  padding: ${({ theme }) => theme.spacing.page};
   display: flex;
   align-items: flex-start;
   text-transform: uppercase;
+  border-top: 4px solid transparent;
+  border-image: url(${Border});
+  border-image-slice: 1;
   > div {
     width: 33%;
     text-align: left;
@@ -41,7 +46,7 @@ export const Texture = styled.span`
   div {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 45%, rgba(255, 255, 255, 0) 100%), url(${BlueTexture}) no-repeat;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .9) 15%, rgba(255, 255, 255, 0) 100%), url(${BlueTexture}) no-repeat;
     background-size: cover;
     background-repeat: no-repeat;
     + div {

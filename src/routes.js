@@ -24,8 +24,8 @@ const Routes = (props) => {
       <Route path="/shop" component={Shop} />
       <Route path="/shop/:id" component={Product} />
       <Route path="/collection" component={Look} />
-      <Route path="/*" component={ComingSoon} />
       <Route path="/about" component={About} />
+      <Route path="/*" component={ComingSoon} />
       <Route path="/account" component={SignIn} />
       <Route path="/bag" component={Cart} />
 

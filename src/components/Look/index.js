@@ -10,9 +10,9 @@ export default ({ src, i, onClick }) => {
     <LookWrap>
       <Look onClick={onClick}>
         <img src={src} alt={src} />
-        <Info className="info">
+        {/* <Info className="info">
           <h3>Shop This Look</h3>
-        </Info>
+        </Info> */}
       </Look>
     </LookWrap>
   )
