@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
 import LookGrid from '../../components/LookGrid'
-import { Look } from './ui'
+import { Container } from './ui'
 
-class LookClass extends Component {
+export default class Look extends Component {
 
   render() {
     return (
-      <Look>
-        <LookGrid items={this.props.products.data} />
-      </Look>
+      <Container>
+        <LookGrid />
+      </Container>
     )
   }
 }
-
-export default LookClass

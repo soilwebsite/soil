@@ -10,5 +10,5 @@ module.exports = (app) => {
     next()
   })
 
-  // app.use('/api/v1', require('../server/api/v1'))
+  app.use('/api/v1', require('../server/api/v1'))
 }

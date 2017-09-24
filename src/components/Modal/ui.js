@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Icon } from 'react-fa'
 
+export const modalWidth = 830
 export const Container = styled.div`
   position: fixed;
   top: 0;
@@ -15,55 +16,28 @@ export const Container = styled.div`
   z-index: 10;
 `
 
+export const Cloak = Container.extend`
+  opacity: ${({ opacity }) => opacity ? opacity : 0.4};
+  background-color: #000;
+  z-index: 5;
+`
+
 export const Close = styled(Icon)`
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 20px;
-  height: 20px;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.5em !important;
 `
 
 export const Content = styled.div`
-  border: 1px solid lightgray;
-  width: 800px;
-  height: 600px;
-  padding: 10px;
-  background: white;
+  width: ${modalWidth}px;
+  height: 605px;
+  padding: 30px;
+  background: ${({ background }) => background ? background : 'white'};
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: relative;
-`
-
-export const Images = styled.div`
-  display: flex;
-  flex-direction: column;
-  border: 1px solid lightgray;
-`
-
-export const MiniImage = styled.div`
-  cursor: pointer;
-  border: 1px solid ${({ active }) => active ? 'darkgray' : 'lightgray'};
-  margin: 10px;
-  width: 50px;
-  height: 50px;
-  background-image: url(${({ url }) => url});
-  background-size: contain;
-`
-
-export const Image = styled.img`
-  max-height: 500px;
-  max-width: 300px;
-`
-
-export const Details = styled.div`
-  border: 1px solid lightgray;
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-  max-height: 500px;
-  width: 300px;
-  span {
-    padding: 10px;
-  }
+  z-index: 11;
 `

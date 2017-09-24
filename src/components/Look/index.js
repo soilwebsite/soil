@@ -2,14 +2,14 @@ import React from 'react'
 import Spinner from '../Spinner'
 import { LookWrap, Look, Info } from './ui'
 
-export default ({ item, onClick }) => {
+export default ({ src, i, onClick }) => {
 
-  if(!item) return <Spinner />
+  if(!src) return <Spinner />
 
   return (
     <LookWrap>
       <Look onClick={onClick}>
-        <img src={item.images[0].url} alt={item.name} />
+        <img src={src} alt={src} />
         <Info className="info">
           <h3>Shop This Look</h3>
         </Info>

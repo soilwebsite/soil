@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-export const Look = styled.div`
+export const Container = styled.div`
   position: relative;
   margin: 0 auto;
   padding: 0 ${({ theme }) => theme.spacing.page};
-  max-width: 1550px;
+  max-width: ${({ theme }) => theme.width.page}px;
 `

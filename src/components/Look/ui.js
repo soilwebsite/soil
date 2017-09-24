@@ -5,11 +5,9 @@ export const LookWrap = styled.div`
   overflow: hidden;
   height: 500px;
   width: 350px;
-  margin-top: 55px;
-  margin-left: 55px;
-  ${'' /* &:nth-child(3n + 1) {
-    margin-left: 0;
-  } */}
+  margin-bottom: ${({ theme }) => theme.spacing.page};
+  margin-left: ${({ theme }) => theme.spacing.page};
+  cursor: pointer;
   &:hover .info {
     opacity: .9;
   }
@@ -40,7 +38,6 @@ export const Info = styled.div`
   width: 100%;
   height: 7%;
   position: absolute;
-  cursor: pointer;
   bottom: 40%;
   left: 0;
   background: #fff;

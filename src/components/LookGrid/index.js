@@ -1,9 +1,9 @@
 import React from 'react'
-import { shuffle } from 'lodash'
 import Look from '../Look'
-import Spinner from '../Spinner'
 import { Container } from './ui'
 import Modal from '../Modal'
+import LookModal from '../Modal/components/slideshow'
+import looks from '../../assets/images/ss18'
 
 export default class LookGrid extends React.Component {
 
@@ -22,26 +22,22 @@ export default class LookGrid extends React.Component {
     this.setState({ modalItem: null })
   }
 
-  getItems() {
-    const { items, filter } = this.props
-    if(!items) return []
-    let manyImages = shuffle(items.concat(items).concat(items).concat(items))
-    if(filter) manyImages = manyImages.filter(i => i.tags.find(t => t.name === filter))
-    return manyImages.map((item, i) =>
-      <Look key={i} item={item} onClick={() => this.onClick(item)} />
-    )
-  }
-
   render() {
     const { modalItem } = this.state
-    let content = this.getItems()
-    if(content.length === 0) return <Spinner />
-
+    // if(content.length === 0) return <Spinner />
+    let custom = {
+      cloak: { opacity: 0.87 },
+      content: { background: 'transparent' }
+    }
     return (
       <Container>
-        {content}
+        {looks.map((look, i) =>
+          <Look key={i} src={look.images[0].url} onClick={() => this.onClick(look)} />
+        )}
         {modalItem &&
-          <Modal content={modalItem} hideModal={this.hideModal} />
+          <Modal hideModal={this.hideModal} custom={custom}>
+            <LookModal items={looks} />
+          </Modal>
         }
       </Container>
     )

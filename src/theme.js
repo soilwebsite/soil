@@ -5,6 +5,9 @@ export default {
     navItem: 15,
     navHeight: 110
   },
+  width: {
+    page: 1550
+  },
   color: {
     text: '#031864'
   }
