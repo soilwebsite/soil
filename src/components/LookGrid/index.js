@@ -9,21 +9,21 @@ export default class LookGrid extends React.Component {
 
   constructor(props) {
     super(props)
-    this.state = { modalItem: null }
+    this.state = { modalIdx: null }
     this.onClick = this.onClick.bind(this)
     this.hideModal = this.hideModal.bind(this)
   }
 
-  onClick(item) {
-    this.setState({ modalItem: item })
+  onClick(i) {
+    this.setState({ modalIdx: i })
   }
 
   hideModal() {
-    this.setState({ modalItem: null })
+    this.setState({ modalIdx: null })
   }
 
   render() {
-    const { modalItem } = this.state
+    const { modalIdx } = this.state
     // if(content.length === 0) return <Spinner />
     let custom = {
       cloak: { opacity: 0.87 },
@@ -32,11 +32,11 @@ export default class LookGrid extends React.Component {
     return (
       <Container>
         {looks.map((look, i) =>
-          <Look key={i} src={look.images[0].url} onClick={() => this.onClick(look)} />
+          <Look key={i} item={look} onClick={() => this.onClick(i)} />
         )}
-        {modalItem &&
+        {(modalIdx || modalIdx === 0) &&
           <Modal hideModal={this.hideModal} custom={custom}>
-            <LookModal items={looks} />
+            <LookModal items={looks} selected={modalIdx} />
           </Modal>
         }
       </Container>

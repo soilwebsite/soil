@@ -2,7 +2,8 @@ import styled from 'styled-components'
 import BeltImg from '../../assets/images/shop/belt.png'
 
 export const Container = styled.div`
-  margin-top: -$nav-height;
+  margin-top: ${({ theme }) => -theme.spacing.page * 2 - 4}px;
+  margin-bottom: ${({ theme }) => -theme.spacing.page * 2}px;
   height: 100%;
   width: 100%;
   display: flex;

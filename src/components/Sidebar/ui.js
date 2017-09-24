@@ -4,7 +4,7 @@ export const Sidebar = styled.nav`
   position: fixed;
   bottom: 0;
   height: 100%;
-  width: ${({ theme }) => theme.spacing.sidebar};
+  width: ${({ theme }) => theme.px.spacing.sidebar};
   transition: width 1s;
   z-index: 1;
   display: flex;

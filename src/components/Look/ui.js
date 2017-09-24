@@ -5,8 +5,8 @@ export const LookWrap = styled.div`
   overflow: hidden;
   height: 500px;
   width: 350px;
-  margin-bottom: ${({ theme }) => theme.spacing.page};
-  margin-left: ${({ theme }) => theme.spacing.page};
+  margin-bottom: ${({ theme }) => theme.px.spacing.page};
+  margin-left: ${({ theme }) => theme.px.spacing.page};
   cursor: pointer;
   &:hover .info {
     opacity: .9;

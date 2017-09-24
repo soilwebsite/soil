@@ -7,8 +7,8 @@ export const Container = styled.div`
   position: relative;
   background: #fff;
   height: ${height}px;
-  margin-top: ${({ theme }) => theme.spacing.page};
-  padding: ${({ theme }) => theme.spacing.page};
+  margin-top: ${({ theme }) => theme.px.spacing.page};
+  padding: ${({ theme }) => theme.px.spacing.page};
   display: flex;
   align-items: flex-start;
   text-transform: uppercase;

@@ -2,12 +2,12 @@ import styled from 'styled-components'
 import Border from '../../assets/images/border.png'
 
 let linkPadding = ({ theme }) =>
-  `calc(${theme.spacing.page} - ${theme.spacing.navItem}px)`
+  `calc(${theme.px.spacing.page} - ${theme.spacing.navItem}px)`
 
 export const Nav = styled.nav`
   position: relative;
-  height: ${({ theme }) => theme.spacing.navHeight}px;
-  margin-bottom: ${({ theme }) => theme.spacing.page};
+  height: ${({ theme }) => theme.height.nav}px;
+  margin-bottom: ${({ theme }) => theme.px.spacing.page};
   background: #fff;
   text-align: center;
   z-index: 10;
@@ -16,7 +16,7 @@ export const Nav = styled.nav`
   border-image: url(${Border});
   border-image-slice: 1;
   @media screen and (max-width: 890px) {
-    height: ${({ theme }) => theme.spacing.navHeight / 2}px;
+    height: ${({ theme }) => theme.height.nav / 2}px;
   }
 `
 
@@ -32,13 +32,13 @@ export const VirginSoil = styled.img`
 `
 
 export const NavLinks = styled.div`
-  height: ${({ theme }) => theme.spacing.navHeight}px;
+  height: ${({ theme }) => theme.height.nav}px;
   display: flex;
   justify-content: space-between;
   padding-left: ${linkPadding};
   padding-right: ${linkPadding};
   @media screen and (max-width: 890px) {
-    height: ${({ theme }) => theme.spacing.navHeight / 2}px;
+    height: ${({ theme }) => theme.height.nav / 2}px;
     padding-left: 0;
     padding-right: 0;
   }

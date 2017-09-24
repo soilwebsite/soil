@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  padding: 0 ${({ theme }) => theme.spacing.page};
+  padding: 0 ${({ theme }) => theme.px.spacing.page};
   width: ${({ theme }) => theme.width.page / 2}px;
   margin: 0 auto;
 `

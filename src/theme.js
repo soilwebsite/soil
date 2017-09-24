@@ -1,9 +1,19 @@
-export default {
+// import { map, isObject } from 'lodash'
+
+let theme = {
+  px: {
+    spacing: {
+      page: '55px',
+      sidebar: '240px',
+    }
+  },
   spacing: {
-    page: '55px', // vw
-    sidebar: '240px',
-    navItem: 15,
-    navHeight: 110
+    page: 55,
+    sidebar: 240,
+    navItem: 15
+  },
+  height: {
+    nav: 110
   },
   width: {
     page: 1550
@@ -12,3 +22,17 @@ export default {
     text: '#031864'
   }
 }
+
+// let px = {}
+// let pxer = obj => {
+//   return map(obj, (v, k) => {
+//     if(isObject(v)) px[k] = pxer(v); else px[k] = v + 'px'
+//     return px[k]
+//   })
+// }
+
+// pxer(theme)
+// theme.px = px
+// console.log(theme);
+
+export default theme
