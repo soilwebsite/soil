@@ -37,8 +37,8 @@ class Footer extends Component {
         </Column>
         <Column>
           <h3>Helpful Info</h3>
-          <p><a href="/">Terms & Conditions</a></p>
-          <p><a href="/">Privacy Policy</a></p>
+          <p><a href="/terms-of-service">Terms of Service</a></p>
+          <p><a href="/privacy-policy">Privacy Policy</a></p>
           <p><a href="/">FAQ</a></p>
         </Column>
         <Column>
