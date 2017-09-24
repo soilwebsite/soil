@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import React, { Component } from 'react'
 import shopifyWidget from './shopifyWidget'
 import styled from 'styled-components'
@@ -23,13 +21,13 @@ class ProductDetail extends Component {
         {shopifyWidget(item.product_id)}
       </div>
     )
-    return (
-      <Container>
-        <img src={item.images[0].src} alt={item.title} />
-        {item.title}
-        {item.tags ? item.tags.split(' ').map(tag => <span key={tag}>#{tag}</span>) : null}
-      </Container>
-    )
+    // return (
+    //   <Container>
+    //     <img src={item.images[0].src} alt={item.title} />
+    //     {item.title}
+    //     {item.tags ? item.tags.split(' ').map(tag => <span key={tag}>#{tag}</span>) : null}
+    //   </Container>
+    // )
   }
 }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ItemGrid from '../../components/ItemGrid'
 import Sidebar from '../../components/Sidebar'
+import Spinner from '../../components/Spinner'
 import { Shop } from './ui'
 
 class ShopClass extends Component {
@@ -35,7 +36,7 @@ class ShopClass extends Component {
 
   render() {
     let { filteredItems } = this.state
-    if(!this.props.products || !filteredItems) { return null }
+    if(!this.props.products || !filteredItems) return <Spinner />
 
     return (
       <Shop>
