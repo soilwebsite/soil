@@ -7,11 +7,12 @@ export const Container = styled.div`
 `
 export const Content = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 `
 export const Photo = styled.img`
-  height: 600px;
+  height: 450px;
   flex-shrink: 0;
+  margin-right: ${({ theme }) => theme.px.spacing.page};
 `
 
 export const Title = styled.h2`
@@ -19,4 +20,6 @@ export const Title = styled.h2`
 
 export const Text = styled.p`
   width: 400px;
+  text-align: left;
+  letter-spacing: normal;
 `
