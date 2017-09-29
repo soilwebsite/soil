@@ -8,22 +8,11 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
-  height: 100%;
+  height: 90vh;
   width: 100%;
   .arrow {
     color: white;
   }
-`
-
-const Window = styled.div`
-  height: 100%;
-  width: 100%;
-`
-
-const Carousel = styled.div`
-  height: 100%;
-  width: 100%;
-  ${'' /* width: 400%; */}
 `
 
 const Pane = styled.div`
@@ -35,9 +24,7 @@ const Pane = styled.div`
   display: inline-block;
 `
 
-const Image = styled.img`
-  height: 100%;
-`
+const Image = styled.img`height: 100%;`
 
 const Arrow = styled(Icon)`
   padding: 10px;
@@ -56,15 +43,9 @@ export default class extends React.Component {
   rotate(increment) {
     let maxIdx = this.props.items.length - 1
     let newActive = this.state.active + increment
-    if(maxIdx - 1 < newActive) newActive = 0
-    if(newActive < 0) newActive = maxIdx
+    if (maxIdx - 1 < newActive) newActive = 0
+    if (newActive < 0) newActive = maxIdx
     this.setState({ active: newActive })
-    // if(dir === 'right') {
-    //   console.log('scroll');
-    //   console.log(this.carousel.scrollLeft);
-    //   this.carousel.scrollLeft += 860
-    //   console.log(this.carousel.scrollLeft);
-    // }
   }
 
   render() {
@@ -73,13 +54,9 @@ export default class extends React.Component {
     return (
       <Container>
         <Arrow className="arrow" name="angle-left" size="4x" onClick={this.rotate.bind(this, -1)} />
-        <Window className="window">
-          <Carousel innerRef={el => this.carousel = el}>
-            <Pane>
-              <Image src={items[active].images[0].url} />
-            </Pane>
-          </Carousel>
-        </Window>
+        <Pane>
+          <Image src={items[active].images[0].url} />
+        </Pane>
         <Arrow className="arrow" name="angle-right" size="4x" onClick={this.rotate.bind(this, 1)} />
       </Container>
     )

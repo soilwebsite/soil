@@ -17,7 +17,7 @@ export const Container = styled.div`
 `
 
 export const Cloak = Container.extend`
-  opacity: ${({ opacity }) => opacity ? opacity : 0.4};
+  opacity: ${({ opacity }) => (opacity ? opacity : 0.4)};
   background-color: #000;
   z-index: 5;
 `
@@ -28,13 +28,14 @@ export const Close = styled(Icon)`
   right: 15px;
   cursor: pointer;
   font-size: 1.5em !important;
+  visibility: ${({ visibility }) => (visibility ? visibility : 'visible')};
 `
 
 export const Content = styled.div`
   width: ${modalWidth}px;
   height: 605px;
   padding: 30px;
-  background: ${({ background }) => background ? background : 'white'};
+  background: ${({ background }) => (background ? background : 'white')};
   display: flex;
   justify-content: center;
   align-items: center;

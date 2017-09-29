@@ -6,7 +6,6 @@ import LookModal from '../Modal/components/slideshow'
 import looks from '../../assets/images/ss18'
 
 export default class LookGrid extends React.Component {
-
   constructor(props) {
     super(props)
     this.state = { modalIdx: null }
@@ -24,21 +23,19 @@ export default class LookGrid extends React.Component {
 
   render() {
     const { modalIdx } = this.state
-    // if(content.length === 0) return <Spinner />
     let custom = {
       cloak: { opacity: 0.87 },
-      content: { background: 'transparent' }
+      content: { background: 'transparent' },
+      close: { visibility: 'hidden' }
     }
     return (
       <Container>
-        {looks.map((look, i) =>
-          <Look key={i} item={look} onClick={() => this.onClick(i)} />
-        )}
-        {(modalIdx || modalIdx === 0) &&
+        {looks.map((look, i) => <Look key={i} item={look} onClick={() => this.onClick(i)} />)}
+        {(modalIdx || modalIdx === 0) && (
           <Modal hideModal={this.hideModal} custom={custom}>
             <LookModal items={looks} selected={modalIdx} />
           </Modal>
-        }
+        )}
       </Container>
     )
   }
