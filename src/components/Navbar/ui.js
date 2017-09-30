@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 import Border from '../../assets/images/border.png'
 
-let linkPadding = ({ theme }) =>
-  `calc(${theme.px.spacing.page} - ${theme.spacing.navItem}px)`
+let linkPadding = ({ theme }) => theme.px.spacing.page
 
 export const Nav = styled.nav`
   position: relative;
@@ -24,15 +23,15 @@ export const VirginSoil = styled.img`
   height: 50px;
   ${'' /* opacity: .5;
   filter: hue-rotate(180deg);
-  filter: sepia(100%); */}
-  ${'' /* filter: blur(.5px); */}
-  @media screen and (max-width: 890px) {
+  filter: sepia(100%); */} ${'' /* filter: blur(.5px); */} @media screen and (max-width: 890px) {
     height: 25px;
   }
 `
 
 export const NavLinks = styled.div`
   height: ${({ theme }) => theme.height.nav}px;
+  margin: 0 auto;
+  max-width: ${({ theme }) => theme.width.page}px;
   display: flex;
   justify-content: space-between;
   padding-left: ${linkPadding};
@@ -75,11 +74,10 @@ export const NavLink = styled.a`
   padding: 20px ${({ theme }) => theme.spacing.navItem}px 0;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  ${'' /* color: #7f7f7f; */}
-  color: ${({ theme }) => theme.color.text};
+  ${'' /* color: #7f7f7f; */} color: ${({ theme }) => theme.color.text};
   text-decoration: none;
   overflow: hidden;
-  transition: 0.4s color cubic-bezier(.19, 1, .22, 1);
+  transition: 0.4s color cubic-bezier(0.19, 1, 0.22, 1);
   z-index: 14;
   &:after {
     position: absolute;
@@ -89,7 +87,7 @@ export const NavLink = styled.a`
     bottom: -4px;
     height: 4px;
     background: #2d2d2d;
-    transition: 0.6s bottom cubic-bezier(.19, 1, .22, 1);
+    transition: 0.6s bottom cubic-bezier(0.19, 1, 0.22, 1);
   }
   &.current:after,
   &.current:hover:after,

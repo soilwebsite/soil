@@ -17,16 +17,17 @@ let Container = styled.div`
 
 class App extends Component {
   componentDidMount() {
-    store.dispatch(fetchProducts())
-    // .then(() => store.dispatch(fetchImages()))
-    // .then(() => store.dispatch(fetchTags()))
-    // .then(() => store.dispatch(fetchPosts()))
-    .then(() => {
-      let state = store.getState()
-      console.log('state', state)
-      this.setState(state)
-    })
-    .catch(err => console.error(err))
+    store
+      .dispatch(fetchProducts())
+      // .then(() => store.dispatch(fetchImages()))
+      // .then(() => store.dispatch(fetchTags()))
+      // .then(() => store.dispatch(fetchPosts()))
+      .then(() => {
+        let state = store.getState()
+        console.log('state', state)
+        this.setState(state)
+      })
+      .catch(err => console.error(err))
   }
 
   render() {
@@ -34,10 +35,7 @@ class App extends Component {
       <ThemeProvider theme={theme}>
         <Container>
           <Navbar location={this.props.location} />
-          {React.cloneElement(
-              this.props.children,
-              { ...this.props, ...this.state }
-            )}
+          {React.cloneElement(this.props.children, { ...this.props, ...this.state })}
           <Footer />
         </Container>
       </ThemeProvider>

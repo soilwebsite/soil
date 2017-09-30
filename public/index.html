@@ -18,7 +18,7 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Virgin Soil</title>
-    <meta name="description" content="Luxury fashion for a simple lifestyle. Find women's dresses and coats, minus the complexity.">
+    <meta name="description" content="Luxury fashion for a simple lifestyle.">
   </head>
   <body>
     <div id="root"></div>
@@ -33,25 +33,30 @@
       To create a production bundle, use `npm run build`.
     -->
     <script>
-    if(window.location.host !== 'www.baikhal.com'
-      && window.location.host !== 'www.virginsoil.us'
-      && window.location.host !== 'www.virgin-sol.com'
-      && window.location.host !== 'www.foresttribe.com'
-    ) {
-      console.log('analytics: off for', window.location.host)
-    } else {
-      (function (i,s,o,g,r,a,m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() { (i[r].q = i[r].q||[]).push(arguments) },
-        i[r].l = 1 * new Date();
-        a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a,m)
-      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-      ga && ga('create', 'UA-71229500-3', 'auto');
-      ga && ga('send', 'pageview');
-    }
-    </script>
+    if (
+  window.location.host !== 'www.baikhal.com' &&
+  window.location.host !== 'www.virginsoil.us' &&
+  window.location.host !== 'www.virgin-sol.com' &&
+  window.location.host !== 'www.foresttribe.com'
+) {
+  console.log('analytics off for', window.location.host)
+} else {
+  ;(function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r
+    ;(i[r] =
+      i[r] ||
+      function() {
+        ;(i[r].q = i[r].q || []).push(arguments)
+      }),
+      (i[r].l = 1 * new Date())
+    ;(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
+    a.async = 1
+    a.src = g
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga')
+  ga && ga('create', 'UA-71229500-3', 'auto')
+  ga && ga('send', 'pageview')
+}
+</script>
   </body>
 </html>

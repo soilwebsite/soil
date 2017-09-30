@@ -5,11 +5,11 @@ export const LookWrap = styled.div`
   overflow: hidden;
   height: 500px;
   width: 350px;
-  margin-bottom: ${({ theme }) => theme.px.spacing.page};
-  margin-left: ${({ theme }) => theme.px.spacing.page};
-  cursor: pointer;
+  cursor: ${({ dummy }) => !dummy && 'pointer'};
+  margin: ${({ theme: { spacing: { page } } }) =>
+    `${page / 2}px ${page / 2}px ${page / 2}px ${page / 2}px`};
   &:hover .info {
-    opacity: .9;
+    opacity: 0.9;
   }
 `
 export const Look = styled.div`
@@ -18,19 +18,11 @@ export const Look = styled.div`
   align-items: center;
   position: relative;
   height: 100%;
-
   img {
-    ${'' /* max-width: 100%; */}
-    ${'' /* perspective: 1000; */}
-    ${'' /* transition: 0.5s; */}
-    height: 100%;
+    ${'' /* max-width: 100%; */} ${'' /* perspective: 1000; */} ${'' /* transition: 0.5s; */} height: 100%;
   }
   @media screen and (max-width: 890px) {
-    height: auto;
     width: 100%;
-    img {
-      height: auto;
-    }
   }
 `
 
@@ -42,7 +34,7 @@ export const Info = styled.div`
   left: 0;
   background: #fff;
   opacity: 0;
-  transition: opacity .5s;
+  transition: opacity 0.5s;
   text-transform: none;
   display: flex;
   font-size: 12px;

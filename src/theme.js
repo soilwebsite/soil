@@ -4,7 +4,7 @@ let theme = {
   px: {
     spacing: {
       page: '55px',
-      sidebar: '240px',
+      sidebar: '240px'
     }
   },
   spacing: {
@@ -16,7 +16,7 @@ let theme = {
     nav: 110
   },
   width: {
-    page: 1550
+    page: 1220
   },
   color: {
     text: '#031864'

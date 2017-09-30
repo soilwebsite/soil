@@ -1,11 +1,13 @@
 import React from 'react'
 import Spinner from '../Spinner'
 import { LookWrap, Look, Info } from './ui'
+import { isNumber } from 'lodash'
 
 export default ({ item, i, onClick }) => {
+  if (isNumber(item)) return <LookWrap dummy />
 
   let src = item.images[0].url
-  if(!src) return <Spinner />
+  if (!src) return <Spinner />
 
   return (
     <LookWrap>
