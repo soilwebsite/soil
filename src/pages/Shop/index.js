@@ -14,7 +14,7 @@ class ShopClass extends Component {
   }
 
   componentWillMount() {
-    if(!this.props.products) {
+    if (!this.props.products) {
       return
     }
     this.setState({ filteredItems: this.props.products.data })
@@ -26,17 +26,20 @@ class ShopClass extends Component {
 
   setFilter(productType) {
     let { data } = this.props.products
-    if(!productType) { return this.setState({ filteredItems: data }) }
+    if (!productType) {
+      return this.setState({ filteredItems: data })
+    }
     var regex = new RegExp(productType)
     let filteredItems = data.filter(i => {
-      if(!i.product_type) console.warn('Warning: No product type for ' + i.handle)
-      return regex.test(i.product_type)})
+      if (!i.product_type) console.warn('Warning: No product type for ' + i.handle)
+      return regex.test(i.product_type)
+    })
     this.setState({ filteredItems })
   }
 
   render() {
     let { filteredItems } = this.state
-    if(!this.props.products || !filteredItems) return <Spinner />
+    if (!this.props.products || !filteredItems) return <Spinner />
 
     return (
       <Shop>
