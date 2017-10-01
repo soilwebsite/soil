@@ -36,6 +36,13 @@ export default class extends React.Component {
     super(props)
     this.state = { active: props.selected }
     this.setActive = this.setActive.bind(this)
+    this.handlePress = this.handlePress.bind(this)
+  }
+  componentWillMount() {
+    document.addEventListener('keydown', this.handlePress)
+  }
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handlePress)
   }
   setActive(i) {
     this.setState({ active: i })
@@ -47,12 +54,16 @@ export default class extends React.Component {
     if (newActive < 0) newActive = maxIdx
     this.setState({ active: newActive })
   }
+  handlePress({ key }) {
+    if (key === 'ArrowRight') this.rotate(1)
+    if (key === 'ArrowLeft') this.rotate(-1)
+  }
 
   render() {
     let { items } = this.props
     let { active } = this.state
     return (
-      <Container>
+      <Container onKeyDown={this.handlePress}>
         <Arrow className="arrow" name="angle-left" size="4x" onClick={this.rotate.bind(this, -1)} />
         <Pane>
           <Image src={items[active].images[0].url} />
