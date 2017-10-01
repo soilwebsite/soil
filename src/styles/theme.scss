@@ -1,32 +1,32 @@
 @font-face {
-    font-family: 'franklingothic-demi';
-    src: url('../../public/fonts/franklingothic-demi-webfont.woff2') format('woff2'),
-         url('../../public/fonts/franklingothic-demi-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: 'franklingothic-demi';
+  src: url('../../public/fonts/franklingothic-demi-webfont.woff2') format('woff2'),
+    url('../../public/fonts/franklingothic-demi-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'franklingothic-book';
-    src: url('../../public/fonts/franklingothic-book-webfont.woff2') format('woff2'),
-         url('../../public/fonts/franklingothic-book-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: 'franklingothic-book';
+  src: url('../../public/fonts/franklingothic-book-webfont.woff2') format('woff2'),
+    url('../../public/fonts/franklingothic-book-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'adamcgpro';
-    src: url('../../public/fonts/ADAMCGPRO.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'adamcgpro';
+  src: url('../../public/fonts/ADAMCGPRO.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 $nav-height: 100px;
 $page-margin: 55px;
 
-html, #root, body {
+html,
+#root,
+body {
   height: 100%;
   width: 100%;
 }
@@ -35,15 +35,22 @@ body {
   text-align: center;
   font-family: 'franklingothic-book', 'Open Sans', 'Kanit', sans-serif;
   letter-spacing: 0.2em;
-  color: #7f7f7f;
+  // color: #7f7f7f;
+  color: #022041;
   font-size: 12px;
+  background-color: #f3ebe1;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'franklingothic-demi', sans-serif;
 }
 
-$logo-spacing: .7em;
+$logo-spacing: 0.7em;
 h1 {
   font-family: 'adamcgpro', sans-serif;
   text-transform: uppercase;
@@ -64,7 +71,7 @@ h2 {
   color: #333;
   font-size: 24px;
   display: inline-block;
-  padding: .2em;
+  padding: 0.2em;
   margin-bottom: 25px;
 }
 p {

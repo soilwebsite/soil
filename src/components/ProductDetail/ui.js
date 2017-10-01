@@ -38,11 +38,6 @@ export const Info = styled.div`
   width: 40%;
   padding: 1.5%;
 `
-export const Vendor = styled.h2`
-  display: block;
-  font-size: 14px;
-  margin-bottom: 5px;
-`
 export const Title = styled.h2`
   display: block;
   font-size: 18px;
@@ -55,13 +50,18 @@ export const Text = styled.span`
   font-size: 14px;
 `
 export const Button = styled.div`
-  background-color: black;
+  background-color: #022041;
   color: white;
   border-radius: 2px;
-  display: inline-block;
-  padding: 10px;
+  ${'' /* display: inline-block; */} padding: 15px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  margin-bottom: 10px;
+  margin: 30px 0 30px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
 `
 export const Description = styled.div`
   p {
@@ -72,7 +72,6 @@ export const Description = styled.div`
   }
   p:nth-of-type(2) {
     ${'' /* Details */};
-    ${'' /* color: black; */};
   }
   p:nth-of-type(3) {
     ${'' /* Care instructions */};

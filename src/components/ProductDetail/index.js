@@ -8,7 +8,6 @@ import {
   Image,
   Info,
   Description,
-  Vendor,
   Title,
   Text,
   Button
@@ -43,7 +42,6 @@ class ProductDetail extends Component {
         </Previews>
         <Image src={item.images[imageIdx].src} alt={item.title} />
         <Info>
-          <Vendor>{item.vendor}</Vendor>
           <Title>{item.title}</Title>
           <Text>{variant.formatted_price}</Text>
           {variant.available ? (
