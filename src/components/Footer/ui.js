@@ -15,6 +15,7 @@ export const Container = styled.div`
   border-top: 4px solid transparent;
   border-image: url(${Border});
   border-image-slice: 1;
+  z-index: 10;
   > div {
     width: 33%;
     text-align: left;
@@ -30,9 +31,7 @@ export const Container = styled.div`
     }
   }
 `
-export const Column = styled.div`
-  z-index: 1;
-`
+export const Column = styled.div`z-index: 1;`
 
 export const Texture = styled.span`
   position: absolute;
@@ -46,7 +45,13 @@ export const Texture = styled.span`
   div {
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, .9) 15%, rgba(255, 255, 255, 0) 100%), url(${BlueTexture}) no-repeat;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.9) 15%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      url(${BlueTexture}) no-repeat;
     background-size: cover;
     background-repeat: no-repeat;
     + div {
@@ -58,7 +63,7 @@ export const Texture = styled.span`
 export const EmailCapture = styled.div`
   color: #333;
   display: flex;
-  input[type=email] {
+  input[type='email'] {
     border-width: 0;
     width: 18vw;
     padding: 5px;
