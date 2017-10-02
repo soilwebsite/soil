@@ -24,7 +24,10 @@ const Pane = styled.div`
   display: inline-block;
 `
 
-const Image = styled.img`height: 100%;`
+const Image = styled.img`
+  height: 100%;
+  width: auto;
+`
 
 const Arrow = styled(Icon)`
   padding: 10px;

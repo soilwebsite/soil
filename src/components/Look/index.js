@@ -1,16 +1,16 @@
 import React from 'react'
 import Spinner from '../Spinner'
-import { LookWrap, Look, Info } from './ui'
+import { Container, Look, Info } from './ui'
 import { isNumber } from 'lodash'
 
 export default ({ item, i, onClick }) => {
-  if (isNumber(item)) return <LookWrap dummy />
+  if (isNumber(item)) return <Container dummy />
 
   let src = item.images[0].url
   if (!src) return <Spinner />
 
   return (
-    <LookWrap>
+    <Container>
       <Look onClick={onClick}>
         <img src={src} alt={src} />
         <Info className="info">
@@ -18,6 +18,6 @@ export default ({ item, i, onClick }) => {
           {/* <h3>Shop This Look</h3> */}
         </Info>
       </Look>
-    </LookWrap>
+    </Container>
   )
 }

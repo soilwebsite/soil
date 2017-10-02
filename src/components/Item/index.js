@@ -3,7 +3,7 @@ import Spinner from '../Spinner'
 import { Item, Info } from './ui'
 
 export default ({ item }) => {
-  if(!item) return <Spinner />
+  if (!item) return <Spinner />
 
   return (
     <Item to={`/shop/${item.handle}`}>
