@@ -9,4 +9,11 @@ export const Container = styled.div`
     padding: 0;
   }
 `
-export const Hero = styled.div`height: 400px;`
+export const Hero = styled.div`
+  padding-bottom: ${({ theme }) => theme.px.spacing.page};
+  p {
+    letter-spacing: normal;
+    font-size: 14px;
+    padding: 0 360px;
+  }
+`
