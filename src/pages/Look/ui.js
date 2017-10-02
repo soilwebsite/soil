@@ -9,3 +9,4 @@ export const Container = styled.div`
     padding: 0;
   }
 `
+export const Hero = styled.div`height: 400px;`

@@ -4,14 +4,14 @@ import Look3 from './Virgin Soil7237.jpg'
 import Look4 from './Virgin Soil7278.jpg'
 import Look5 from './Virgin Soil7313.jpg'
 import Look6 from './Virgin Soil7348.jpg'
-import Look7 from './Virgin Soil7385.jpg'
+import Look7 from './Virgin Soil7379.jpg'
 import Look8 from './Virgin Soil7402.jpg'
 import Look9 from './Virgin Soil7431.jpg'
 import Look10 from './Virgin Soil7470.jpg'
 import Look11 from './Virgin Soil7508.jpg'
 import Look12 from './Virgin Soil7557.jpg'
 import Look13 from './Virgin Soil7596.jpg'
-import Look14 from './Virgin Soil7649.jpg'
+import Look14 from './Virgin Soil7609.jpg'
 
 export default [
   {
@@ -69,5 +69,5 @@ export default [
   {
     name: 'Look 14',
     images: [{ url: Look14 }]
-  },
+  }
 ]
