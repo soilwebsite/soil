@@ -61,7 +61,6 @@ export const Texture = styled.span`
 `
 
 export const EmailCapture = styled.div`
-  color: #333;
   display: flex;
   input[type='email'] {
     border-width: 0;

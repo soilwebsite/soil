@@ -13,7 +13,15 @@ export const Hero = styled.div`
   padding-bottom: ${({ theme }) => theme.px.spacing.page};
   p {
     letter-spacing: normal;
-    font-size: 14px;
     padding: 0 360px;
   }
+`
+export const Panel = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border-top: 2px solid silver;
+  margin-top: 100px;
+  padding: 100px;
 `

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Content, Photo, Text } from './ui'
+import { Container, Content, Frame, Photo, Text } from './ui'
 import AboutPhoto from '../../assets/images/aboutme.jpg'
 
 export default class About extends Component {
@@ -7,7 +7,9 @@ export default class About extends Component {
     return (
       <Container>
         <Content>
-          <Photo src={AboutPhoto} alt="About Me: Maneesha" />
+          <Frame>
+            <Photo src={AboutPhoto} alt="About Me: Maneesha" />
+          </Frame>
           <Text>
             VIRGIN SOIL is the creative child of Maneesha Wijesinghe, and started in 2017 as an
             effort to find an artistic outlet in fashion. The name was inspired by one of her

@@ -1,7 +1,7 @@
 import React from 'react'
 import Look from '../Look'
 import { Container } from './ui'
-import { times } from 'lodash'
+// import { times } from 'lodash'
 import Modal from '../Modal'
 import LookModal from '../Modal/components/slideshow'
 import looks from '../../assets/images/ss18'

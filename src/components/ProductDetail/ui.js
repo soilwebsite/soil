@@ -47,19 +47,17 @@ export const Title = styled.h2`
 export const Text = styled.span`
   display: block;
   margin-bottom: 10px;
-  font-size: 14px;
 `
 export const Button = styled.div`
   background-color: #022041;
   color: white;
   border-radius: 2px;
-  ${'' /* display: inline-block; */} padding: 15px 25px;
+  padding: 15px 25px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   margin: 30px 0 30px;
-  font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
 `

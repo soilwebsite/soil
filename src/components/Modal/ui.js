@@ -13,13 +13,13 @@ export const Container = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  z-index: 10;
+  z-index: 999;
 `
 
 export const Cloak = Container.extend`
   opacity: ${({ opacity }) => (opacity ? opacity : 0.4)};
   background-color: #000;
-  z-index: 5;
+  z-index: 998;
 `
 
 export const Close = styled(Icon)`
@@ -40,5 +40,5 @@ export const Content = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 11;
+  z-index: 1000;
 `

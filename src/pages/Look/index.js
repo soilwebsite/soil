@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import LookGrid from '../../components/LookGrid'
-import { Container, Hero } from './ui'
+import { Container, Panel, Hero } from './ui'
 
 export default class Look extends Component {
   render() {
@@ -18,6 +18,9 @@ export default class Look extends Component {
           </p>
         </Hero>
         <LookGrid />
+        <Panel>
+          <a href="/about">>> Shop The Collection >></a>
+        </Panel>
       </Container>
     )
   }

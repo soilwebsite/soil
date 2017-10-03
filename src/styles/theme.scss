@@ -5,7 +5,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'franklingothic-book';
   src: url('../../public/fonts/franklingothic-book-webfont.woff2') format('woff2'),
@@ -13,7 +12,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'adamcgpro';
   src: url('../../public/fonts/ADAMCGPRO.otf') format('opentype');
@@ -21,8 +19,8 @@
   font-style: normal;
 }
 
-$nav-height: 100px;
-$page-margin: 55px;
+$text-color: #022041;
+$background-color: #f3ebe1;
 
 html,
 #root,
@@ -30,17 +28,14 @@ body {
   height: 100%;
   width: 100%;
 }
-
 body {
   text-align: center;
   font-family: 'franklingothic-book', 'Open Sans', 'Kanit', sans-serif;
-  letter-spacing: 0.2em;
-  // color: #7f7f7f;
-  color: #022041;
-  font-size: 12px;
-  background-color: #f3ebe1;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: $text-color;
+  background-color: $background-color;
 }
-
 h1,
 h2,
 h3,
@@ -49,34 +44,11 @@ h5,
 h6 {
   font-family: 'franklingothic-demi', sans-serif;
 }
-
-$logo-spacing: 0.7em;
-h1 {
-  font-family: 'adamcgpro', sans-serif;
-  text-transform: uppercase;
-  transform: scaleX(0.92);
-  display: inline-block;
-  font-size: 64px;
-  padding: 15px 20px 0;
-  color: #333;
-  font-weight: 900;
-  letter-spacing: normal;
-  // letter-spacing: $logo-spacing;
-  // padding-left: $logo-spacing;
-  span {
-    color: #bbb;
-  }
-}
 h2 {
-  color: #333;
-  font-size: 24px;
+  font-size: 2em;
   display: inline-block;
   padding: 0.2em;
   margin-bottom: 25px;
-}
-p {
-  font-size: 14px;
-  line-height: 24px;
 }
 img {
   height: auto;

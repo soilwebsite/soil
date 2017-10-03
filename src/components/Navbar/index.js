@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { VirginSoil, Nav, NavLinks, NavLink, Group, TitleLink } from './ui'
-import HeartIcon from 'react-icons/lib/fa/heart'
-import AccountIcon from 'react-icons/lib/fa/user'
-import BagIcon from 'react-icons/lib/fa/shopping-bag'
+import { Icon } from 'react-fa'
 import Logo from '../../assets/images/virgin-soil-text-kerned-navy.png'
 // import VirginSoilTextLogo from '../../../public/virgin-soil-transparent.svg'
 
@@ -18,31 +16,19 @@ class Navbar extends Component {
               IMPRESSIONS
             </NavLink> */}
             <NavLink href="/heart">
-              <HeartIcon />
+              <Icon name="heart" />
             </NavLink>
-            <NavLink href="/about">
-              ABOUT
-            </NavLink>
+            <NavLink href="/about">ABOUT</NavLink>
           </Group>
           <TitleLink href="/">
-            {/* <svg>
-              <use xlinkHref={'virgin-soil-text-kerned.svg'} />
-            </svg> */}
             <VirginSoil src={Logo} alt="Virgin Soil" />
-            {/* <h1>Virgin Soil</h1> */}
           </TitleLink>
           <Group>
-            <NavLink
-              className={path === '/account' && 'current'}
-              href="/account"
-            >
-              <AccountIcon />
+            <NavLink className={path === '/account' && 'current'} href="/account">
+              <Icon name="user" />
             </NavLink>
-            <NavLink
-              className={path === '/bag' && 'current'}
-              href="/bag"
-            >
-              <BagIcon />
+            <NavLink className={path === '/bag' && 'current'} href="/bag">
+              <Icon name="shopping-bag" />
             </NavLink>
           </Group>
         </NavLinks>
