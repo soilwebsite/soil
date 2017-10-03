@@ -10,7 +10,10 @@ import {
   Description,
   Title,
   Text,
-  Button
+  Button,
+  Options,
+  OptionSection,
+  Option
 } from './ui'
 
 class ProductDetail extends Component {
@@ -44,11 +47,20 @@ class ProductDetail extends Component {
         <Info>
           <Title>{item.title}</Title>
           <Text>{variant.formatted_price}</Text>
-          {variant.available ? (
-            <Button onClick={this.addToBag}>Add To Bag</Button>
-          ) : (
-            <Text>Not Available</Text>
-          )}
+          <Options>
+            {item.options.map(option => {
+              if (option.name !== 'Size') return null
+              return (
+                <OptionSection key={option.name}>
+                  {option.values.map(val => <Option key={val}>{val}</Option>)}
+                </OptionSection>
+              )
+            })}
+          </Options>
+          <Text>
+            <a>View Size Guide</a>
+          </Text>
+          <Button onClick={this.addToBag}>Coming Soon</Button>
           {item.tags && item.tags.split(' ').map(tag => <span key={tag}>#{tag}</span>)}
           <Description dangerouslySetInnerHTML={{ __html: item.body_html }} />
         </Info>

@@ -19,7 +19,10 @@ let theme = {
     page: 1220
   },
   color: {
-    text: '#031864'
+    // primary: '#031864',
+    primary: '#022041',
+    secondary: '#f3ebe1',
+    white: '#ffffff'
   }
 }
 

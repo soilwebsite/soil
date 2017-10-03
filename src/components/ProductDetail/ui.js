@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -22,7 +23,7 @@ export const Preview = styled.div`
   height: 100px;
   cursor: pointer;
   overflow: hidden;
-  margin-bottom: 10px;
+  margin-bottom: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,28 +43,28 @@ export const Title = styled.h2`
   display: block;
   font-size: 18px;
   font-weight: normal;
-  margin-bottom: 10px;
+  margin-bottom: 1em;
 `
 export const Text = styled.span`
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 1em;
 `
 export const Button = styled.div`
-  background-color: #022041;
+  background-color: ${({ theme }) => theme.color.primary};
   color: white;
   border-radius: 2px;
   padding: 15px 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
-  margin: 30px 0 30px;
+  ${'' /* cursor: pointer; */} cursor: default;
+  margin-bottom: 2em;
   text-transform: uppercase;
   font-weight: bold;
 `
 export const Description = styled.div`
   p {
-    padding-bottom: 10px;
+    padding-bottom: 1em;
   }
   p:nth-of-type(1) {
     ${'' /* Editor's Note */};
@@ -76,5 +77,29 @@ export const Description = styled.div`
   }
   p:nth-of-type(4) {
     ${'' /* Size and Fit */};
+  }
+`
+
+export const Options = styled.div``
+export const OptionSection = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1em;
+`
+export const Option = styled.div`
+  cursor: pointer;
+  padding: 8px 32px;
+  display: inline-block;
+  color: ${({ theme }) => theme.color.primary};
+  border: 1px solid ${({ theme }) => theme.color.primary};
+  &:hover {
+    opacity: 0.7;
+  }
+  margin: 0 auto;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
   }
 `

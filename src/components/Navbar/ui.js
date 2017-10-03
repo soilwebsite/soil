@@ -75,7 +75,7 @@ export const NavLink = styled.a`
   padding: 20px ${({ theme }) => theme.spacing.navItem}px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.color.text};
+  color: ${({ theme }) => theme.color.primary};
   text-decoration: none;
   overflow: hidden;
   transition: 0.4s color cubic-bezier(0.19, 1, 0.22, 1);

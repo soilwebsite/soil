@@ -10,8 +10,17 @@ class Product extends Component {
     this.state = { item: null }
   }
 
+  componentWillMount() {
+    this.setItem(this.props)
+  }
+
   componentWillReceiveProps(nextProps) {
-    let item = nextProps.products.byHandle[this.handle]
+    this.setItem(nextProps)
+  }
+
+  setItem(props) {
+    if (!props.products) return
+    let item = props.products.byHandle[this.handle]
     if (item !== this.state.item) {
       this.setState({ item })
     }
