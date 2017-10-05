@@ -13,8 +13,12 @@ export const SubmitUI = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    &:hover {
+      border: 1px solid #bbb;
+    }
   }
-  &:focus, &:active {
+  &:focus,
+  &:active {
     background: #ddd;
   }
 `

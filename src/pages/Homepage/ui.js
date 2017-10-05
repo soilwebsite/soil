@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import BeltImg from '../../assets/images/shop/belt.png'
+import Image from '../../assets/images/shop/StockPhoto1.png'
 
 export const Container = styled.div`
   margin-top: ${({ theme }) => -theme.spacing.page * 2 - 4}px;
@@ -24,9 +24,6 @@ export const Container = styled.div`
     font-size: 32px;
     padding: 0px;
   }
-  p {
-    font-size: 12px;
-  }
   .buttons {
     display: flex;
     flex-direction: row;
@@ -37,12 +34,11 @@ export const Container = styled.div`
       width: 120px;
       color: inherit;
       letter-spacing: 1.2px;
-      font-size: 12px;
       padding: 15px;
       border: 1px solid white;
       text-decoration: none;
-      transition: color .4s;
-      transition: background-color .4s;
+      transition: color 0.4s;
+      transition: background-color 0.4s;
       &:hover {
         color: black;
         background-color: white;
@@ -55,12 +51,10 @@ export const Background = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
   right: 0;
+  bottom: 0;
   z-index: -1;
   overflow: hidden;
-  ${'' /* background-image: url(https://scontent-lga3-1.cdninstagram.com/t51.2885-15/e35/19761740_384896158575105_5699318299238596608_n.jpg); */}
-  ${'' /* background-image: url(https://scontent-iad3-1.cdninstagram.com/t51.2885-15/e35/19623470_1868955620025064_19260140888784896_n.jpg); */}
-  background-image: url(${BeltImg});
+  background-image: url(${Image});
   background-size: cover;
 `

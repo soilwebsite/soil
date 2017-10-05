@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import store from '../../store'
 import { subscribeUser } from '../../actions/subscription'
 import Submit from '../Submit'
-import { Container, Column, Texture, EmailCapture } from './ui'
+import { Container, Links, Texture, SubscriptionBox, EmailCapture } from './ui'
 
 class Footer extends Component {
   constructor() {
@@ -28,50 +28,40 @@ class Footer extends Component {
       <Container className="Footer">
         <Texture>
           <div />
-          <div />
         </Texture>
-        <Column>
-          <h3>Care</h3>
-          <p>
-            <a href="/shipping">Shipping</a>
-          </p>
-          <p>
-            <a href="/returns">Returns & Exchanges</a>
-          </p>
-          <p>
-            <a href="/contact">Contact</a>
-          </p>
-        </Column>
-        <Column>
-          <h3>Helpful Info</h3>
-          <p>
-            <a href="/terms-of-service">Terms of Service</a>
-          </p>
-          <p>
-            <a href="/privacy-policy">Privacy Policy</a>
-          </p>
-        </Column>
-        <Column>
-          <h3>Befriend</h3>
-          <p>
-            <a href="https://www.instagram.com/virgin_soil" target="blank">
-              Instagram
-            </a>
-          </p>
-          <p>
+        <Links>
+          <h3>
+            <a href="/contact">Contact Us</a>
+          </h3>
+          <h3>
+            <a href="/shipping-and-returns">Shipping & Returns</a>
+          </h3>
+          <h3>
+            <a href="/terms-of-service">Terms & Privacy</a>
+          </h3>
+          <h3>
             <a href="https://www.facebook.com/virginsoilus" target="blank">
               Facebook
             </a>
-          </p>
-        </Column>
-        <Column>
-          <h3>Stay In Touch</h3>
+          </h3>
+          <h3>
+            <a href="https://www.instagram.com/virgin_soil" target="blank">
+              Instagram
+            </a>
+          </h3>
+        </Links>
+        <SubscriptionBox>
           <div>{this.state.message}</div>
           <EmailCapture>
-            <input type="email" value={this.state.value} onChange={this.handleChange} />
+            <input
+              type="email"
+              value={this.state.value}
+              onChange={this.handleChange}
+              placeholder="Stay in touch"
+            />
             <Submit handleSubmit={this.subscribeEmail} />
           </EmailCapture>
-        </Column>
+        </SubscriptionBox>
       </Container>
     )
   }
