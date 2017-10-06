@@ -10,7 +10,7 @@ export default ({ item, i, onClick }) => {
   if (!src) return <Spinner />
 
   return (
-    <Container>
+    <Container i={i}>
       <Look onClick={onClick}>
         <img src={src} alt={src} />
         <Info className="info">

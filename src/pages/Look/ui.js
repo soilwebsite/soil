@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import HeroImage from '../../assets/images/brooklyn-bridge-in-new-york.jpg'
 
 export const Container = styled.div`
   position: relative;
@@ -10,8 +11,15 @@ export const Container = styled.div`
   }
 `
 export const Hero = styled.div`
-  padding-bottom: ${({ theme }) => theme.px.spacing.page};
+  height: 300px;
+  background-image: url(${HeroImage});
+  background-size: cover;
+  margin-top: -55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   p {
+    color: #fff;
     letter-spacing: normal;
     padding: 0 360px;
   }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Title, TextBtn } from './ui'
+import { Container, TextBtn } from './ui'
 import TermsOfService from './terms'
 import Privacy from './privacy'
 

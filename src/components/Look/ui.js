@@ -1,13 +1,20 @@
 import styled from 'styled-components'
 export { Info } from '../../designs'
 
+// strict dimensions crop photos
 export const Container = styled.div`
   display: inline-block;
   overflow: hidden;
-  width: 350px;
+  width: 370px;
+  height: 570px;
+  overflow: hidden;
   cursor: ${({ dummy }) => !dummy && 'pointer'};
-  margin: ${({ theme: { spacing: { page } } }) =>
-    `${page / 2}px ${page / 2}px ${page / 2}px ${page / 2}px`};
+  margin: ${({ i, theme: { spacing: { page } } }) => {
+    console.log(i)
+    let left = i % 3 === 2 ? page : 0
+    let right = i % 3 === 0 ? page : 0
+    return `${page}px ${right}px ${page}px ${left}px`
+  }};
   &:hover .info {
     opacity: 0.9;
   }
@@ -17,7 +24,11 @@ export const Look = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 100%;
+  height: 100%;
+  img {
+    height: 100%;
+    width: auto;
+  }
   @media screen and (max-width: 890px) {
     width: 100%;
   }
