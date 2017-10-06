@@ -19,6 +19,7 @@ class Navbar extends Component {
               <Icon name="heart" />
             </NavLink>
             <NavLink href="/about">ABOUT</NavLink>
+            <NavLink href="/shop">SHOP</NavLink>
           </Group>
           <TitleLink href="/">
             <VirginSoil src={Logo} alt="Virgin Soil" />

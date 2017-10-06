@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Image from '../../assets/images/shop/StockPhoto1.png'
+import Image from '../../assets/images/cover_photo1.jpg'
 
 export const Container = styled.div`
   margin-top: ${({ theme }) => -theme.spacing.page * 2 - 4}px;
@@ -49,7 +49,7 @@ export const Container = styled.div`
 
 export const Background = styled.div`
   position: absolute;
-  top: 0;
+  top: ${({ theme }) => theme.height.nav + 4 - 20}px;
   left: 0;
   right: 0;
   bottom: 0;

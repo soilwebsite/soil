@@ -8,8 +8,7 @@ import Look from './pages/Look'
 import Product from './pages/Product'
 import About from './pages/About'
 import Contact from './pages/Contact'
-import TermsOfService from './pages/TermsOfService'
-import PrivacyPolicy from './pages/PrivacyPolicy'
+import Legal from './pages/Legal'
 import SignIn from './pages/SignIn'
 import Cart from './pages/Cart'
 // import Blogs from './pages/Blogs'
@@ -29,8 +28,7 @@ const Routes = props => {
         <Route path="/collection" component={Look} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
-        <Route path="/terms-of-service" component={TermsOfService} />
-        <Route path="/privacy-policy" component={PrivacyPolicy} />
+        <Route path="/terms-and-privacy" component={Legal} />
         <Route path="/*" component={ComingSoon} />
         <Route path="/account" component={SignIn} />
         <Route path="/bag" component={Cart} />

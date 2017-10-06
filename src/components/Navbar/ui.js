@@ -72,7 +72,7 @@ export const NavLink = styled.a`
   } */} height: 24px;
   position: relative;
   display: inline-block;
-  padding: 20px ${({ theme }) => theme.spacing.navItem}px;
+  padding: 20px ${({ theme }) => theme.spacing.navItem}px 0;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: ${({ theme }) => theme.color.primary};
