@@ -26,9 +26,6 @@ class Footer extends Component {
   render() {
     return (
       <Container className="Footer">
-        <Texture>
-          <div />
-        </Texture>
         <Links>
           <h3>
             <a href="/contact">Contact Us</a>
@@ -62,6 +59,9 @@ class Footer extends Component {
             <Submit handleSubmit={this.subscribeEmail} />
           </EmailCapture>
         </SubscriptionBox>
+        <Texture>
+          <div />
+        </Texture>
       </Container>
     )
   }

@@ -1,14 +1,12 @@
 import styled from 'styled-components'
-import BlueTexture from '../../assets/images/virginsoil-texture-spray-dark.png'
+import BlueTexture from '../../assets/images/virginsoil-texture-spray-dark-crop.png'
 import Border from '../../assets/images/border.png'
 
-let height = 380
 export const Container = styled.div`
   position: relative;
   background: #fff;
-  height: ${height}px;
-  margin-top: ${({ theme }) => theme.px.spacing.page};
-  padding: ${({ theme }) => theme.px.spacing.page};
+  margin-top: ${({ theme }) => theme.px.spacing.page /* makes Hero proper size */};
+  padding-top: ${({ theme }) => theme.px.spacing.page};
   text-transform: uppercase;
   border-top: 4px solid transparent;
   border-image: url(${Border});
@@ -54,29 +52,16 @@ export const EmailCapture = styled.div`
   }
 `
 
-export const Texture = styled.span`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 345px;
-  opacity: 1;
-  display: flex;
+export const Texture = styled.div`
+  height: 200px;
   z-index: -1;
   div {
-    ${'' /* background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(255, 255, 255, 0.9) 15%,
-        rgba(255, 255, 255, 0) 100%
-      ),
-      url(${BlueTexture}) no-repeat;
-*/} width: 100%;
+    width: 100%;
     height: 100%;
-    background: url(${BlueTexture}) no-repeat;
+    background: url(${BlueTexture});
     background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat-x;
+    background-size: contain;
     + div {
       transform: scaleX(-1);
     }
