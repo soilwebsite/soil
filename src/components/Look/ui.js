@@ -10,13 +10,17 @@ export const Container = styled.div`
   overflow: hidden;
   cursor: ${({ dummy }) => !dummy && 'pointer'};
   margin: ${({ i, theme: { spacing: { page } } }) => {
-    console.log(i)
     let left = i % 3 === 2 ? page : 0
     let right = i % 3 === 0 ? page : 0
     return `${page}px ${right}px ${page}px ${left}px`
   }};
   &:hover .info {
     opacity: 0.9;
+  }
+  @media screen and (max-width: 890px) {
+    margin: 0;
+    width: 100vw;
+    height: auto;
   }
 `
 export const Look = styled.div`
@@ -28,8 +32,9 @@ export const Look = styled.div`
   img {
     height: 100%;
     width: auto;
-  }
-  @media screen and (max-width: 890px) {
-    width: 100%;
+    @media screen and (max-width: 890px) {
+      width: 100%;
+      height: auto;
+    }
   }
 `

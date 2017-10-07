@@ -14,17 +14,26 @@ export const Nav = styled.nav`
   ${'' /* border-image: linear-gradient(180deg, #303030, #dddddd); */}
   border-image: url(${Border});
   border-image-slice: 1;
+`
+
+export const TitleLink = styled.a`
+  height: 100%;
+  flex: 0 0 410px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media screen and (max-width: 890px) {
     height: ${({ theme }) => theme.height.nav / 2}px;
+    position: absolute;
+    width: 100%;
   }
 `
 
 export const VirginSoil = styled.img`
   height: 50px;
-  ${'' /* opacity: .5;
-  filter: hue-rotate(180deg);
-  filter: sepia(100%); */} ${'' /* filter: blur(.5px); */} @media screen and (max-width: 890px) {
+  @media screen and (max-width: 890px) {
     height: 25px;
+    width: auto;
   }
 `
 
@@ -40,17 +49,6 @@ export const NavLinks = styled.div`
     height: ${({ theme }) => theme.height.nav / 2}px;
     padding-left: 0;
     padding-right: 0;
-  }
-`
-
-export const TitleLink = styled.a`
-  height: 100%;
-  flex: 0 0 410px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @media screen and (max-width: 890px) {
-    flex: 0 0 205px;
   }
 `
 
@@ -102,5 +100,8 @@ export const NavLink = styled.a`
   }
   &.current {
     cursor: default;
+  }
+  @media screen and (max-width: 890px) {
+    margin-top: ${({ theme }) => theme.height.nav / 2}px;
   }
 `

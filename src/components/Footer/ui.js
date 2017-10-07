@@ -66,4 +66,7 @@ export const Texture = styled.div`
       transform: scaleX(-1);
     }
   }
+  @media screen and (max-width: 890px) {
+    height: 80px;
+  }
 `

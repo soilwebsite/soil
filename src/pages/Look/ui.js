@@ -21,7 +21,7 @@ export const Hero = styled.div`
   p {
     color: #fff;
     letter-spacing: normal;
-    padding: 0 360px;
+    padding: 0 10%;
   }
 `
 export const Panel = styled.div`
@@ -30,6 +30,6 @@ export const Panel = styled.div`
   align-items: center;
   font-size: 24px;
   border-top: 2px solid silver;
-  margin-top: 100px;
-  padding: 100px;
+  margin-top: 30%;
+  padding: 10%;
 `
