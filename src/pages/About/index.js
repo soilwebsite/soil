@@ -10,25 +10,31 @@ export default class About extends Component {
           <Frame>
             <Photo src={AboutPhoto} alt="About Me: Maneesha" />
           </Frame>
-          <Text>
-            VIRGIN SOIL is the creative child of Maneesha Wijesinghe, and started in 2017 as an
-            effort to find an artistic outlet in fashion. The name was inspired by one of her
-            favorite books: The 1935 Mikhail Sholokhov novel <cite>"Virgin Soil Upturned"</cite>.
+          <div>
+            <Text>
+              VIRGIN SOIL is the creative child of Maneesha Wijesinghe, started in 2017 as an effort
+              to find an outlet for applied arts. The name was inspired by one of her favorite
+              books: The 1935 Mikhail Sholokhov novel "Virgin Soil Upturned".
+            </Text>
+            <Text>
+              VIRGIN SOIL explores a world of visual positivity where it aims to evoke positive
+              emotions in the viewer of the designs. The design aesthetic is modern minimalism with
+              subtle touches of Indian couture.
+            </Text>
+            <Text>
+              VIRGIN SOIL is designed and manufactured in New York City using premium-quality
+              fabrics imported from Europe and Asia.
+            </Text>
             <br />
-            <br />
-            VIRGIN SOIL explores a world of visual positivity. The design aesthetic is modern
-            minimalism with subtle touches of Indian couture.
-            <br />
-            <br />
-            We would love our creations to bring out the powerful, yet enigmatic person in you.
-            Someone who is not necessarily driven by trend but with a desire to be different. We
-            imagine the VIRGIN SOIL wearer to be beautiful and amiable, yet seem to hide a mystery
-            that cannot be deciphered.
-            <br />
-            <br />
-            VIRGIN SOIL is designed and manufactured within the US using imported premium-quality
-            fabrics.
-          </Text>
+            <Text>
+              <p>
+                <a>Learn more about the designer</a>
+              </p>
+              <p>
+                <a>Learn more about our philanthropic efforts</a>
+              </p>
+            </Text>
+          </div>
         </Content>
       </Container>
     )

@@ -22,7 +22,8 @@ let theme = {
     // primary: '#031864',
     primary: '#022041',
     secondary: '#f3ebe1',
-    white: '#ffffff'
+    white: '#ffffff',
+    text: '#333'
   }
 }
 

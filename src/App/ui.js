@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
   width: 100%;
   height: 100%;
-  color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.text};
   h1,
   h2,
   h3,

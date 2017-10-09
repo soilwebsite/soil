@@ -11,7 +11,6 @@ export const Nav = styled.nav`
   text-align: center;
   z-index: 10;
   border-bottom: 4px solid transparent;
-  ${'' /* border-image: linear-gradient(180deg, #303030, #dddddd); */}
   border-image: url(${Border});
   border-image-slice: 1;
 `
@@ -65,15 +64,12 @@ export const Group = styled.div`
 `
 
 export const NavLink = styled.a`
-  ${'' /* .fa::before {
-    font-size: 20px;
-  } */} height: 24px;
+  height: 24px;
   position: relative;
   display: inline-block;
   padding: 20px ${({ theme }) => theme.spacing.navItem}px 0;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.color.primary};
   text-decoration: none;
   overflow: hidden;
   transition: 0.4s color cubic-bezier(0.19, 1, 0.22, 1);
