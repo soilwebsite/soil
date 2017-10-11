@@ -25,13 +25,14 @@ export const Container = styled.div`
     padding: 0px;
   }
   .buttons {
+    width: 390px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     z-index: 2;
     a {
-      width: 120px;
+      width: 100%;
       color: inherit;
       letter-spacing: 1.2px;
       padding: 15px;
