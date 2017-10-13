@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import { Container, Background } from './ui'
 
 class Homepage extends Component {
-
   // componentDidMount() {
   //   this.refs.video.addEventListener('ended', this.replay.bind(this));
   // }
@@ -17,7 +16,6 @@ class Homepage extends Component {
     return (
       <Container>
         <div className="action-box">
-          {/* <h2 className="textTitle">Discover</h2> */}
           <div className="buttons">
             <a href="/collection">THE COLLECTION</a>
             &nbsp;
