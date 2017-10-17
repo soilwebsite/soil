@@ -26,10 +26,11 @@ export const Links = styled.div`
 
 export const SubscriptionBox = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 15px;
+  height: 60px;
 `
 
 export const EmailCapture = styled.div`

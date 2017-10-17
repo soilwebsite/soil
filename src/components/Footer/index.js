@@ -30,12 +30,12 @@ class Footer extends Component {
           <h3>
             <a href="/contact">Contact Us</a>
           </h3>
-          <h3>
+          {/* <h3>
             <a href="/shipping-and-returns">Shipping & Returns</a>
           </h3>
           <h3>
             <a href="/terms-and-privacy">Terms & Privacy</a>
-          </h3>
+          </h3> */}
           <h3>
             <a href="https://www.facebook.com/virginsoilus" target="blank">
               Facebook

@@ -3,7 +3,7 @@ import Look from '../Look'
 import { Container } from './ui'
 // import { times } from 'lodash'
 import Modal from '../Modal'
-import LookModal from '../Modal/components/slideshow'
+import LookModal from '../Modal/components/look'
 import looks from '../../assets/images/ss18'
 
 export default class LookGrid extends React.Component {
@@ -25,9 +25,9 @@ export default class LookGrid extends React.Component {
   render() {
     const { modalIdx } = this.state
     let custom = {
-      cloak: { opacity: 0.87 },
-      content: { background: 'transparent' },
-      close: { visibility: 'hidden' }
+      // cloak: { opacity: 0.87 },
+      // content: { background: 'transparent' },
+      // close: { visibility: 'hidden' }
     }
     // let whiteBlocks = looks.length % 3 !== 0 ? 3 - looks.length % 3 : 0
     return (

@@ -18,8 +18,8 @@ class Homepage extends Component {
         <div className="action-box">
           <div className="buttons">
             <a href="/collection">THE COLLECTION</a>
-            &nbsp;
-            <a href="/shop">SHOP</a>
+            {/* &nbsp;
+            <a href="/shop">SHOP</a> */}
           </div>
         </div>
         <Background />

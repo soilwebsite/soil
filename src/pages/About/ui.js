@@ -11,7 +11,7 @@ export const Content = styled.div`
 `
 export const Frame = styled.div`
   flex-basis: content;
-  margin-right: ${({ theme }) => theme.px.spacing.page};
+  margin-right: 20px;
 `
 export const Photo = styled.img``
 
