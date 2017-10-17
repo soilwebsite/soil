@@ -19,7 +19,7 @@ class Footer extends Component {
   subscribeEmail() {
     if (!this.state.email) alert('Please enter a valid email address')
     store.dispatch(subscribeUser(this.state.email)).then(res => {
-      this.setState({ message: 'Thanks!' })
+      this.setState({ email: '', message: 'Thanks!' })
     })
   }
 

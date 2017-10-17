@@ -4,11 +4,9 @@ module.exports = app => {
   app.use(bodyParser.json({ strict: true }))
   app.use(bodyParser.urlencoded({ extended: true }))
 
-  app.get('*', function(req, res, next) {
+  app.use((req, res, next) => {
     if (req.headers['x-forwarded-proto'] !== 'https' && process.env.NODE_ENV === 'production') {
-      // Redirect http to https using Heroku x-header
-      // https://stackoverflow.com/questions/7185074/heroku-nodejs-http-to-https-ssl-forced-redirect
-      res.redirect('https://' + req.hostname + req.url)
+      res.redirect(`https://${req.hostname}${req.url}`)
     } else {
       next()
     }
