@@ -1,0 +1,66 @@
+{
+  "name": "forest-tribe",
+  "description": "",
+  "scripts": {
+  },
+  "env": {
+    "DB_HOST": {
+      "required": true
+    },
+    "DB_NAME": {
+      "required": true
+    },
+    "DB_PASS": {
+      "required": true
+    },
+    "DB_PORT": {
+      "required": true
+    },
+    "DB_URL": {
+      "required": true
+    },
+    "DB_USER": {
+      "required": true
+    },
+    "NEW_RELIC_LICENSE_KEY": {
+      "required": true
+    },
+    "NEW_RELIC_LOG": {
+      "required": true
+    },
+    "PAPERTRAIL_API_TOKEN": {
+      "required": true
+    },
+    "REACT_APP_API_DOMAIN": {
+      "required": true
+    },
+    "REACT_APP_DOMAIN": {
+      "required": true
+    },
+    "REACT_APP_EMAIL_PW": {
+      "required": true
+    },
+    "REACT_APP_MAILCHIMP_API": {
+      "required": true
+    },
+    "REACT_APP_MAILCHIMP_ID": {
+      "required": true
+    },
+    "SENTRY_DSN": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+    "newrelic",
+    "papertrail",
+    "heroku-postgresql",
+    "sentry"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/mars/create-react-app-buildpack.git"
+    }
+  ]
+}
