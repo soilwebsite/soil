@@ -30,10 +30,7 @@ export const Preview = styled.div`
   ${'' /* filter: ${({ active }) => active && 'sepia()'}; */};
 `
 export const MiniImg = styled.img`width: 100%;`
-export const Image = styled.img`
-  max-width: 35%;
-  max-height: 600px;
-`
+export const Image = styled.img`max-width: 35%;`
 export const Info = styled.div`
   width: 40%;
   padding: 1.5%;
