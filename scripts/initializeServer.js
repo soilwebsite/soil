@@ -4,7 +4,7 @@ module.exports = app => {
   app.use(bodyParser.json({ strict: true }))
   app.use(bodyParser.urlencoded({ extended: true }))
 
-  app.use((req, res, next) => {
+  app.get('*', (req, res, next) => {
     if (req.headers['x-forwarded-proto'] !== 'https' && process.env.NODE_ENV === 'production') {
       res.redirect(`https://${req.hostname}${req.url}`)
     } else {
