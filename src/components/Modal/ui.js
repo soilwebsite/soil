@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Icon } from 'react-fa'
 
 export const modalWidth = 830
 export const Container = styled.div`

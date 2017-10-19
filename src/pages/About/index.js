@@ -7,9 +7,9 @@ export default class About extends Component {
     return (
       <Container>
         <Content>
-          <Frame>
+          {/* <Frame>
             <Photo src={AboutPhoto} alt="About Me: Maneesha" />
-          </Frame>
+          </Frame> */}
           <div>
             <Text>
               VIRGIN SOIL is the creative child of Maneesha Wijesinghe, started in 2017 as an effort
@@ -26,14 +26,6 @@ export default class About extends Component {
               fabrics imported from Europe and Asia.
             </Text>
             <br />
-            <Text>
-              <p>
-                <a>Learn more about the designer</a>
-              </p>
-              <p>
-                <a>Learn more about our philanthropic efforts</a>
-              </p>
-            </Text>
           </div>
         </Content>
       </Container>

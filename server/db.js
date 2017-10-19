@@ -1,4 +1,3 @@
-
 let db = {}
 const initDB = () => {
   global.dbInitiated = true
@@ -8,36 +7,26 @@ const initDB = () => {
   let sequelize
 
   const connect = () => {
-    if(process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === 'production') {
       console.log('********** Connecting to Production DB **********')
-      sequelize = new Sequelize(
-        process.env.DB_NAME,
-        process.env.DB_USER,
-        process.env.DB_PASS,
-        {
-          dialect:  'postgres',
-          protocol: 'postgres',
-          port: process.env.DB_PORT,
-          host: process.env.DB_HOST,
-          logging:  true
-        }
-      )
+      sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
+        dialect: 'postgres',
+        protocol: 'postgres',
+        port: process.env.DB_PORT,
+        host: process.env.DB_HOST,
+        logging: true
+      })
     } else {
       console.log('********** Connecting to Development DB **********')
-      sequelize = new Sequelize(
-        process.env.DB_NAME,
-        process.env.DB_USER,
-        process.env.DB_PASS,
-        {
-          host: 'localhost',
-          dialect: 'postgres',
-          pool: {
-            max: 5,
-            min: 0,
-            idle: 10000
-          }
+      sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
+        host: 'localhost',
+        dialect: 'postgres',
+        pool: {
+          max: 5,
+          min: 0,
+          idle: 10000
         }
-      )
+      })
     }
   }
 
@@ -69,16 +58,16 @@ const initDB = () => {
 
   const testConnection = () => {
     sequelize
-    .authenticate()
-    .then(() => console.log('√√√ √√√ √√√ Postgres connected √√√ √√√ √√√'))
-    .catch(err => console.log('Unable to connect to the database:', err))
+      .authenticate()
+      .then(() => console.log('√√√ √√√ √√√ Postgres connected √√√ √√√ √√√'))
+      .catch(err => console.log('Unable to connect to the database:', err))
   }
 
   const seedDB = () => {
     sequelize
-    .sync({ force: true })
-    .then(() => seeder(db.models))
-    .catch(err => console.log('An error occurred while creating the table:', err))
+      .sync({ force: true })
+      .then(() => seeder(db.models))
+      .catch(err => console.log('An error occurred while creating the table:', err))
   }
 
   connect()
@@ -89,5 +78,5 @@ const initDB = () => {
   db.sequelize = sequelize
 }
 
-if(!global.dbInitiated) initDB()
+if (!global.dbInitiated) initDB()
 module.exports = db

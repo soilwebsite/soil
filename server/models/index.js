@@ -1,3 +1,2 @@
-let db = require('../db')
-
-module.exports = db.models
+// let db = require('../db')
+// module.exports = db.models

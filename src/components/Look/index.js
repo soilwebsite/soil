@@ -4,7 +4,6 @@ import { isNumber } from 'lodash'
 
 export default ({ item, i, onClick }) => {
   if (isNumber(item)) return <Container dummy />
-  console.log(item)
   let src = item.images[0].src
 
   return (
