@@ -3,7 +3,7 @@ import HeroImage from '../../assets/images/brooklyn-bridge-in-new-york.jpg'
 
 export const Container = styled.div`
   position: relative;
-  margin: 0 auto;
+  margin: ${({ theme }) => -theme.spacing.page}px auto;
   padding: 0 ${({ theme }) => theme.px.spacing.page};
   max-width: ${({ theme }) => theme.width.page}px;
   @media screen and (max-width: 890px) {
@@ -30,6 +30,6 @@ export const Panel = styled.div`
   align-items: center;
   font-size: 24px;
   border-top: 2px solid silver;
-  margin-top: 30%;
+  margin-top: ${({ theme }) => theme.px.spacing.page};
   padding: 10%;
 `

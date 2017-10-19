@@ -3,16 +3,16 @@
 import fetch from 'isomorphic-fetch'
 
 const requestProducts = () => ({ type: 'REQUEST_PRODUCTS' })
-const receiveProducts = (products) => ({
+const receiveProducts = data => ({
   type: 'RECEIVE_PRODUCTS',
-  products,
+  data,
   receivedAt: Date.now()
 })
 
-export const fetchProducts = () => (dispatch) => {
+export const fetchProducts = () => dispatch => {
   dispatch(requestProducts())
   return fetch(`${process.env.REACT_APP_API_DOMAIN}/products`)
     .then(res => res.json())
-    .then(products => dispatch(receiveProducts(products)))
+    .then(data => dispatch(receiveProducts(data)))
     .catch(err => console.log('err', err))
 }

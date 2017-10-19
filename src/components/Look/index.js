@@ -1,13 +1,11 @@
 import React from 'react'
-import Spinner from '../Spinner'
 import { Container, Look, Info } from './ui'
 import { isNumber } from 'lodash'
 
 export default ({ item, i, onClick }) => {
   if (isNumber(item)) return <Container dummy />
-
-  let src = item.images[0].url
-  if (!src) return <Spinner />
+  console.log(item)
+  let src = item.images[0].src
 
   return (
     <Container i={i}>

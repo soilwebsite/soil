@@ -24,8 +24,10 @@ class Footer extends Component {
   }
 
   render() {
+    const path = this.props.location.pathname
+    const showBorder = path !== '/collection'
     return (
-      <Container className="Footer">
+      <Container showBorder={showBorder} className="Footer">
         <Links>
           <h3>
             <a href="/contact">Contact Us</a>

@@ -15,14 +15,24 @@ const conf = new ShopifyBuy.Config({
 })
 const client = ShopifyBuy.buildClient(conf)
 
+const looksCollectionId = 9633398811
+const productsCollectionId = 5052661787
+
 let cache
-setInterval(() => cache = null, 1800000) // 30 min cache
+setInterval(() => (cache = null), 1800000) // 30 min cache
 module.exports = (req, res) => {
-  if(cache) return res.json(cache)
-  client.fetchAllProducts()
-    .then(products => {
-      cache = products.map(p => p.attrs)
-      res.json(cache)
+  if (cache) return res.json(cache)
+
+  Promise.all([
+    client.fetchQueryProducts({ collection_id: looksCollectionId }),
+    client.fetchQueryProducts({ collection_id: productsCollectionId })
+  ])
+    .then(data => {
+      cache = {
+        looks: data[0].map(p => p.attrs),
+        products: data[1].map(p => p.attrs)
+      }
+      return res.json(cache)
     })
     .catch(err => {
       console.log(err)

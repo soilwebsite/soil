@@ -10,7 +10,7 @@ export const Nav = styled.nav`
   background: #fff;
   text-align: center;
   z-index: 10;
-  border-bottom: 4px solid transparent;
+  border-bottom: ${({ showBorder }) => showBorder && '4px solid transparent'};
   border-image: url(${Border});
   border-image-slice: 1;
 `

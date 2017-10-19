@@ -8,7 +8,7 @@ export const Container = styled.div`
   margin-top: ${({ theme }) => theme.px.spacing.page /* makes Hero proper size */};
   padding-top: ${({ theme }) => theme.px.spacing.page};
   text-transform: uppercase;
-  border-top: 4px solid transparent;
+  border-top: ${({ showBorder }) => showBorder && '4px solid transparent'};
   border-image: url(${Border});
   border-image-slice: 1;
   z-index: 10;

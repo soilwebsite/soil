@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
-import LookGrid from '../../components/LookGrid'
+import Spinner from '../../components/Spinner'
+// import LookGrid from '../../components/LookGrid'
+import Slideshow from '../../components/Slideshow'
 import { Container, Panel, Hero } from './ui'
 
 export default class Look extends Component {
   render() {
+    if (!this.props.products) return <Spinner />
+
     return (
       <Container>
-        <Hero>
+        {/* <Hero>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
             has been the industry's standard dummy text ever since the 1500s, when an unknown
@@ -16,11 +20,12 @@ export default class Look extends Component {
             Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
             publishing software like Aldus PageMaker including versions of Lorem Ipsum.
           </p>
-        </Hero>
-        <LookGrid />
-        <Panel>
+        </Hero> */}
+        <Slideshow items={this.props.products.looks} />
+        {/* <LookGrid items={this.props.products.looks} /> */}
+        {/* <Panel>
           <a href="/about">>> Shop The Collection >></a>
-        </Panel>
+        </Panel> */}
       </Container>
     )
   }

@@ -6,10 +6,10 @@ import Logo from '../../assets/images/virgin-soil-text-kerned-navy.png'
 
 class Navbar extends Component {
   render() {
-    // const path = this.props.location.pathname
-
+    const path = this.props.location.pathname
+    const showBorder = path !== '/collection'
     return (
-      <Nav>
+      <Nav showBorder={showBorder}>
         <NavLinks>
           <Group>
             {/* <NavLink href="/impressions">

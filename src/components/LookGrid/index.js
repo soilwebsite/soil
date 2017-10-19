@@ -32,7 +32,9 @@ export default class LookGrid extends React.Component {
     // let whiteBlocks = looks.length % 3 !== 0 ? 3 - looks.length % 3 : 0
     return (
       <Container>
-        {looks.map((look, i) => <Look key={i} i={i} item={look} onClick={() => this.onClick(i)} />)}
+        {this.props.items.map((look, i) => (
+          <Look key={i} i={i} item={look} onClick={() => this.onClick(i)} />
+        ))}
         {/* {times(whiteBlocks, i => <Look key={i} item={i} />)} */}
         {(modalIdx || modalIdx === 0) && (
           <Modal hideModal={this.hideModal} custom={custom}>
