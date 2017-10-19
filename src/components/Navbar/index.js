@@ -7,22 +7,22 @@ import Logo from '../../assets/images/virgin-soil-text-kerned-navy.png'
 class Navbar extends Component {
   render() {
     const path = this.props.location.pathname
-    const showBorder = path !== '/collection'
+    const lookMinimal = path === '/collection'
     return (
-      <Nav showBorder={showBorder}>
+      <Nav showBorder={!lookMinimal}>
         <NavLinks>
-          <Group>
-            {/* <NavLink href="/impressions">
+          {/* <Group>
+            <NavLink href="/impressions">
               IMPRESSIONS
-            </NavLink> */}
-            {/* <NavLink href="/heart">
+            </NavLink>
+            <NavLink href="/heart">
               <Icon name="heart" />
-            </NavLink> */}
+            </NavLink>
             <NavLink href="/about">ABOUT</NavLink>
-            {/* <NavLink href="/shop">SHOP</NavLink> */}
-          </Group>
+            <NavLink href="/shop">SHOP</NavLink>
+          </Group> */}
           <TitleLink href="/">
-            <VirginSoil src={Logo} alt="Virgin Soil" />
+            <VirginSoil shrink={lookMinimal} src={Logo} alt="Virgin Soil" />
           </TitleLink>
           <Group>
             {/* <NavLink className={path === '/account' && 'current'} href="/account">

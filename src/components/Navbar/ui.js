@@ -13,6 +13,9 @@ export const Nav = styled.nav`
   border-bottom: ${({ showBorder }) => showBorder && '4px solid transparent'};
   border-image: url(${Border});
   border-image-slice: 1;
+  @media screen and (max-width: 890px) {
+    height: ${({ theme }) => theme.height.nav / 2}px;
+  }
 `
 
 export const TitleLink = styled.a`
@@ -29,10 +32,11 @@ export const TitleLink = styled.a`
 `
 
 export const VirginSoil = styled.img`
-  height: 50px;
+  width: 240px;
+  margin-right: auto;
+
   @media screen and (max-width: 890px) {
-    height: 25px;
-    width: auto;
+    width: 150px;
   }
 `
 

@@ -51,6 +51,9 @@ export const Container = styled.div`
 export const Background = styled.div`
   position: absolute;
   top: ${({ theme }) => theme.height.nav + 4 - 20}px;
+  @media screen and (max-width: 890px) {
+    top: ${({ theme }) => theme.height.nav / 2}px;
+  }
   left: 0;
   right: 0;
   bottom: 0;
