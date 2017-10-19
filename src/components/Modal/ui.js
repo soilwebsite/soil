@@ -22,12 +22,13 @@ export const Cloak = Container.extend`
   z-index: 998;
 `
 
-export const Close = styled(Icon)`
+export const Close = styled.span`
   position: absolute;
   top: 15px;
   right: 15px;
   cursor: pointer;
   font-size: 1.5em !important;
+  color: black;
   visibility: ${({ visibility }) => (visibility ? visibility : 'visible')};
 `
 

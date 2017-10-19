@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Icon } from 'react-fa'
+import Modal from '../Modal'
+import ModalContent from '../Modal/components/shop'
 
 const Container = styled.div`
   display: flex;
@@ -39,6 +41,8 @@ export default class extends React.Component {
     this.state = { active: 0 }
     this.setActive = this.setActive.bind(this)
     this.handlePress = this.handlePress.bind(this)
+    this.openModal = this.openModal.bind(this)
+    this.hideModal = this.hideModal.bind(this)
   }
   componentWillMount() {
     document.addEventListener('keydown', this.handlePress)
@@ -60,18 +64,29 @@ export default class extends React.Component {
     if (key === 'ArrowRight') this.rotate(1)
     if (key === 'ArrowLeft') this.rotate(-1)
   }
+  openModal() {
+    this.setState({ showModal: true })
+  }
+  hideModal() {
+    this.setState({ showModal: false })
+  }
 
   render() {
     let { items } = this.props
-    let { active } = this.state
-    console.log(items[active].images[0])
+    let { active, showModal } = this.state
+    console.log(items[active])
     return (
       <Container onKeyDown={this.handlePress}>
         <Arrow className="arrow" name="angle-left" size="4x" onClick={this.rotate.bind(this, -1)} />
         <Pane>
-          <Image src={items[active].images[0].src} />
+          <Image onClick={this.openModal} src={items[active].images[0].src} />
         </Pane>
         <Arrow className="arrow" name="angle-right" size="4x" onClick={this.rotate.bind(this, 1)} />
+        {showModal && (
+          <Modal hideModal={this.hideModal} custom={{}}>
+            <ModalContent item={items[active]} />
+          </Modal>
+        )}
       </Container>
     )
   }

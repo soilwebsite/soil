@@ -4,7 +4,6 @@ import { Container } from './ui'
 // import { times } from 'lodash'
 import Modal from '../Modal'
 import LookModal from '../Modal/components/look'
-import looks from '../../assets/images/ss18'
 
 export default class LookGrid extends React.Component {
   constructor(props) {
@@ -38,7 +37,7 @@ export default class LookGrid extends React.Component {
         {/* {times(whiteBlocks, i => <Look key={i} item={i} />)} */}
         {(modalIdx || modalIdx === 0) && (
           <Modal hideModal={this.hideModal} custom={custom}>
-            <LookModal items={looks} selected={modalIdx} />
+            <LookModal items={[]} selected={modalIdx} />
           </Modal>
         )}
       </Container>

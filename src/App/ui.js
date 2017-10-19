@@ -12,6 +12,8 @@ export const Container = styled.div`
   h5,
   h6 {
     font-weight: bold;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
   }
   h2 {
     font-size: 2em;

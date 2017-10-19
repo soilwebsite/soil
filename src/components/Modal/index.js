@@ -8,7 +8,9 @@ export default class Modal extends React.Component {
       <Container onClick={hideModal}>
         <Cloak {...custom.cloak} />
         <Content onClick={e => e.stopPropagation()} {...custom.content}>
-          <Close name="close" onClick={hideModal} {...custom.close} />
+          <Close name="close" onClick={hideModal} {...custom.close}>
+            x
+          </Close>
           {children}
         </Content>
       </Container>

@@ -23,7 +23,13 @@ let theme = {
     primary: '#022041',
     secondary: '#f3ebe1',
     white: '#ffffff',
-    text: '#333'
+    text: '#000'
+  },
+  size: {
+    font: {
+      primary: 12,
+      secondary: 10
+    }
   }
 }
 
