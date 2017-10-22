@@ -79,10 +79,15 @@ export default class extends React.Component {
       <Container>
         <Images>
           {images.map(({ src }, i) => (
-            <MiniImage key={i} src={src} active={active === i} onClick={() => this.setActive(i)} />
+            <MiniImage
+              key={i}
+              src={src.replace('.jpg', '_compact.jpg')}
+              active={active === i}
+              onClick={() => this.setActive(i)}
+            />
           ))}
         </Images>
-        <Image src={images[active].src} />
+        <Image src={images[active].src.replace('.jpg', '_grande.jpg')} />
         <Details>
           <h3>{title}</h3>
           {price && <span>Price: ${price}</span>}

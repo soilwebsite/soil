@@ -39,11 +39,11 @@ class ProductDetail extends Component {
         <Previews>
           {item.images.map((img, i) => (
             <Preview active={i === imageIdx} key={i} onClick={() => this.selectImage(i)}>
-              <MiniImg src={img.src} alt={item.title} />
+              <MiniImg src={img.src.replace('.jpg', '_compact.jpg')} alt={item.title} />
             </Preview>
           ))}
         </Previews>
-        <Image src={item.images[imageIdx].src} alt={item.title} />
+        <Image src={item.images[imageIdx].src.replace('.jpg', '_grande.jpg')} alt={item.title} />
         <Info>
           <Title>{item.title}</Title>
           <Text>{variant.formatted_price}</Text>

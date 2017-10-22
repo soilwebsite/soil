@@ -4,10 +4,10 @@ import { Item, Info } from './ui'
 
 export default ({ item }) => {
   if (!item) return <Spinner />
-
+  let src = item.images[0] && item.images[0].src.replace('.jpg', '_grande.jpg')
   return (
     <Item to={`/shop/${item.handle}`}>
-      <img src={item.images[0] && item.images[0].src} alt={item.name} />
+      <img src={src} alt={item.name} />
       <Info className="info">
         <h3>{item.title}</h3>
         <strong>{item.variants[0].formatted_price}</strong>

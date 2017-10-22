@@ -4,7 +4,7 @@ import { isNumber } from 'lodash'
 
 export default ({ item, i, onClick }) => {
   if (isNumber(item)) return <Container dummy />
-  let src = item.images[0].src
+  let src = item.images[0].src.replace('.jpg', '_grande.jpg')
 
   return (
     <Container i={i}>
