@@ -7,9 +7,9 @@ import ModalContent from '../Modal/components/shop'
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
-  height: calc(100vh - 114px);
+  height: calc(100vh - ${({ theme }) => theme.height.nav * 2}px);
   width: 100%;
   .arrow {
     color: ${({ theme }) => theme.color.primary};
@@ -17,7 +17,7 @@ const Container = styled.div`
 `
 
 const Pane = styled.div`
-  height: 80%;
+  height: 100%;
   width: 830px;
   display: flex;
   justify-content: center;
@@ -33,6 +33,7 @@ const Image = styled.img`
 const Arrow = styled(Icon)`
   padding: 10px;
   cursor: pointer;
+  align-self: center;
 `
 
 export default class extends React.Component {
@@ -79,7 +80,10 @@ export default class extends React.Component {
       <Container onKeyDown={this.handlePress}>
         <Arrow className="arrow" name="angle-left" size="4x" onClick={this.rotate.bind(this, -1)} />
         <Pane>
-          <Image onClick={this.openModal} src={items[active].images[0].src} />
+          <Image
+            onClick={this.openModal}
+            src={items[active].images[0].src.replace('.jpg', '_grande.jpg')}
+          />
         </Pane>
         <Arrow className="arrow" name="angle-right" size="4x" onClick={this.rotate.bind(this, 1)} />
         {showModal && (
