@@ -87,7 +87,7 @@ export default class extends React.Component {
             />
           ))}
         </Images>
-        <Image src={images[active].src.replace('.jpg', '_grande.jpg')} />
+        <Image src={images[active].src.replace('.jpg', '_1024x1024.jpg')} />
         <Details>
           <h3>{title}</h3>
           {price && <span>Price: ${price}</span>}

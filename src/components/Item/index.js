@@ -4,7 +4,7 @@ import { Item, Info } from './ui'
 
 export default ({ item }) => {
   if (!item) return <Spinner />
-  let src = item.images[0] && item.images[0].src.replace('.jpg', '_grande.jpg')
+  let src = item.images[0] && item.images[0].src.replace('.jpg', '_1024x1024.jpg')
   return (
     <Item to={`/shop/${item.handle}`}>
       <img src={src} alt={item.name} />

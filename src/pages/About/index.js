@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Container, Content, Frame, Photo, Text } from './ui'
-import AboutPhoto from '../../assets/images/aboutme.jpg'
+import { Container, Content, Text } from './ui'
+// import AboutPhoto from '../../assets/images/aboutme.jpg'
 
 export default class About extends Component {
   render() {

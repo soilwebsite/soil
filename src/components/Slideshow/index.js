@@ -82,7 +82,7 @@ export default class extends React.Component {
         <Pane>
           <Image
             onClick={this.openModal}
-            src={items[active].images[0].src.replace('.jpg', '_grande.jpg')}
+            src={items[active].images[0].src.replace('.jpg', '_1024x1024.jpg')}
           />
         </Pane>
         <Arrow className="arrow" name="angle-right" size="4x" onClick={this.rotate.bind(this, 1)} />

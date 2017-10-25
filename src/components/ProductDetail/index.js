@@ -43,7 +43,7 @@ class ProductDetail extends Component {
             </Preview>
           ))}
         </Previews>
-        <Image src={item.images[imageIdx].src.replace('.jpg', '_grande.jpg')} alt={item.title} />
+        <Image src={item.images[imageIdx].src.replace('.jpg', '_1024x1024.jpg')} alt={item.title} />
         <Info>
           <Title>{item.title}</Title>
           <Text>{variant.formatted_price}</Text>

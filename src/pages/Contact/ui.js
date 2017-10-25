@@ -10,9 +10,8 @@ export const Container = styled.div`
   flex-direction: column;
 `
 export const Box = styled.div`
-  border-top: 1px solid #797807;
-  border-bottom: 1px solid #797807;
-  height: 200px;
+  ${'' /* border-top: 1px solid #797807;
+  border-bottom: 1px solid #797807; */} height: 200px;
   width: 300px;
   display: flex;
   justify-content: center;
