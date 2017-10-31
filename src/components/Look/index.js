@@ -11,8 +11,8 @@ export default ({ item, i, onClick }) => {
       <Look onClick={onClick}>
         <img src={src} alt={src} />
         <Info className="info">
-          <h3>{item.name}</h3>
-          {/* <h3>Shop This Look</h3> */}
+          {/* <h3>{item.name}</h3> */}
+          <p>More Info</p>
         </Info>
       </Look>
     </Container>

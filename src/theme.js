@@ -13,7 +13,8 @@ let theme = {
     navItem: 15
   },
   height: {
-    nav: 110
+    nav: 110,
+    footer: 382
   },
   width: {
     page: 1220

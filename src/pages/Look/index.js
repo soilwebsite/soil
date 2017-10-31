@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Spinner from '../../components/Spinner'
-// import LookGrid from '../../components/LookGrid'
-import Slideshow from '../../components/Slideshow'
+import LookGrid from '../../components/LookGrid'
+// import Slideshow from '../../components/Slideshow'
 import { Container, Panel, Hero } from './ui'
 
 export default class Look extends Component {
@@ -21,8 +21,8 @@ export default class Look extends Component {
             publishing software like Aldus PageMaker including versions of Lorem Ipsum.
           </p>
         </Hero> */}
-        <Slideshow items={this.props.products.looks} />
-        {/* <LookGrid items={this.props.products.looks} /> */}
+        {/* <Slideshow items={this.props.products.looks} /> */}
+        <LookGrid items={this.props.products.looks} />
         {/* <Panel>
           <a href="/about">>> Shop The Collection >></a>
         </Panel> */}
