@@ -37,7 +37,7 @@ export default class LookGrid extends React.Component {
         {/* {times(whiteBlocks, i => <Look key={i} item={i} />)} */}
         {(modalIdx || modalIdx === 0) && (
           <Modal hideModal={this.hideModal} custom={custom}>
-            <LookModal items={[]} selected={modalIdx} />
+            <LookModal items={this.props.items} selected={modalIdx} />
           </Modal>
         )}
       </Container>

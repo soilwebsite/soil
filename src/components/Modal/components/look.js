@@ -13,6 +13,7 @@ const Container = styled.div`
 const Images = styled.div`
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   ${'' /* border: 1px solid lightgray; */};
 `
 
@@ -21,8 +22,8 @@ const MiniImage = styled.div`
   border: 1px solid ${({ active }) => (active ? 'darkgray' : 'lightgray')};
   margin: 10px;
   width: 50px;
-  height: 50px;
-  background-image: url('${({ url }) => url}');
+  height: 70px;
+  background-image: url('${({ src }) => src}');
   background-repeat: no-repeat;
   background-size: cover;
 `
@@ -33,8 +34,7 @@ const Image = styled.img`
 `
 
 const Details = styled.div`
-  border: 1px solid lightgray;
-  display: flex;
+  ${'' /* border: 1px solid lightgray; */} display: flex;
   align-items: flex-end;
   flex-direction: column;
   max-height: 500px;
@@ -57,16 +57,17 @@ export default class extends React.Component {
   render() {
     let { items, selected } = this.props
     let { active } = this.state
+
     return (
       <Container>
         <Images>
-          {items[selected].images.map(({ url }, i) => (
-            <MiniImage key={i} url={url} active={active === i} onClick={() => this.setActive(i)} />
+          {items[selected].images.map(({ src }, i) => (
+            <MiniImage key={i} src={src} active={active === i} onClick={() => this.setActive(i)} />
           ))}
         </Images>
-        <Image src={items[selected].images[0].url} />
+        <Image src={items[selected].images[active].src} />
         <Details>
-          <span>Item: {items[selected].name}</span>
+          <span>Item: {items[selected].title}</span>
           {items[selected].price && <span>Price: ${items[selected].price}</span>}
         </Details>
       </Container>
