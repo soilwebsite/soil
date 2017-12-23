@@ -29,7 +29,7 @@ class App extends Component {
     return (
       <ThemeProvider theme={theme}>
         <Container>
-          <Navbar location={this.props.location} />
+          {/* <Navbar location={this.props.location} /> */}
           {React.cloneElement(this.props.children, { ...this.props, ...this.state })}
           <Footer location={this.props.location} />
         </Container>

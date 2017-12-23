@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import forestVideo from '../../assets/forest.mp4';
-import { Container, Background } from './ui'
+import { Container, ActionBox, Background } from './ui'
 
 class Homepage extends Component {
   // componentDidMount() {
@@ -15,13 +15,13 @@ class Homepage extends Component {
   render() {
     return (
       <Container>
-        <div className="action-box">
+        <ActionBox>
           <div className="buttons">
             <a href="/collection">THE COLLECTION</a>
             {/* &nbsp;
             <a href="/shop">SHOP</a> */}
           </div>
-        </div>
+        </ActionBox>
         <Background />
         {/* <div className='video-container'>
           <video

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Image from '../../assets/images/cover_photo1.jpg'
+import Image from '../../assets/images/SOIL.png'
 
 export const Container = styled.div`
   margin-top: ${({ theme }) => -theme.spacing.page * 2 - 4}px;
@@ -25,25 +25,31 @@ export const Container = styled.div`
     padding: 0px;
   }
   .buttons {
-    width: 390px;
+
+    }
+  }
+`
+
+export const ActionBox = styled.div`
+  a {
+    background-color: rgba(210, 210, 210, 0.4);
+    width: 320px;
+    height: 300px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     z-index: 2;
-    a {
-      width: 100%;
-      color: inherit;
-      letter-spacing: 1.2px;
-      padding: 15px;
-      border: 1px solid white;
-      text-decoration: none;
-      transition: color 0.4s;
-      transition: background-color 0.4s;
-      &:hover {
-        color: black;
-        background-color: white;
-      }
+    border: 1px solid white;
+    color: inherit;
+    letter-spacing: 1.2px;
+    padding: 15px;
+    text-decoration: none;
+    transition: color 0.4s;
+    transition: background-color 0.4s;
+    &:hover {
+      color: black;
+      background-color: white;
     }
   }
 `
@@ -60,5 +66,5 @@ export const Background = styled.div`
   z-index: -1;
   overflow: hidden;
   background-image: url(${Image});
-  background-size: cover;
+  background-size: contain;
 `
