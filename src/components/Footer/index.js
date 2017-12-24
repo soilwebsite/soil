@@ -47,7 +47,7 @@ class Footer extends Component {
               </a>
             </h3>
             <h3>
-              <a href="https://www.instagram.com/virgin_soil" target="blank">
+              <a href="https://www.instagram.com/soil_brand" target="blank">
                 Instagram
               </a>
             </h3>

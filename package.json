@@ -1,12 +1,12 @@
 {
-  "name": "virginsoil",
+  "name": "soil",
   "version": "0.3.0",
   "engines": {
     "node": "7.5.0",
     "npm": "5.2.0"
   },
   "private": true,
-  "homepage": "https://www.virginsoil.us",
+  "homepage": "https://www.soilwebsite.com",
   "devDependencies": {
     "autoprefixer": "6.5.1",
     "babel-core": "6.17.0",
