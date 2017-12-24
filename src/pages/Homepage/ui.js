@@ -2,9 +2,7 @@ import styled from 'styled-components'
 import Image from '../../assets/images/SOIL.png'
 
 export const Container = styled.div`
-  margin-top: ${({ theme }) => -theme.spacing.page * 2 - 4}px;
-  margin-bottom: ${({ theme }) => -theme.spacing.page * 2}px;
-  height: 100%;
+  height: calc(100% - ${({ theme }) => theme.spacing.footer}px);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -24,14 +22,11 @@ export const Container = styled.div`
     font-size: 32px;
     padding: 0px;
   }
-  .buttons {
-
-    }
-  }
 `
 
 export const ActionBox = styled.div`
   a {
+    text-transform: uppercase;
     background-color: rgba(210, 210, 210, 0.4);
     width: 320px;
     height: 300px;
@@ -56,15 +51,15 @@ export const ActionBox = styled.div`
 
 export const Background = styled.div`
   position: absolute;
-  top: ${({ theme }) => theme.height.nav + 4 - 20}px;
-  @media screen and (max-width: 890px) {
-    top: ${({ theme }) => theme.height.nav / 2}px;
-  }
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: -1;
   overflow: hidden;
   background-image: url(${Image});
+  background-position: center;
   background-size: contain;
+  background-repeat: no-repeat;
+  margin: ${({ theme }) => theme.spacing.page}px auto 250px;
 `

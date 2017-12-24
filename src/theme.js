@@ -1,4 +1,5 @@
 // import { map, isObject } from 'lodash'
+let page = 55
 
 let theme = {
   px: {
@@ -8,9 +9,10 @@ let theme = {
     }
   },
   spacing: {
-    page: 55,
+    page: page,
     sidebar: 240,
-    navItem: 15
+    navItem: 15,
+    footer: page * 4
   },
   height: {
     nav: 110,

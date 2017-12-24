@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Spinner from '../../components/Spinner'
 import LookGrid from '../../components/LookGrid'
 // import Slideshow from '../../components/Slideshow'
-import { Container, Panel, Hero } from './ui'
+import { Container } from './ui'
 
 export default class Look extends Component {
   render() {

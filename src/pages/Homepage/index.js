@@ -15,14 +15,14 @@ class Homepage extends Component {
   render() {
     return (
       <Container>
+        <Background />
         <ActionBox>
-          <div className="buttons">
-            <a href="/collection">THE COLLECTION</a>
+          <div>
+            <a href="/collection">Explore</a>
             {/* &nbsp;
             <a href="/shop">SHOP</a> */}
           </div>
         </ActionBox>
-        <Background />
         {/* <div className='video-container'>
           <video
             ref='video'

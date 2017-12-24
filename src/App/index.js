@@ -6,7 +6,7 @@ import { fetchProducts } from '../actions/product'
 // import { fetchPosts } from '../actions/wordpress'
 import theme from '../theme'
 import store from '../store'
-import Navbar from '../components/Navbar'
+// import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { Container } from './ui'
 
