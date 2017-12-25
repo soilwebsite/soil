@@ -4,8 +4,11 @@ import BlueTexture from '../../assets/images/virginsoil-texture-spray-dark-crop.
 
 export const Container = styled.div`
   height: ${({ theme }) => theme.spacing.footer}px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
   overflow: hidden;
-  position: relative;
   background: #fff;
   z-index: 10;
   ${'' /* border-top: ${({ showBorder }) => showBorder && '4px solid transparent'};

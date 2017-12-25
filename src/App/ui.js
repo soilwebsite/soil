@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+  height: calc(100% - ${({ theme }) => theme.spacing.footer}px);
   width: 100%;
-  height: 100%;
   color: ${({ theme }) => theme.color.text};
   font-family: 'Raleway', sans-serif;
+  margin-bottom: ${({ theme }) => theme.spacing.footer}px;
   h1,
   h2,
   h3,

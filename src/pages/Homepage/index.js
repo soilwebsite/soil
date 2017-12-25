@@ -14,7 +14,7 @@ class Homepage extends Component {
 
   render() {
     return (
-      <Container>
+      <Container className="j-homepage">
         <Background />
         <ActionBox>
           <div>
