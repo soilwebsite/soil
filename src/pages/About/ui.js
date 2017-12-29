@@ -2,24 +2,20 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   height: 100%;
-  width: ${({ theme }) => theme.width.page / 2}px;
-  padding: 0 ${({ theme }) => theme.px.spacing.page};
   margin: 0 auto;
-`
-export const Content = styled.div`
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 `
+
 export const Frame = styled.div`
   flex-basis: content;
-  margin-right: 20px;
+  margin-right: ${({ theme }) => theme.px.spacing.page};
 `
+
 export const Photo = styled.img`
   filter: grayscale();
   width: 350px;
-  margin-right: ${({ theme }) => theme.px.spacing.page};
 `
 
 export const Title = styled.h2``

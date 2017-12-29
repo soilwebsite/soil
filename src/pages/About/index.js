@@ -1,26 +1,23 @@
 import React, { Component } from 'react'
-import { Container, Content, Text, Frame, Photo } from './ui'
+import { Container, Text, Frame, Photo } from './ui'
 import AboutPhoto from '../../assets/images/maneesha-grey-slanted.png'
 
 export default class About extends Component {
   render() {
     return (
       <Container>
-        <Content>
-          <Frame>
-            <Photo src={AboutPhoto} alt="About Me: Maneesha" />
-          </Frame>
-          <div>
-            <Text>
-              SOIL was conceived in 2017 by Maneesha Wijesinghe as an outlet for creative
-              expression.
-              <br />
-              The project explores the concept of "visual positivity" that aims to evoke positive
-              emotions in the viewer of the designs.
-            </Text>
-            <Text>Currently, designs are created and manufactured in New York City.</Text>
-          </div>
-        </Content>
+        <Frame>
+          <Photo src={AboutPhoto} alt="About Me: Maneesha" />
+        </Frame>
+        <div>
+          <Text>
+            SOIL was conceived in 2017 by Maneesha Wijesinghe as an outlet for creative expression.
+            <br />
+            The project explores the concept of "visual positivity" that aims to evoke positive
+            emotions in the viewer of the designs.
+          </Text>
+          <Text>Currently, designs are created and manufactured in New York City.</Text>
+        </div>
       </Container>
     )
   }

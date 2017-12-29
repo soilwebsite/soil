@@ -6,10 +6,10 @@ let linkPadding = ({ theme }) => theme.px.spacing.page
 export const Nav = styled.nav`
   position: relative;
   height: ${({ theme }) => theme.height.nav}px;
-  margin-bottom: ${({ theme }) => theme.px.spacing.page};
   background: #fff;
   text-align: center;
   z-index: 10;
+  margin-bottom: ${({ theme }) => -theme.spacing.page}px;
   border-bottom: ${({ showBorder }) => showBorder && '4px solid transparent'};
   border-image: url(${Border});
   border-image-slice: 1;
@@ -32,19 +32,18 @@ export const TitleLink = styled.a`
 `
 
 export const VirginSoil = styled.img`
-  width: 240px;
+  width: 100px;
   margin-right: auto;
 
   @media screen and (max-width: 890px) {
-    width: 150px;
+    width: 75px;
   }
 `
 
 export const NavLinks = styled.div`
   height: ${({ theme }) => theme.height.nav}px;
   margin: 0 auto;
-  max-width: ${({ theme }) => theme.width.page}px;
-  display: flex;
+  ${'' /* max-width: ${({ theme }) => theme.width.page}px; */} display: flex;
   justify-content: space-between;
   padding-left: ${linkPadding};
   padding-right: ${linkPadding};

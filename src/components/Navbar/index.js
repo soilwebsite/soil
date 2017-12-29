@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import { VirginSoil, Nav, NavLinks, NavLink, Group, TitleLink } from './ui'
+import { VirginSoil, Nav, NavLinks, Group, TitleLink } from './ui'
 // import { Icon } from 'react-fa'
-import Logo from '../../assets/images/virgin-soil-text-kerned-navy.png'
+import Logo from '../../assets/images/SOIL.png'
 // import VirginSoilTextLogo from '../../../public/virgin-soil-transparent.svg'
 
 class Navbar extends Component {
   render() {
-    const path = this.props.location.pathname
-    const lookMinimal = path === '/collection'
+    // const path = this.props.location.pathname
+    // const lookMinimal = path === '/collection'
     return (
-      <Nav showBorder={!lookMinimal}>
+      <Nav showBorder={false}>
         <NavLinks>
           {/* <Group>
             <NavLink href="/impressions">
@@ -22,7 +22,7 @@ class Navbar extends Component {
             <NavLink href="/shop">SHOP</NavLink>
           </Group> */}
           <TitleLink href="/">
-            <VirginSoil shrink={lookMinimal} src={Logo} alt="Virgin Soil" />
+            <VirginSoil src={Logo} alt="Virgin Soil" />
           </TitleLink>
           <Group>
             {/* <NavLink className={path === '/account' && 'current'} href="/account">
