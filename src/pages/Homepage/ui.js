@@ -61,5 +61,5 @@ export const Background = styled.div`
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  margin: ${({ theme }) => theme.spacing.page}px auto 250px;
+  margin: 0 auto;
 `

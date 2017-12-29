@@ -4,12 +4,14 @@ import Border from '../../assets/images/border.png'
 let linkPadding = ({ theme }) => theme.px.spacing.page
 
 export const Nav = styled.nav`
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   height: ${({ theme }) => theme.height.nav}px;
   background: #fff;
   text-align: center;
   z-index: 10;
-  margin-bottom: ${({ theme }) => -theme.spacing.page}px;
   border-bottom: ${({ showBorder }) => showBorder && '4px solid transparent'};
   border-image: url(${Border});
   border-image-slice: 1;

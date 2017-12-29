@@ -42,7 +42,7 @@ class App extends Component {
     let { showNav } = this.state
     return (
       <ThemeProvider theme={theme}>
-        <Container>
+        <Container className="App">
           {showNav && <Navbar location={this.props.location} />}
           {React.cloneElement(this.props.children, { ...this.props, ...this.state })}
           <Footer location={this.props.location} />
