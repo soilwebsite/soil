@@ -16,7 +16,11 @@ export const Frame = styled.div`
   flex-basis: content;
   margin-right: 20px;
 `
-export const Photo = styled.img``
+export const Photo = styled.img`
+  filter: grayscale();
+  width: 350px;
+  margin-right: ${({ theme }) => theme.px.spacing.page};
+`
 
 export const Title = styled.h2``
 
