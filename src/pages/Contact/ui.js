@@ -8,10 +8,6 @@ export const Container = styled.div`
   flex-direction: column;
   height: 100%;
 `
-export const Title = styled.h2`
-  text-transform: uppercase;
-  font-size: 14px;
-`
 
 export const Text = styled.p`
   text-align: center;

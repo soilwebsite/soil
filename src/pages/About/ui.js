@@ -18,8 +18,6 @@ export const Photo = styled.img`
   width: 350px;
 `
 
-export const Title = styled.h2``
-
 export const Text = styled.p`
   width: 400px;
   letter-spacing: normal;

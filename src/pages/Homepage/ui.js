@@ -18,10 +18,6 @@ export const Container = styled.div`
     z-index: -1;
     overflow: hidden;
   }
-  h2 {
-    font-size: 32px;
-    padding: 0px;
-  }
 `
 
 export const ActionBox = styled.div`

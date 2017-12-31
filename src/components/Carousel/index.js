@@ -4,8 +4,17 @@ import styled from 'styled-components'
 const speed = 0.6
 const width = 33
 
+const Container = styled.div`height: 100%;`
+
+const Title = styled.h2`
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: normal;
+  padding-bottom: 55px;
+`
+
 const Window = styled.div`
-  height: 90%;
+  height: 80%;
   margin: 0 auto;
   overflow: hidden;
   display: flex;
@@ -51,20 +60,23 @@ export default class Carousel extends React.Component {
   render() {
     let { activeIdx } = this.state
     return (
-      <Window>
-        <Reel activeIdx={activeIdx}>
-          {this.props.items.map((item, i) => (
-            <Item key={i} isActive={i === activeIdx} onClick={() => this.setActiveIdx(i)}>
-              <Image
-                i={i}
-                isActive={i === activeIdx}
-                activeIdx={activeIdx}
-                src={item.images[0].src}
-              />
-            </Item>
-          ))}
-        </Reel>
-      </Window>
+      <Container>
+        <Title>Pre-fall 2018</Title>
+        <Window>
+          <Reel activeIdx={activeIdx}>
+            {this.props.items.map((item, i) => (
+              <Item key={i} isActive={i === activeIdx} onClick={() => this.setActiveIdx(i)}>
+                <Image
+                  i={i}
+                  isActive={i === activeIdx}
+                  activeIdx={activeIdx}
+                  src={item.images[0].src}
+                />
+              </Item>
+            ))}
+          </Reel>
+        </Window>
+      </Container>
     )
   }
 }
