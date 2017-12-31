@@ -14,6 +14,7 @@ const Window = styled.div`
 `
 
 const Reel = styled.ul`
+  height: 100%;
   margin: 0;
   padding: 0;
   white-space: nowrap;
@@ -27,11 +28,12 @@ const Item = styled.li`
   white-space: normal; /* reset */
   display: inline-flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 `
 
 const Image = styled.img`
-  height: auto;
+  object-fit: contain;
+  height: 100%;
   width: 100%;
   transition: all ${speed}s;
   transform: scale(${({ isActive }) => (isActive ? 1 : 0.9)});
