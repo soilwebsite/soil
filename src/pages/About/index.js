@@ -11,17 +11,25 @@ export default class About extends Component {
         </Frame>
         <div>
           <Text>
-            SOIL was conceived in 2017 by Maneesha Wijesinghe as an outlet for creative expression.
-            <br />
-            The project explores the concept of "visual positivity" that aims to evoke positive
-            emotions in the viewer of the designs.
+            SOIL was conceived in 2017 by Maneesha Wijesinghe, as an effort to find an outlet in
+            creative expression. The name was inspired by the 1935 Mikhail Sholokhov novel “Virgin
+            Soil Upturned”.
           </Text>
-          <Text>Currently, designs are created and manufactured in New York City.</Text>
+          <Text>
+            SOIL explores a world of visual positivity where it aims to evoke positive emotions in
+            the viewer of the designs. The design aesthetic is modern minimalism with subtle touches
+            of Indian couture.
+          </Text>
+          <Text>SOIL is currently designed and manufactured in New York City.</Text>
         </div>
       </Container>
     )
   }
 }
+// SOIL was conceived in 2017 by Maneesha Wijesinghe as an outlet for creative expression.
+// The project explores the concept of "visual positivity" that aims to evoke positive
+// emotions in the viewer of the designs.
+// Currently, designs are created and manufactured in New York City.
 
 // VIRGIN SOIL is the creative child of Maneesha Wijesinghe, started in 2017 as an effort
 // to find an outlet for applied arts. The name was inspired by one of her favorite
