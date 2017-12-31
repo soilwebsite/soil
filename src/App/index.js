@@ -38,7 +38,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.props.location)
     let { showNav } = this.state
     return (
       <ThemeProvider theme={theme}>

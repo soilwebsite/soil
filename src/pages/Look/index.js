@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Spinner from '../../components/Spinner'
-import LookGrid from '../../components/LookGrid'
+import Carousel from '../../components/Carousel'
+// import LookGrid from '../../components/LookGrid'
 // import Slideshow from '../../components/Slideshow'
 import { Container } from './ui'
 
@@ -22,7 +23,8 @@ export default class Look extends Component {
           </p>
         </Hero> */}
         {/* <Slideshow items={this.props.products.looks} /> */}
-        <LookGrid items={this.props.products.looks} />
+        {/* <LookGrid items={this.props.products.looks} /> */}
+        <Carousel items={this.props.products.looks} />
         {/* <Panel>
           <a href="/about">>> Shop The Collection >></a>
         </Panel> */}

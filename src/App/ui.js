@@ -5,7 +5,7 @@ export const Container = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing.footer}px;
   position: fixed;
   overflow-y: scroll;
-  height: calc(100% - ${({ theme }) => theme.spacing.footer + theme.height.nav}px);
+  height: calc(100vh - ${({ theme }) => theme.spacing.footer + theme.height.nav}px);
   width: 100%;
   color: ${({ theme }) => theme.color.text};
   font-family: 'Raleway', sans-serif;

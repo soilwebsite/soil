@@ -3,7 +3,7 @@ import HeroImage from '../../assets/images/brooklyn-bridge-in-new-york.jpg'
 
 export const Container = styled.div`
   position: relative;
-  height: auto;
+  height: 100%;
   width: 100%;
   max-width: ${({ theme }) => theme.width.page}px;
   margin: 0 auto;
