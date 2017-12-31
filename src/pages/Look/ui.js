@@ -5,7 +5,7 @@ export const Container = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
-  max-width: ${({ theme }) => theme.width.page}px;
+  // max-width: ${({ theme }) => theme.width.page}px;
   margin: 0 auto;
   @media screen and (max-width: 890px) {
     padding: 0;

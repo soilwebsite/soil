@@ -50,6 +50,7 @@ export const ActionBox = styled.div`
 `
 
 export const Background = styled.div`
+  height: 85%;
   position: absolute;
   top: 0;
   left: 0;

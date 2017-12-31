@@ -5,7 +5,7 @@ const speed = 0.6
 const width = 33
 
 const Window = styled.div`
-  height: 100%;
+  height: 90%;
   margin: 0 auto;
   overflow: hidden;
   display: flex;
@@ -32,11 +32,12 @@ const Item = styled.li`
 `
 
 const Image = styled.img`
-  object-fit: contain;
+  object-fit: scale-down;
+  object-position: ${p => (p.isActive ? 'center' : p.activeIdx < p.i ? 'left' : 'right')} center;
   height: 100%;
   width: 100%;
   transition: all ${speed}s;
-  transform: scale(${({ isActive }) => (isActive ? 1 : 0.9)});
+  transform: scale(${({ isActive }) => (isActive ? 1 : 0.8)});
   opacity: ${({ isActive }) => (isActive ? 1 : 0.5)};
 `
 
@@ -54,7 +55,12 @@ export default class Carousel extends React.Component {
         <Reel activeIdx={activeIdx}>
           {this.props.items.map((item, i) => (
             <Item key={i} isActive={i === activeIdx} onClick={() => this.setActiveIdx(i)}>
-              <Image isActive={i === activeIdx} src={item.images[0].src} />
+              <Image
+                i={i}
+                isActive={i === activeIdx}
+                activeIdx={activeIdx}
+                src={item.images[0].src}
+              />
             </Item>
           ))}
         </Reel>

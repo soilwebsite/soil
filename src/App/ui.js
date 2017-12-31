@@ -2,10 +2,11 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   margin-top: ${({ theme }) => theme.height.nav}px;
-  margin-bottom: ${({ theme }) => theme.spacing.footer}px;
+  // margin-bottom: ${({ theme }) => theme.spacing.footer}px;
+  height: calc(100vh - ${({ theme }) => theme.height.nav}px);
+  // height: calc(100vh - ${({ theme }) => theme.spacing.footer + theme.height.nav}px);
   position: fixed;
   overflow-y: scroll;
-  height: calc(100vh - ${({ theme }) => theme.spacing.footer + theme.height.nav}px);
   width: 100%;
   color: ${({ theme }) => theme.color.text};
   font-family: 'Raleway', sans-serif;

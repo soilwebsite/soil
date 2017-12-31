@@ -4,10 +4,7 @@ import BlueTexture from '../../assets/images/virginsoil-texture-spray-dark-crop.
 
 export const Container = styled.div`
   height: ${({ theme }) => theme.spacing.footer}px;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  position: relative;
   overflow: hidden;
   background: #fff;
   z-index: 10;
@@ -26,7 +23,10 @@ export const Links = styled.div`
   background: transparent;
   div {
     position: absolute;
-    top: 70px;
+    bottom: 0;
+    background: #fff;
+    width: 100%;
+    padding: 5px;
   }
   h3 {
     a {
