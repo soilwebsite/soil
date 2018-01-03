@@ -7,7 +7,8 @@ import { Container } from './ui'
 
 export default class Look extends Component {
   render() {
-    if (!this.props.products) return <Spinner />
+    let { collections } = this.props
+    if (!collections) return <Spinner />
 
     return (
       <Container>
@@ -24,7 +25,7 @@ export default class Look extends Component {
         </Hero> */}
         {/* <Slideshow items={this.props.products.looks} /> */}
         {/* <LookGrid items={this.props.products.looks} /> */}
-        <Carousel items={this.props.products.looks} />
+        <Carousel items={collections.preFall2018.products} />
         {/* <Panel>
           <a href="/about">>> Shop The Collection >></a>
         </Panel> */}

@@ -24,8 +24,8 @@ const Preview = styled.article`
     }
     text-align: left;
     line-height: 24px;
-    ${'' /* white-space: nowrap; */}
-    ${'' /* overflow: hidden; */}
+    // white-space: nowrap;
+    // overflow: hidden;
     text-overflow: ellipsis;
   }
 `
@@ -33,7 +33,7 @@ const Preview = styled.article`
 class Blog extends Component {
   render() {
     let { wordpress } = this.props
-    if(!wordpress) return <Spinner />
+    if (!wordpress) return <Spinner />
     return (
       <Container>
         {wordpress.data.posts.map((post, i) => {

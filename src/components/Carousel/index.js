@@ -4,13 +4,14 @@ import styled from 'styled-components'
 const speed = 0.6
 const width = 33
 
-const Container = styled.div`height: 100%;`
+const Container = styled.div`
+  height: 100%;
+`
 
 const Title = styled.h2`
   font-weight: normal;
   font-size: 16px;
   letter-spacing: normal;
-  padding-bottom: 55px;
 `
 
 const Window = styled.div`

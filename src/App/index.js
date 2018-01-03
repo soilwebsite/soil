@@ -8,23 +8,16 @@ import theme from '../theme'
 import store from '../store'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import { Container } from './ui'
+import { Container, Content } from './ui'
+import getProducts from './shopify'
 
 class App extends Component {
   state = { showNav: false }
   componentDidMount() {
     this.setShowNav(this.props)
-    store
-      .dispatch(fetchProducts())
-      // .then(() => store.dispatch(fetchImages()))
-      // .then(() => store.dispatch(fetchTags()))
-      // .then(() => store.dispatch(fetchPosts()))
-      .then(() => {
-        let state = store.getState()
-        console.log('state', state)
-        this.setState(state)
-      })
-      .catch(err => console.error(err))
+    let p = getProducts().then((collections = {}) => {
+      this.setState({ collections })
+    })
   }
 
   componentWillReceiveProps(nextProps, nextState) {
@@ -43,7 +36,9 @@ class App extends Component {
       <ThemeProvider theme={theme}>
         <Container className="App">
           {showNav && <Navbar location={this.props.location} />}
-          {React.cloneElement(this.props.children, { ...this.props, ...this.state })}
+          <Content>
+            {React.cloneElement(this.props.children, { ...this.props, ...this.state })}
+          </Content>
           <Footer location={this.props.location} />
         </Container>
       </ThemeProvider>
