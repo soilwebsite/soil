@@ -34,7 +34,7 @@ class App extends Component {
       <ThemeProvider theme={theme}>
         <Container className="App" innerRef={x => (this.scrollDiv = x)}>
           {showNav && <Navbar scrollDiv={this.scrollDiv} location={this.props.location} />}
-          <Content>
+          <Content className="content">
             {React.cloneElement(this.props.children, { ...this.props, ...this.state })}
           </Content>
           <Footer location={this.props.location} />

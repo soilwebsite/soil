@@ -13,5 +13,5 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   margin-top: ${({ theme }) => theme.height.nav}px;
-  min-height: calc(100vh - ${({ theme }) => theme.height.footer}px);
+  min-height: calc(100vh - ${({ theme }) => theme.height.nav + theme.height.footer}px);
 `

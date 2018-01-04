@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Image from '../../assets/images/SOIL.png'
 
 export const Container = styled.div`
+  position: relative;
   height: calc(100vh - ${({ theme }) => theme.height.footer + theme.height.nav}px);
   width: 100%;
   display: flex;

@@ -42,6 +42,9 @@ class Footer extends Component {
               <a href="/about">About</a>
             </h3>
             <h3>
+              <a href="/collection">Explore</a>
+            </h3>
+            <h3>
               <a href="https://www.facebook.com/virginsoilus" target="blank">
                 Facebook
               </a>
