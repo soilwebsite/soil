@@ -9,7 +9,7 @@ let cache
 setInterval(() => (cache = null), 1800000) // 30 min cache
 
 export default () => {
-  // if (cache) return cache
+  if (cache) return cache
 
   // client.collection.fetchAllWithProducts()
   // Promise.all([client.collection.fetchWithProducts(preFall2018)])
