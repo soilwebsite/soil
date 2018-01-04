@@ -9,12 +9,12 @@ export const Nav = styled.nav`
   left: 0;
   right: 0;
   height: ${({ theme }) => theme.height.nav}px;
-  background: #fff;
+  background-color: transparent;
   text-align: center;
   z-index: 10;
-  border-bottom: ${({ showBorder }) => showBorder && '4px solid transparent'};
-  border-image: url(${Border});
-  border-image-slice: 1;
+  // border-bottom: ${({ showBorder }) => showBorder && '4px solid transparent'};
+  // border-image: url(${Border});
+  // border-image-slice: 1;
   @media screen and (max-width: 890px) {
     height: ${({ theme }) => theme.height.nav / 2}px;
   }
@@ -36,7 +36,8 @@ export const TitleLink = styled.a`
 export const VirginSoil = styled.img`
   width: 100px;
   margin-right: auto;
-
+  opacity: ${p => p.opacity};
+  transition: opacity 0.4s;
   @media screen and (max-width: 890px) {
     width: 75px;
   }

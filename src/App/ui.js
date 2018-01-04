@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  margin-top: ${({ theme }) => theme.height.nav}px;
   // margin-bottom: ${({ theme }) => theme.height.footer}px;
-  height: calc(100vh - ${({ theme }) => theme.height.nav}px);
+  height: 100vh;
+  // height: calc(100vh - ${({ theme }) => theme.height.nav}px);
   position: fixed;
   overflow-y: scroll;
   width: 100%;
@@ -12,5 +12,6 @@ export const Container = styled.div`
 `
 
 export const Content = styled.div`
-  min-height: calc(100vh - ${({ theme }) => theme.height.footer + theme.height.nav}px);
+  margin-top: ${({ theme }) => theme.height.nav}px;
+  min-height: calc(100vh - ${({ theme }) => theme.height.footer}px);
 `

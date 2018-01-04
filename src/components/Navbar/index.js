@@ -5,6 +5,17 @@ import Logo from '../../assets/images/SOIL.png'
 // import VirginSoilTextLogo from '../../../public/virgin-soil-transparent.svg'
 
 class Navbar extends Component {
+  state = { opacity: 1 }
+  componentDidMount() {
+    this.props.scrollDiv.addEventListener('scroll', this.onScroll.bind(this))
+  }
+  componentWillUnmount() {
+    this.props.scrollDiv.removeEventListener('scroll')
+  }
+  onScroll() {
+    let opacity = this.props.scrollDiv.scrollTop > 10 ? 0 : 1
+    if (this.state.opacity !== opacity) this.setState({ opacity })
+  }
   render() {
     // const path = this.props.location.pathname
     // const lookMinimal = path === '/collection'
@@ -22,7 +33,7 @@ class Navbar extends Component {
             <NavLink href="/shop">SHOP</NavLink>
           </Group> */}
           <TitleLink href="/">
-            <VirginSoil src={Logo} alt="Virgin Soil" />
+            <VirginSoil src={Logo} alt="Virgin Soil" opacity={this.state.opacity} />
           </TitleLink>
           <Group>
             {/* <NavLink className={path === '/account' && 'current'} href="/account">
