@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Image from '../../assets/images/SOIL.png'
 
 export const Container = styled.div`
-  height: calc(100vh - ${({ theme }) => theme.spacing.footer + theme.height.nav}px);
+  height: calc(100vh - ${({ theme }) => theme.height.footer + theme.height.nav}px);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -46,7 +46,7 @@ export const ActionBox = styled.div`
 `
 
 export const Background = styled.div`
-  height: calc(100vh - ${({ theme }) => theme.spacing.footer + theme.height.nav}px);
+  height: calc(100vh - ${({ theme }) => theme.height.footer + theme.height.nav}px);
   position: absolute;
   top: 0;
   left: 0;

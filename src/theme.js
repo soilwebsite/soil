@@ -4,22 +4,23 @@ let page = 55
 let theme = {
   px: {
     spacing: {
-      page: '55px',
+      page: '55px'
+    },
+    width: {
       sidebar: '240px'
     }
   },
   spacing: {
-    page: page,
-    sidebar: 240,
-    navItem: 15,
-    footer: page * 4
+    page,
+    navItem: 15
   },
   height: {
     nav: 110,
-    footer: 382
+    footer: page * 4
   },
   width: {
-    page: 1220
+    page: 1220,
+    sidebar: 240
   },
   color: {
     // primary: '#031864',

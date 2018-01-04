@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const ItemGrid = styled.div`
-  width: 100% - ${({ theme }) => theme.px.spacing.sidebar};
-  margin-left: ${({ theme }) => theme.px.spacing.sidebar};
+  width: 100% - ${({ theme }) => theme.px.width.sidebar};
+  margin-left: ${({ theme }) => theme.px.width.sidebar};
   padding: ${({ theme }) => theme.px.spacing.page} 0;
   display: flex;
   ${'' /* column-count: 2;

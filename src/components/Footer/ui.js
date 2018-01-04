@@ -3,7 +3,7 @@ import BlueTexture from '../../assets/images/virginsoil-texture-spray-dark-crop.
 // import Border from '../../assets/images/border.png'
 
 export const Container = styled.div`
-  height: ${({ theme }) => theme.spacing.footer}px;
+  height: ${({ theme }) => theme.height.footer}px;
   position: relative;
   overflow: hidden;
   background: #fff;
