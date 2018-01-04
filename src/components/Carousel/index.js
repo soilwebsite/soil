@@ -4,6 +4,10 @@ import { Container, Title, Window, Reel, Item, Image } from './ui'
 export default class Carousel extends React.Component {
   state = { activeIdx: 1 }
 
+  componentWillMount() {
+    this.setState({ activeIdx: this.props.items.length })
+  }
+
   setActiveIdx(activeIdx) {
     this.setState({ activeIdx })
   }
@@ -15,11 +19,15 @@ export default class Carousel extends React.Component {
         <Title>Pre-fall 2018</Title>
         <Window>
           <Reel activeIdx={activeIdx}>
-            {this.props.items.map((item, i) => (
-              <Item key={i} isActive={i === activeIdx} onClick={() => this.setActiveIdx(i)}>
+            {this.props.items.concat(this.props.items).map((item, idx) => (
+              <Item
+                key={item.id + idx}
+                isActive={idx === activeIdx}
+                onClick={() => this.setActiveIdx(idx)}
+              >
                 <Image
-                  i={i}
-                  isActive={i === activeIdx}
+                  i={idx}
+                  isActive={idx === activeIdx}
                   activeIdx={activeIdx}
                   src={item.images[0].src}
                 />

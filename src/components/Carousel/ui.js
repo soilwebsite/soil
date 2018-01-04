@@ -43,7 +43,7 @@ export const Item = styled.li`
 
 export const Image = styled.img`
   object-fit: scale-down;
-  object-position: ${p => (p.isActive ? 'center' : p.activeIdx < p.i ? 'left' : 'right')} center;
+  // object-position: ${p => (p.isActive ? 'center' : p.activeIdx < p.i ? 'left' : 'right')} center;
   height: 100%;
   width: 100%;
   transition: all ${speed}s;
