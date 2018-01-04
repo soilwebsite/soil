@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { fetchProducts } from '../actions/product'
+// import { fetchProducts } from '../actions/product'
 // import { fetchImages } from '../actions/image'
 // import { fetchTags } from '../actions/tag'
 // import { fetchPosts } from '../actions/wordpress'
+// import store from '../store'
 import theme from '../theme'
-import store from '../store'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { Container, Content } from './ui'
@@ -15,9 +15,7 @@ class App extends Component {
   state = { showNav: false }
   componentDidMount() {
     this.setShowNav(this.props)
-    let p = getProducts().then((collections = {}) => {
-      this.setState({ collections })
-    })
+    getProducts().then((collections = {}) => this.setState({ collections }))
   }
 
   componentWillReceiveProps(nextProps, nextState) {
