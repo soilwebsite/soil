@@ -22,7 +22,7 @@ If we ask for your personal information for a secondary reason, like marketing, 
 <br />
 <br />
 
-If after you opt-in, you change your mind, you may withdraw your consent for us to contact you, for the continued collection, use or disclosure of your information, at anytime, by contacting us at info@virginsoil.us or mailing us at: VIRGIN SOIL 68 W 3rd St New York New York US 10012.
+If after you opt-in, you change your mind, you may withdraw your consent for us to contact you, for the continued collection, use or disclosure of your information, at anytime, by contacting us at info@soilwebsite.com or mailing us at: VIRGIN SOIL 68 W 3rd St New York New York US 10012.
 <br />
 <br />
 

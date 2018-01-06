@@ -122,7 +122,7 @@ We reserve the right, at our sole discretion, to update, change or replace any p
 <br /><br />
  CONTACT INFORMATION
 <br /><br />
-Please send any questions about the Terms of Service to us at info@virginsoil.us.
+Please send any questions about the Terms of Service to us at info@soilwebsite.com.
 <br /><br />
 
 --------------------------------------

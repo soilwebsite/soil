@@ -10,9 +10,7 @@ setInterval(() => (cache = null), 1800000) // 30 min cache
 
 export default () => {
   if (cache) return cache
-
-  // client.collection.fetchAllWithProducts()
-  // Promise.all([client.collection.fetchWithProducts(preFall2018)])
+  // Promise.all([client.collection.fetchWithProducts(preFall2018)]) // multiple collections
   return (
     client.collection
       // .fetchAllWithProducts() // find your collection ID with this

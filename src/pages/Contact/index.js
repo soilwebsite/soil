@@ -8,7 +8,11 @@ class About extends Component {
         <Text>
           Customer Care
           <br />
+<<<<<<< HEAD
           contact@soilwebsite.com
+=======
+          care@soilwebsite.com
+>>>>>>> Replace virginsoil emails with soilwebsite. Clean up shopify code
         </Text>
       </Container>
     )
