@@ -8,7 +8,7 @@ class About extends Component {
         <Text>
           Customer Care
           <br />
-          care@virginsoil.us
+          contact@soilwebsite.com
         </Text>
       </Container>
     )
