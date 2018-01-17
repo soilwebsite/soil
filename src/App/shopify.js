@@ -4,9 +4,13 @@ const client = Client.buildClient({
   domain: 'soilwebsite.myshopify.com',
   storefrontAccessToken: 'c48a9b276c10b85d0186e960f090cec8'
 })
+// collections
 const preFall2018 = 'Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzM1NTEyMDI1MTMw'
+
+// cache
 let cache
-setInterval(() => (cache = null), 1800000) // 30 min cache
+let backup
+setInterval(() => (cache = null), 30 * 60 * 1000)
 
 export default () => {
   if (cache) return cache
@@ -17,10 +21,12 @@ export default () => {
       .fetchWithProducts(preFall2018)
       .then(res => {
         cache = { preFall2018: res }
+        localStorage.setItem('collections', JSON.stringify(cache))
         return cache
       })
       .catch(err => {
         console.error(err)
+        return backup
       })
   )
 }
